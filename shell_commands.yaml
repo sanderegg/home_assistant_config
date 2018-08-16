@@ -1,0 +1,2 @@
+switchoff_pc: net rpc shutdown -I {{ ip }} -U {{ user }}%{{ password }}    
+switchoff_nas: ssh -p {{ port }} {{ user }}@{{ ip }}

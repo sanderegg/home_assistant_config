@@ -1,0 +1,14 @@
+turn_on_light_based_on_time:
+  alias: Turn on a light based on time
+  sequence:
+      - alias: Switch on the light
+        service: homeassistant.turn_on
+        data_template:
+          entity_id: '{{ desired_entity_id }}'
+          brightness: >
+              {% if (now().hour >=22) or (now().hour < 6 and now().minute > 30) %}
+              15
+              {% else %}
+              255
+              {% endif %}
+          transition: 3

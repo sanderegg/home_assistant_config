@@ -1,0 +1,11 @@
+- platform: mystrom
+  host: !secret ip_kodi_switch
+  name: Kodi Switch
+
+- platform: mystrom
+  host: !secret ip_printer_switch
+  name: Printer Switch
+
+- platform: mystrom
+  host: !secret ip_pcs_switch
+  name: PCs Switch

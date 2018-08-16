@@ -1,0 +1,21 @@
+- platform: command_line
+  switches:
+    projector_cli:
+      friendly_name: Projector
+      command_on: !secret projector_on_command
+      command_off: !secret projector_off_command
+      command_state: !secret projector_state_command
+
+- platform: template
+  switches:
+    watch_film:
+      friendly_name: Watch Movies/Videos
+      value_template: >-
+        {{ is_state('switch.projector_cli', 'on')
+           and is_state('switch.kodi_switch', 'on') }}
+      turn_on:
+        service: script.start_watching_film
+      turn_off:
+        service: switch.turn_off
+        data:
+          entity_id: switch.projector_cli

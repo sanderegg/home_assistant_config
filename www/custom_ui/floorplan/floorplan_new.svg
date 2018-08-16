@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1280"
+   height="1024"
+   viewBox="0 0 1280 1024"
+   version="1.1"
+   id="svg4820"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="floorplan_new.svg">
+  <title
+     id="title5367">steinauweg30</title>
+  <defs
+     id="defs4814">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5445"
+       x="-0.384"
+       width="1.768"
+       y="-0.384"
+       height="1.768">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="30.4"
+         id="feGaussianBlur5447" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5445-7"
+       x="-0.384"
+       width="1.768"
+       y="-0.384"
+       height="1.768">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="30.4"
+         id="feGaussianBlur5447-4" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5445-7-0"
+       x="-0.384"
+       width="1.768"
+       y="-0.384"
+       height="1.768">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="30.4"
+         id="feGaussianBlur5447-4-2" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="223.71284"
+     inkscape:cy="501.72795"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer4"
+     showgrid="true"
+     inkscape:pagecheckerboard="false"
+     borderlayer="false"
+     showborder="true"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid5365"
+       dotted="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4817">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>steinauweg30</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="surfaces"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-26.066629)">
+    <rect
+       style="opacity:0.53299495;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:31;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="living_room_kitchen"
+       width="430"
+       height="700"
+       x="140"
+       y="330.06662"
+       inkscape:label="living_room_kitchen" />
+    <rect
+       style="opacity:0.53299495;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:31;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="liv_room"
+       width="460"
+       height="260"
+       x="260"
+       y="70.066628"
+       ry="0"
+       inkscape:label="liv_room" />
+    <rect
+       style="opacity:0.53299495;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:31;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="bathroom"
+       width="260"
+       height="360"
+       x="720"
+       y="70.066628"
+       ry="0"
+       inkscape:label="bathroom">
+      <title
+         id="title5384">bathroom</title>
+    </rect>
+    <rect
+       style="opacity:0.53299495;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:31;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="entrance"
+       width="150"
+       height="360.00003"
+       x="570"
+       y="330.06662"
+       inkscape:label="entrance" />
+    <rect
+       style="opacity:0.53299495;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:31;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="bedroom"
+       width="300"
+       height="339.99997"
+       x="580"
+       y="690.06665"
+       inkscape:label="bedroom" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="presence_detection"
+     style="display:none">
+    <rect
+       style="opacity:0.23800001;fill:#333333;fill-opacity:1;stroke:none;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5552"
+       width="430"
+       height="370"
+       x="140"
+       y="304" />
+    <rect
+       style="opacity:0.23800001;fill:#333333;fill-opacity:1;stroke:none;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5552-1"
+       width="430"
+       height="330"
+       x="140"
+       y="674" />
+    <rect
+       style="opacity:0.23800001;fill:#333333;fill-opacity:1;stroke:none;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5552-1-0"
+       width="310"
+       height="330"
+       x="570"
+       y="664" />
+    <rect
+       style="opacity:0.23800001;fill:#333333;fill-opacity:1;stroke:none;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2"
+       width="150"
+       height="360"
+       x="570"
+       y="304"
+       inkscape:label="entrance detector" />
+    <rect
+       style="opacity:0.23800001;fill:#333333;fill-opacity:1;stroke:none;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5552-1-0-0-5"
+       width="260"
+       height="360"
+       x="720"
+       y="44" />
+    <rect
+       style="opacity:0.23800001;fill:#333333;fill-opacity:1;stroke:none;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5552-1-0-0-5-4"
+       width="460"
+       height="260"
+       x="260"
+       y="44"
+       inkscape:label="rect5552-1-0-0-5-4" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="lights"
+     style="display:inline">
+    <rect
+       style="opacity:0.47715735;fill:none;fill-opacity:1;stroke:none;stroke-width:12.43650436;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="group.kitchen_lights"
+       width="430"
+       height="290"
+       x="140"
+       y="304"
+       inkscape:label="lights_kitchen_1" />
+    <rect
+       style="opacity:0.66497462;fill:#ffd42a;fill-opacity:1;stroke:none;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter5445)"
+       id="rect5443"
+       width="290"
+       height="300"
+       x="150"
+       y="694"
+       ry="60"
+       inkscape:label="light_living_room"
+       transform="matrix(1.0689655,0,0,1.0666667,-10.344828,-66.266667)" />
+    <rect
+       style="opacity:0.78172589;fill:#ffd42a;fill-opacity:1;stroke:none;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter5445-7)"
+       id="rect5443-2"
+       width="234.7059"
+       height="250"
+       x="597.64703"
+       y="704"
+       ry="30"
+       inkscape:label="light_bedroom"
+       transform="matrix(0.89473684,0,0,1,85.263158,0)"
+       rx="0" />
+    <rect
+       style="opacity:0.78172589;fill:#ffd42a;fill-opacity:1;stroke:none;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter5445-7-0)"
+       id="rect5443-2-0"
+       width="288.86877"
+       height="316.66666"
+       x="570.56555"
+       y="670.66669"
+       ry="30"
+       inkscape:label="light_liv_room"
+       transform="matrix(1.1077695,0,0,0.6,-302.05513,-318.4)"
+       rx="0" />
+    <rect
+       style="opacity:0.46700505;fill:#ffd42a;fill-opacity:1;stroke:none;stroke-width:7.55342674;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5439-3"
+       width="180"
+       height="230"
+       x="800"
+       y="44"
+       inkscape:label="lights_bathrrom_shower" />
+    <rect
+       style="opacity:0.46700505;fill:#ffd42a;fill-opacity:1;stroke:none;stroke-width:5.70053673;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5439-3-9"
+       width="180"
+       height="130"
+       x="800"
+       y="274"
+       inkscape:label="lights_bathrrom_toilets" />
+    <rect
+       style="opacity:0.46700505;fill:#ffd42a;fill-opacity:1;stroke:none;stroke-width:6.0863719;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5439-3-5"
+       width="80"
+       height="280"
+       x="720"
+       y="44"
+       inkscape:label="lights_bathrrom_miror" />
+    <rect
+       style="opacity:0.46700505;fill:#ffd42a;fill-opacity:1;stroke:none;stroke-width:8.62662125;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5439-3-93"
+       width="150"
+       height="360"
+       x="570"
+       y="304"
+       inkscape:label="lights_entrance" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="walls"
+     style="display:inline">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 140,304 V 404"
+       id="path5394"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 140,464 V 684"
+       id="path5396"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 140,804 V 924"
+       id="path5398"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 140,984 v 20 h 140"
+       id="path5400"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 440,1004 H 670"
+       id="path5402"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 790,1004 h 90 V 664.00002 H 720 V 594"
+       id="path5410"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 720,504 V 403.99999 L 980,404 v -40"
+       id="path5412"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 980,314 V 264"
+       id="path5414"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 980,214 V 43.999999 H 260 V 114"
+       id="path5416"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 260,194 V 303.99999 H 140"
+       id="path5418"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 260,304 H 630"
+       id="path5420"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 720,324 V 44"
+       id="path5422"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 720,304 H 700"
+       id="path5424"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 720,404 V 394"
+       id="path5426"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 570,304 V 464"
+       id="path5428"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 570,514 v 80"
+       id="path5430"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 570,654 v 350"
+       id="path5432"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 570,664 h 40"
+       id="path5434"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 720,664 H 680"
+       id="path5436"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

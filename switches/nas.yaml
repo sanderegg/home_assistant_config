@@ -1,0 +1,20 @@
+- platform: wake_on_lan
+  mac_address: !secret mac_nas
+  name: NAS WOL
+  host: !secret ip_nas
+
+- platform: template
+  switches:
+    nas:
+      friendly_name: NAS Server
+      value_template: "{{ is_state('switch.nas_wol', 'on') }}"
+      turn_on:
+        service: switch.turn_on
+        data:
+          entity_id: switch.nas_wol
+      turn_off:
+        service: shell_command.switchoff_nas
+        data:
+          port: !secret port_nas
+          user: !secret shutdownuser_nas
+          ip: !secret ip_nas

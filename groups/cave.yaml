@@ -1,0 +1,6 @@
+cave:
+  view: no
+  name: Cave
+  control: hidden
+  entities:
+    - switch.nas

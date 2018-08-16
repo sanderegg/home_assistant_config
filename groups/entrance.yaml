@@ -1,0 +1,14 @@
+entrance:
+  view: no
+  name: Entrance
+  entities:
+      #- group.entrance_lights
+      - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
+
+entrance_lights:
+  view: no
+  name: Entrance Lights
+  entities:
+      - light.cuisineentree

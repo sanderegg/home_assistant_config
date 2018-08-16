@@ -1,0 +1,7 @@
+graphs:
+  view: no
+  name: sensor graphs
+  entities:
+    - history_graph.network_status
+    - history_graph.fibaro_sensors
+    - history_graph.power_consumption

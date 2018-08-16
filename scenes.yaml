@@ -1,0 +1,45 @@
+  - name: Watching Movies
+    entities:
+       light.leds_bureau:
+          state: on
+          transition: 5
+          brightness: 50          
+          rgb_color: [255, 255, 200]
+       light.salonmain:
+          state: off          
+          transition: 8
+  
+  - name: Watching Movies Paused
+    entities:
+       light.leds_bureau:
+          state: on
+          transition: 5
+          brightness: 100          
+          rgb_color: [255, 255, 200]
+       light.salonmain:
+          state: on
+          transition: 8
+          brightness: 50
+
+  - name: Livingroom Normal
+    entities:
+      light.leds_bureau:
+          state: on
+          transition: 5
+          brightness: 200          
+          rgb_color: [255, 255, 255]
+      light.salonmain:
+         state: on
+         transition: 5         
+         
+  - name: All Lights Off
+    entities:
+      group.all_lights:
+        state: off      
+        
+  - name: All Off
+    entities:
+      group.all_lights:
+        state: off
+      group.all_switches:
+        state: off

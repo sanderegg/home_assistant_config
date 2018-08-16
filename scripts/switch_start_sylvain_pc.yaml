@@ -1,0 +1,13 @@
+start_sylvain_pc:
+  alias: Start Sylvain PC
+  sequence:
+    - alias: Switch on PCs switch
+      service: switch.turn_on
+      data:
+        entity_id: switch.pcs_switch
+    - delay:
+        seconds: 7
+    - alias: Switch on PC
+      service: switch.turn_on
+      data:
+        entity_id: switch.pc_sylvain_wol

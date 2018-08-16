@@ -1,0 +1,15 @@
+- platform: template
+  switches:
+    listen_music:
+      friendly_name: Listen Music/Spotify
+      value_template: >-
+        {{ is_state('switch.kodi_switch', 'on') 
+           and is_state('media_player.spotify', 'playing') }}
+      turn_on:
+        service: switch.turn_on
+        data:
+          entity_id: switch.kodi_switch
+      turn_off:
+        service: media_player.media_pause
+        data:
+          entity_id: media_player.spotify

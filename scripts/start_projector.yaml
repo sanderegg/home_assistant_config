@@ -1,0 +1,13 @@
+start_watching_film:
+  alias: Start Watching Movie/Film
+  sequence:
+    - alias: Switch on Kodi switch
+      service: switch.turn_on
+      data:
+        entity_id: switch.kodi_switch
+    - delay:
+        seconds: 3
+    - alias: Switch on Projector
+      service: switch.turn_on
+      data:
+        entity_id: switch.projector_cli

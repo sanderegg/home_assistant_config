@@ -1,0 +1,12 @@
+- platform: kodi
+  host: !secret ip_kodi_player
+  port: !secret port_kodi_player
+  turn_off_action:
+    service: media_player.kodi_call_method
+    data:
+      entity_id: media_player.kodi
+      method: System.Shutdown
+  
+- platform: spotify
+  client_id: !secret client_id_spotify_player
+  client_secret: !secret secret_spotify_player

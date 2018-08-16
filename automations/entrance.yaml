@@ -1,0 +1,31 @@
+# - id: switch on entrance with motion and light
+#   alias: Switch light on in entrance
+#   trigger:
+#   - entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
+#     platform: state
+#     to: 'on'
+#   condition:
+#   - below: '70'
+#     condition: numeric_state
+#     entity_id: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
+#   - condition: state
+#     entity_id: group.entrance_lights
+#     state: 'off'
+#   action:
+#   - data:
+#       entity_id: group.entrance_lights
+#       transition: 5
+#     service: homeassistant.turn_on
+# - id: switch off entrance when no motion
+#   alias: Switch light off in entrance
+#   trigger:
+#   - platform: state
+#     entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
+#     to: 'off'
+#     for:
+#       minutes: 5
+#   action:
+#     service: homeassistant.turn_off
+#     data:
+#       entity_id: group.entrance_lights
+#       transition: 5

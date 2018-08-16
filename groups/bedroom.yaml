@@ -1,0 +1,7 @@
+bed_room:
+  view: no
+  name: Bed Room
+  control: hidden
+  entities:
+      - switch.printer_switch
+      - sensor.printer_uptime

@@ -1,0 +1,20 @@
+- platform: wake_on_lan
+  mac_address: !secret mac_sylvain_pc
+  name: PC Sylvain WOL
+  host: !secret ip_sylvain_pc
+
+- platform: template
+  switches:
+    pcsylvain:
+      friendly_name: PC Sylvain
+      value_template: "{{ is_state('switch.pc_sylvain_wol', 'on') }}"
+      turn_on:
+        service: script.start_sylvain_pc
+        data:
+          entity_id: switch.pc_sylvain_wol
+      turn_off:
+        service: shell_command.switchoff_pc
+        data:
+          ip: !secret ip_sylvain_pc
+          user: !secret username_sylvain_pc
+          password: !secret password_sylvain_pc

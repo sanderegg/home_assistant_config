@@ -1,0 +1,7 @@
+corridor:
+  view: no
+  name: Corridor
+  entities:        
+      - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_3
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_3
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_3
