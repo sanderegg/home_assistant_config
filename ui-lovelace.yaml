@@ -5,11 +5,46 @@
 title: Home
 views:
   - title: Main
+    id: main
+    icon: mdi:flower
+    background: radial-gradient(crimson, skyblue)
+    theme: dark-mode
     cards:
       - type: entities
         entities:
           - sun.sun
           - sensor.time__date
+      - type: entities
+        title: Living Room
+        show_header_toggle: false
+        entities:
+          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
+          - switch.listen_music
+          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
+          - switch.pcsylvain
+          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
+          - switch.watch_film
+          - scene.all_lights_off
+      - type: entities
+        title: Kitchen
+        show_header_toggle: true
+        entities:
+          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_4
+          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_4
+          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4
+          - light.aeotec_zw111_nano_dimmer_level_2
+      - type: entities
+        title: Cave
+        show_header_toggle: false
+        entities:
+          - switch.nas
+      - type: entities
+        title: Entrance
+        show_header_toggle: true
+        entities:
+          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
+          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
+          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
       - type: media-control
         entity: media_player.kodi
       - type: history-graph
@@ -50,35 +85,4 @@ views:
         hours_to_show: 24
         refresh_interval: 0
         entities:
-          - sensor.aeotec_zw111_nano_dimmer_energy_2
-      - type: entities
-        title: Living Room
-        show_header_toggle: false
-        entities:
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
-          - switch.listen_music
-          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
-          - switch.pcsylvain
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
-          - switch.watch_film
-          - scene.all_lights_off
-      - type: entities
-        title: Kitchen
-        show_header_toggle: true
-        entities:
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_4
-          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_4
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4
-          - light.aeotec_zw111_nano_dimmer_level_2
-      - type: entities
-        title: Cave
-        show_header_toggle: false
-        entities:
-          - switch.nas
-      - type: entities
-        title: Entrance
-        show_header_toggle: true
-        entities:
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
-          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
+          - sensor.aeotec_zw111_nano_dimmer_energy_2      
