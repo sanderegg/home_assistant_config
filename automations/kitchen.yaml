@@ -5,7 +5,7 @@
     platform: state
     to: 'on'
   condition:
-  - below: '20'
+  - below: '15'
     condition: numeric_state
     entity_id: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_4
   - condition: state
