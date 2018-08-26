@@ -27,9 +27,9 @@
   - condition: state
     entity_id: group.kitchen_lights
     state: 'on'
-  - condition: state
+  - condition: numeric_state
     entity_id: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4
-    state: 0
+    below: 3
   action:
     service: homeassistant.turn_off
     data:
