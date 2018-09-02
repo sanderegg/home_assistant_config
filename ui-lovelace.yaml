@@ -10,7 +10,7 @@ views:
     background: radial-gradient(crimson, skyblue)
     theme: dark-mode
     cards:
-      - type: entities
+      - type: glance
         title: General
         show_header_toggle: false
         entities:
@@ -22,7 +22,7 @@ views:
           - entity: switch.listen_music
             icon: mdi:music
           - entity: switch.watch_film
-            icon: mdi:video-vintage
+            icon: mdi:film
       - type: entities
         title: Office
         show_header_toggle: false
@@ -30,19 +30,7 @@ views:
           - entity: switch.pcsylvain
             icon: mdi:desktop-classic
           - entity: switch.printer_switch
-            icon: mdi:printer
-      - type: glance
-        title: Living Room Sensors
-        show_header_toggle: false
-        entities:
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
-            name: IR
-          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
-            name: Motion?
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
-            name: Luminance
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
-            name: Temp
+            icon: mdi:printer      
       - type: glance
         title: Kitchen
         show_header_toggle: true
@@ -63,6 +51,18 @@ views:
         entities:
           - entity: switch.nas
             icon: mdi:nas
+      - type: glance
+        title: Living Room Sensors
+        show_header_toggle: false
+        entities:
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
+            name: IR
+          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
+            name: Motion?
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
+            name: Luminance
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
+            name: Temp
       - type: glance
         title: Entrance
         show_header_toggle: true
