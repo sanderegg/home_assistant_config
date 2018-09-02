@@ -15,7 +15,7 @@ views:
         show_header_toggle: false
         entities:
           - entity: scene.all_lights_off
-            tap_action: toggle
+            tap_action: scene.turn_on
       - type: entities
         title: Medias
         show_header_toggle: false
