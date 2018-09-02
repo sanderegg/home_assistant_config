@@ -14,7 +14,8 @@ views:
         title: General
         show_header_toggle: false
         entities:
-          - scene.all_lights_off
+          - entity: scene.all_lights_off
+            tap_action: call-service
       - type: entities
         title: Medias
         show_header_toggle: false
