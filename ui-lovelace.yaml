@@ -15,7 +15,7 @@ views:
         show_header_toggle: false
         entities:
           - entity: scene.all_lights_off
-            tap_action: call-service
+            tap_action: toggle
       - type: entities
         title: Medias
         show_header_toggle: false
@@ -46,6 +46,7 @@ views:
             name: Temp
           - entity: light.aeotec_zw111_nano_dimmer_level_2
             name: Light
+            tap_action: toggle
       - type: entities
         title: Cave
         show_header_toggle: false
