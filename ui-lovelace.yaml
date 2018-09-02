@@ -9,43 +9,72 @@ views:
     icon: mdi:flower
     background: radial-gradient(crimson, skyblue)
     theme: dark-mode
-    badges:
-      - type: entities
-        entities:
-          - sun.sun
-          - sensor.time__date
     cards:
       - type: entities
-        title: Living Room
+        title: General
         show_header_toggle: false
         entities:
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
-          - switch.listen_music
-          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
-          - switch.pcsylvain
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
-          - switch.watch_film
           - scene.all_lights_off
       - type: entities
+        title: Medias
+        show_header_toggle: false
+        entities:
+          - entity: switch.listen_music
+            icon: mdi:music
+          - entity: switch.watch_film
+            icon: mdi:video-vintage
+      - type: entities
+        title: Office
+        show_header_toggle: false
+        entities:
+          - entity: switch.pcsylvain
+            icon: mdi:desktop-classic
+          - entity: switch.printer_switch
+            icon: mdi:printer
+      - type: glance
+        title: Living Room Sensors
+        show_header_toggle: false
+        entities:
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
+            name: IR
+          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
+            name: Motion?
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
+            name: Luminance
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
+            name: Temp
+      - type: glance
         title: Kitchen
         show_header_toggle: true
         entities:
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_4
-          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_4
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4
-          - light.aeotec_zw111_nano_dimmer_level_2
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_4
+            name: Luminance
+          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_4
+            name: Motion?
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4
+            name: IR
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_4
+            name: Temp
+          - entity: light.aeotec_zw111_nano_dimmer_level_2
+            name: Light
       - type: entities
         title: Cave
         show_header_toggle: false
         entities:
-          - switch.nas
-      - type: entities
+          - entity: switch.nas
+            icon: mdi:nas
+      - type: glance
         title: Entrance
         show_header_toggle: true
         entities:
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
-          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
+            name: Luminance
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
+            name: IR
+          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
+            name: Motion?
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2
+            name: Temp
       - type: media-control
         entity: media_player.kodi
       - type: media-control
