@@ -124,9 +124,9 @@ views:
         entities:
           - sensor.aeotec_zw111_nano_dimmer_energy_2      
   - title: Automations
-      cards:
-      - type: glance
-        title: General
-        show_header_toggle: false
-        entities:
-          - group.all_automations
+    cards:
+    - type: glance
+      title: General
+      show_header_toggle: false
+      entities:
+        - group.all_automations
