@@ -125,8 +125,8 @@ views:
           - sensor.aeotec_zw111_nano_dimmer_energy_2      
   - title: Automations
     cards:
-    - type: glance
+    - type: entities
       title: General
       show_header_toggle: false
       entities:
-        - group.all_automations
+        - automation.switch_light_off_in_kitchen
