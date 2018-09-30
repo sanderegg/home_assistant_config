@@ -6,7 +6,7 @@ start_watching_film:
       data:
         entity_id: switch.kodi_switch
     - delay:
-        seconds: 3
+        seconds: 5
     - alias: Switch on Projector
       service: switch.turn_on
       data:
