@@ -12,4 +12,4 @@ bath_room_lights:
   view: no
   name: Bath Room Lights
   entities:
-      - light.light.aeotec_zw111_nano_dimmer_level_4
+      - light.aeotec_zw111_nano_dimmer_level_4
