@@ -39,7 +39,7 @@ views:
         entities:
           - entity: sensor.kitchen_fibaro_battery
             name: Battery
-            icon: mdi-battery
+            icon: mdi:battery
           - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_4
             name: Luminance
           - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_4
@@ -57,7 +57,7 @@ views:
         entities:
           - entity: sensor.bathroom_fibaro_battery
             name: Battery
-            icon: mdi-battery
+            icon: mdi:battery
           - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
             name: Luminance
           - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
