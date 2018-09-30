@@ -15,6 +15,8 @@
     service: script.turn_on_light_based_on_time
     data:
       desired_entity_id: group.kitchen_lights
+      day_intensity: 255
+      night_intensity: 15
 - id: switch off kitchen when no motion
   alias: Switch light off in kitchen
   trigger:
