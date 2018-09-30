@@ -1,0 +1,15 @@
+bath_room:
+  view: no
+  name: Bath Room
+  control: hidden
+  entities:
+      - group.bath_room_lights
+      - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
+
+bath_room_lights:
+  view: no
+  name: Bath Room Lights
+  entities:
+      - light.light.aeotec_zw111_nano_dimmer_level_4

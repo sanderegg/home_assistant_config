@@ -11,4 +11,4 @@ kitchen_lights:
   view: no
   name: Kitchen Lights
   entities:
-      - light.aeotec_zw111_nano_dimmer_level_2
+      - light.light.aeotec_zw111_nano_dimmer_level_3

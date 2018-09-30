@@ -45,7 +45,22 @@ views:
             name: IR
           - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_4
             name: Temp
-          - entity: light.aeotec_zw111_nano_dimmer_level_2
+          - entity: light.aeotec_zw111_nano_dimmer_level_3
+            name: Light
+            tap_action: toggle
+      - type: glance
+        title: Bathroom
+        show_header_toggle: true
+        entities:
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
+            name: Luminance
+          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
+            name: Motion?
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
+            name: IR
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
+            name: Temp
+          - entity: light.aeotec_zw111_nano_dimmer_level_4
             name: Light
             tap_action: toggle
       - type: entities
