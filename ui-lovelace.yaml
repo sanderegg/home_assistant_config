@@ -76,16 +76,8 @@ views:
   - title: States
     cards:
       - type: history-graph
-        title: Network Status
-        hours_to_show: 240
-        refresh_interval: 0
-        entities:
-          - sensor.speedtest_ping
-          - sensor.speedtest_download
-          - sensor.speedtest_upload
-      - type: history-graph
         title: Fibaro Sensors
-        hours_to_show: 12
+        hours_to_show: 3
         refresh_interval: 300
         entities:
           - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
@@ -114,6 +106,14 @@ views:
         refresh_interval: 600
         entities:
           - sensor.aeotec_zw111_nano_dimmer_energy_2      
+      - type: history-graph
+        title: Network Status
+        hours_to_show: 24
+        refresh_interval: 0
+        entities:
+          - sensor.speedtest_ping
+          - sensor.speedtest_download
+          - sensor.speedtest_upload
   - title: Automations
     cards:
     - type: entities
