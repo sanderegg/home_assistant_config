@@ -52,13 +52,13 @@ views:
         title: Bathroom
         show_header_toggle: true
         entities:
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
             name: Luminance
-          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
-            name: Motion?
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
             name: IR
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
+          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
+            name: Motion?
+          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2
             name: Temp
           - entity: light.aeotec_zw111_nano_dimmer_level_4
             name: Light
@@ -68,31 +68,7 @@ views:
         show_header_toggle: false
         entities:
           - entity: switch.nas
-            icon: mdi:nas
-      - type: glance
-        title: Living Room Sensors
-        show_header_toggle: false
-        entities:
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
-            name: IR
-          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
-            name: Motion?
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
-            name: Luminance
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
-            name: Temp
-      - type: glance
-        title: Entrance
-        show_header_toggle: true
-        entities:
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
-            name: Luminance
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
-            name: IR
-          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
-            name: Motion?
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2
-            name: Temp
+            icon: mdi:nas      
       - type: media-control
         entity: media_player.kodi
       - type: media-control

@@ -10,35 +10,35 @@ group.all_automations:
 zwave.aeotec_zw090_zstick_gen5_eu:
   friendly_name: zwave controller
 zwave.fibaro_system_fgms001zw5_motion_sensor:
-  friendly_name: Bathroom Motion Sensor
+  friendly_name: Undef Motion Sensor
 sensor.fibaro_system_fgms001zw5_motion_sensor_burglar:
-  friendly_name: Bathroom IR
+  friendly_name: Undef IR
 sensor.fibaro_system_fgms001zw5_motion_sensor_luminance:
-  friendly_name: Bathroom Light
+  friendly_name: Undef Light
 sensor.fibaro_system_fgms001zw5_motion_sensor_temperature:
-  friendly_name: Bathroom Temperature
+  friendly_name: Undef Temperature
 binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor:
   friendly_name: Bathroom Motion Detection
 zwave.fibaro_system_fgms001zw5_motion_sensor_2:
-  friendly_name: Entrance Motion Sensor
+  friendly_name: Bathroom Motion Sensor
 sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2:
-  friendly_name: Entrance IR
+  friendly_name: Bathroom IR
 sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2:
-  friendly_name: Entrance Light
+  friendly_name: Bathroom Light
 sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2:
-  friendly_name: Entrance Temperature
+  friendly_name: Bathroom Temperature
 binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2:
-  friendly_name: Entrance Motion Detection
+  friendly_name: Bathroom Motion Detection
 zwave.fibaro_system_fgms001zw5_motion_sensor_3:
-  friendly_name: Corridor Motion Sensor
+  friendly_name: Undef Motion Sensor
 sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_3:
-  friendly_name: Corridor IR
+  friendly_name: Undef IR
 sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_3:
-  friendly_name: Corridor Light
+  friendly_name: Undef Light
 sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_3:
-  friendly_name: Corridor Temperature
+  friendly_name: Undef Temperature
 binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_3:
-  friendly_name: Corridor Motion Detection
+  friendly_name: Undef Motion Detection
 zwave.fibaro_system_fgms001zw5_motion_sensor_4:
   friendly_name: Kitchen Motion Sensor
 sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4:
