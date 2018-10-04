@@ -3,9 +3,9 @@ living_room:
   name: Living Room
   control: hidden
   entities:
-      - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
-      - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
-      - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
+      # - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
+      # - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
+      # - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
       - switch.listen_music
       - switch.watch_film
       - switch.pcsylvain
