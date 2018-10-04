@@ -1,6 +1,0 @@
-liv_room:
-  view: no
-  name: Liv Room
-  control: hidden
-  entities:
-      - light.liv_room

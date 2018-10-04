@@ -5,7 +5,7 @@ default_view:
       - sun.sun
       - sensor.time__date
       - group.living_room
-      - group.liv_room
+      - group.bath_room
       - group.bed_room
       - group.entrance
       - group.kitchen
