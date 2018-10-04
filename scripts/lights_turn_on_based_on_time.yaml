@@ -7,8 +7,8 @@ turn_on_light_based_on_time:
           entity_id: '{{ desired_entity_id }}'
           brightness: >
               {% if (now().hour >=22) or (now().hour < 6 and now().minute > 30) %}
-              '{{ day_intensity }}'
+              {{ day_intensity }}
               {% else %}
-              '{{ night_intensity }}'
+              {{ night_intensity }}
               {% endif %}
           transition: 3
