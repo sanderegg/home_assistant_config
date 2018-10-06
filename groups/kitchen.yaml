@@ -13,3 +13,4 @@ kitchen_lights:
   name: Kitchen Lights
   entities:
       - light.aeotec_zw111_nano_dimmer_level_3
+      - light.strip_cuisine
