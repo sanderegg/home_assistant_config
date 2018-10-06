@@ -4,10 +4,10 @@ bath_room:
   control: hidden
   entities:
       - group.bath_room_lights
-      - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
-      - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
-      - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
-      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2
+      - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
       - sensor.bathroom_fibaro_battery
 
 bath_room_lights:

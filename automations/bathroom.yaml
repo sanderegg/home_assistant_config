@@ -1,13 +1,13 @@
 - id: switch on bathrrom with motion and light
   alias: Switch light on in bathroom
   trigger:
-  - entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
+  - entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
     platform: state
     to: 'on'
   condition:
   - below: '15'
     condition: numeric_state
-    entity_id: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
+    entity_id: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
   - condition: state
     entity_id: group.bathroom_lights
     state: 'off'
@@ -21,7 +21,7 @@
   alias: Switch light off in bathroom
   trigger:
   - platform: state
-    entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
+    entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
     to: 'off'
     for:
       minutes: 15

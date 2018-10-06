@@ -10,25 +10,25 @@ group.all_automations:
 zwave.aeotec_zw090_zstick_gen5_eu:
   friendly_name: zwave controller
 zwave.fibaro_system_fgms001zw5_motion_sensor:
-  friendly_name: Entrance Motion Sensor
+  friendly_name: Bathroom Motion Sensor
 sensor.fibaro_system_fgms001zw5_motion_sensor_burglar:
-  friendly_name: Entrance IR
+  friendly_name: Bathroom IR
 sensor.fibaro_system_fgms001zw5_motion_sensor_luminance:
-  friendly_name: Entrance Light
+  friendly_name: Bathroom Light
 sensor.fibaro_system_fgms001zw5_motion_sensor_temperature:
-  friendly_name: Entrance Temperature
+  friendly_name: Bathroom Temperature
 binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor:
   friendly_name: Bathroom Motion Detection
 zwave.fibaro_system_fgms001zw5_motion_sensor_2:
-  friendly_name: Bathroom Motion Sensor
+  friendly_name: Entrance Motion Sensor
 sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2:
-  friendly_name: Bathroom IR
+  friendly_name: Entrance IR
 sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2:
-  friendly_name: Bathroom Light
+  friendly_name: Entrance Light
 sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2:
-  friendly_name: Bathroom Temperature
+  friendly_name: Entrance Temperature
 binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2:
-  friendly_name: Bathroom Motion Detection
+  friendly_name: Entrance Motion Detection
 zwave.fibaro_system_fgms001zw5_motion_sensor_3:
   friendly_name: Undef Motion Sensor
 sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_3:
