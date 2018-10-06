@@ -7,7 +7,7 @@
       icon_template: mdi-battery
       value_template: "{{states.zwave.fibaro_system_fgms001zw5_motion_sensor.attributes.battery_level}}"
     entrance_fibaro_battery:
-      friendly_name: "Corridor Sensor Battery"
+      friendly_name: "Entrance Sensor Battery"
       entity_id: zwave.fibaro_system_fgms001zw5_motion_sensor_2
       unit_of_measurement: "%"
       icon_template: mdi-battery
