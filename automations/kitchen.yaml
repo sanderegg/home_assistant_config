@@ -46,9 +46,11 @@
     for:
       seconds: 15
   condition:
-  - condition: state
-    entity_id: group.kitchen_lights
-    state: 'on'
+    - condition: state
+      entity_id: group.kitchen_lights
+      state: 'on'
+    - condition: template
+      value_template: "{{ group.kitchen_lights.attributes.brightness == 15 }}"
   action:
   - service: homeassistant.turn_on
     data:
