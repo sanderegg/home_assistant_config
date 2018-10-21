@@ -13,4 +13,4 @@ entrance_lights:
   view: no
   name: Entrance Lights
   entities:
-      - - light.aeotec_zw111_nano_dimmer_level_6
+      - light.aeotec_zw111_nano_dimmer_level_6
