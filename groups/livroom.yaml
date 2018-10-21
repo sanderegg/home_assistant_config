@@ -2,10 +2,10 @@ liv_room:
   view: no
   name: Liv Room
   entities:
-      - group.liv_room_lights
+       - light.livroom_main      
 
-liv_room_lights:
-  view: no
-  name: Liv Room Lights
-  entities:
-      - light.livroom_main
+#liv_room_lights:
+#  view: no
+#  name: Liv Room Lights
+#  entities:
+#      - light.livroom_main
