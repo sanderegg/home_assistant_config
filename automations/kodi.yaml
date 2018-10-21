@@ -77,7 +77,7 @@
     entity_id: switch.listen_music
     to: 'off'
     for:
-      minutes: 5
+      minutes: 20
   condition:
   - condition: state
     state: 'off'    
