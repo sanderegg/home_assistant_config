@@ -2,15 +2,15 @@ entrance:
   view: no
   name: Entrance
   entities:
-      #- group.entrance_lights
+      - group.entrance_lights
       - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
       - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
       - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
       - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2
       - sensor.entrance_fibaro_battery
 
-# entrance_lights:
-#   view: no
-#   name: Entrance Lights
-#   entities:
-#       - light.cuisineentree
+entrance_lights:
+  view: no
+  name: Entrance Lights
+  entities:
+      - - light.aeotec_zw111_nano_dimmer_level_6
