@@ -6,6 +6,7 @@ kitchen:
       - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_4
       - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_4
       - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_4
       - sensor.kitchen_fibaro_battery
       - light.aeotec_zw111_nano_dimmer_level_3
       - switch.aeotec_zw111_nano_dimmer_switch_3
