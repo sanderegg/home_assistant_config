@@ -1,0 +1,11 @@
+livroom:
+  view: no
+  name: Liv Room
+  entities:
+      - group.livroom_lights
+
+livroom_lights:
+  view: no
+  name: Liv Room Lights
+  entities:
+      - light.livroom_main

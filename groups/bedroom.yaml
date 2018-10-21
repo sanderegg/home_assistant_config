@@ -3,5 +3,12 @@ bed_room:
   name: Bed Room
   control: hidden
   entities:
-      - switch.printer_switch
-      - sensor.printer_uptime
+    - switch.printer_switch
+    - sensor.printer_uptime
+    - group.bed_room_lights
+
+bed_room_lights:
+  view: no
+  name: Bed Room Lights
+  entities:
+    - light.bedroom_main
