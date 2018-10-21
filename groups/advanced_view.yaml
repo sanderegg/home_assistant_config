@@ -1,0 +1,6 @@
+advanced:
+  view: yes
+  name: Advanced
+  entities:
+      - group.all_automations
+      - group.all_switches
