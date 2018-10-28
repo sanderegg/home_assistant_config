@@ -16,7 +16,7 @@
     data:
       desired_entity_id: light.kitchen_lights
       day_intensity: 255
-      night_intensity: 15
+      night_intensity: 62
 - id: switch off kitchen when no motion
   alias: Switch light off in kitchen
   trigger:
