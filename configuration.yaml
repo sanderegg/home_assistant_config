@@ -65,6 +65,13 @@ zwave:
 tts:
   - platform: google
 
+light:
+  - platform: group
+    name: Kitchen Lights
+    entities:
+      - light.aeotec_zw111_nano_dimmer_level_3
+      - light.strip_cuisine
+
 media_player: !include mediaplayers.yaml
 weblink: !include weblinks.yaml   
 history_graph: !include history_graphs.yaml

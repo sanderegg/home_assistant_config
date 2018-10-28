@@ -9,9 +9,3 @@ kitchen:
       - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_4
       - sensor.kitchen_fibaro_battery
 
-light:
-  - platform: group
-    name: Kitchen Lights
-    entities:
-      - light.aeotec_zw111_nano_dimmer_level_3
-      - light.strip_cuisine
