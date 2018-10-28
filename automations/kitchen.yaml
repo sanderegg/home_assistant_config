@@ -9,12 +9,12 @@
     condition: numeric_state
     entity_id: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_4
   - condition: state
-    entity_id: group.kitchen_lights
+    entity_id: light.kitchen_lights
     state: 'off'
   action:
     service: script.turn_on_light_based_on_time
     data:
-      desired_entity_id: group.kitchen_lights
+      desired_entity_id: light.kitchen_lights
       day_intensity: 255
       night_intensity: 15
 - id: switch off kitchen when no motion
@@ -27,7 +27,7 @@
       minutes: 15
   condition:
   - condition: state
-    entity_id: group.kitchen_lights
+    entity_id: light.kitchen_lights
     state: 'on'
   - condition: numeric_state
     entity_id: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4
@@ -35,7 +35,7 @@
   action:
     service: homeassistant.turn_off
     data:
-      entity_id: group.kitchen_lights
+      entity_id: light.kitchen_lights
       transition: 5
 - id: increase light brightness when someone keeps being there
   alias: Increase light in corridor
@@ -47,13 +47,13 @@
       seconds: 15
   condition:
     - condition: state
-      entity_id: group.kitchen_lights
+      entity_id: light.kitchen_lights
       state: 'on'
     - condition: template
-      value_template: "{{ group.kitchen_lights.attributes.brightness == 15 }}"
+      value_template: "{{ light.kitchen_lights.attributes.brightness == 15 }}"
   action:
   - service: homeassistant.turn_on
     data:
-      entity_id: group.kitchen_lights
+      entity_id: light.kitchen_lights
       transition: 3
       brightness: 255
