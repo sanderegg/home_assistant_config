@@ -12,11 +12,12 @@
     entity_id: light.kitchen_lights
     state: 'off'
   action:
-    service: script.turn_on_light_based_on_time
+    service: homeassistant.turn_on
     data:
-      desired_entity_id: light.kitchen_lights
-      day_intensity: 255
-      night_intensity: 62
+      entity_id: light.aeotec_zw111_nano_dimmer_level_3
+      brightness: 255
+      transition: 3
+
 - id: switch off kitchen when no motion
   alias: Switch light off in kitchen
   trigger:
