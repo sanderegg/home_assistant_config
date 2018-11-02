@@ -1,7 +1,0 @@
-corridor:
-  view: no
-  name: Corridor
-  entities:        
-      - binary_sensor.bathroom_motion_sensor_sensor_3
-      - sensor.bathroom_motion_sensor_luminance_3
-      - sensor.bathroom_burglar_3
