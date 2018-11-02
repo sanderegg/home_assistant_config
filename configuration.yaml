@@ -12,7 +12,7 @@ homeassistant:
   time_zone: !secret time_zone
   # Customization file
   customize: !include customize.yaml
-  customize_glob: !include customglob.yaml
+  customize_glob: !include customizeglob.yaml
 
 # Show links to resources in log and frontend
 # introduction:
