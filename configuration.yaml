@@ -12,6 +12,7 @@ homeassistant:
   time_zone: !secret time_zone
   # Customization file
   customize: !include customize.yaml
+  customize_glob: !include customglob.yaml
 
 # Show links to resources in log and frontend
 # introduction:
@@ -82,6 +83,7 @@ scene: !include scenes.yaml
 group: !include_dir_merge_named groups/
 automation: !include_dir_merge_list automations/
 script: !include_dir_merge_named scripts/
+
 
 panel_custom:
   - name: floorplan
