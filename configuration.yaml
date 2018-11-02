@@ -37,8 +37,8 @@ updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   include_used_components: true
 
-# logger:
-  # default: warn
+logger:
+  default: info
   
 # Discover some devices automatically
 discovery:
