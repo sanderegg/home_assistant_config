@@ -66,7 +66,7 @@ views:
             name: Motion?
           - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2
             name: Temp
-          - entity: light.aeotec_zw111_nano_dimmer_level_4
+          - entity: light.bathroom_dimmer_level
             name: Light
             tap_action: toggle
       - type: entities
