@@ -3,10 +3,10 @@ entrance:
   name: Entrance
   entities:
       - group.entrance_lights
-      - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
-      - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
-      - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
-      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2
+      - binary_sensor.bathroom_motion_sensor_sensor_2
+      - sensor.bathroom_motion_sensor_luminance_2
+      - sensor.bathroom_burglar_2
+      -  sensor.bathroom_motion_sensor_temperature_2
       - sensor.entrance_fibaro_battery
 
 entrance_lights:

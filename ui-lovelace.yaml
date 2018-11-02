@@ -40,13 +40,13 @@ views:
           - entity: sensor.kitchen_fibaro_battery
             name: Battery
             icon: mdi:battery
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_4
+          - entity: sensor.bathroom_motion_sensor_luminance_4
             name: Luminance
-          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_4
+          - entity: binary_sensor.bathroom_motion_sensor_sensor_4
             name: Motion?
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4
+          - entity: sensor.bathroom_burglar_4
             name: IR
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_4
+          - entity:  sensor.bathroom_motion_sensor_temperature_4
             name: Temp
           - entity: light.aeotec_zw111_nano_dimmer_level_3
             name: Light
@@ -58,13 +58,13 @@ views:
           - entity: sensor.bathroom_fibaro_battery
             name: Battery
             icon: mdi:battery
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
+          - entity: sensor.bathroom_motion_sensor_luminance_2
             name: Luminance
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
+          - entity: sensor.bathroom_burglar_2
             name: IR
-          - entity: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
+          - entity: binary_sensor.bathroom_motion_sensor_sensor_2
             name: Motion?
-          - entity: sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2
+          - entity:  sensor.bathroom_motion_sensor_temperature_2
             name: Temp
           - entity: light.bathroom_dimmer_level
             name: Light
@@ -86,25 +86,25 @@ views:
         hours_to_show: 3
         refresh_interval: 300
         entities:
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar
-          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance
+          - sensor.bathroom_burglar
+          - binary_sensor.bathroom_motion_sensor_sensor
+          -  sensor.bathroom_motion_sensor_temperature
+          - sensor.bathroom_motion_sensor_luminance
           - sensor.living_room_fibaro_battery
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_2
-          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_2
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2
+          - sensor.bathroom_burglar_2
+          - binary_sensor.bathroom_motion_sensor_sensor_2
+          -  sensor.bathroom_motion_sensor_temperature_2
+          - sensor.bathroom_motion_sensor_luminance_2
           - sensor.bathroom_fibaro_battery
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_3
-          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_3
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_3
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_3
+          - sensor.bathroom_burglar_3
+          - binary_sensor.bathroom_motion_sensor_sensor_3
+          -  sensor.bathroom_motion_sensor_temperature_3
+          - sensor.bathroom_motion_sensor_luminance_3
           - sensor.corridor_fibaro_battery
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4
-          - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_4
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_4
-          - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_4
+          - sensor.bathroom_burglar_4
+          - binary_sensor.bathroom_motion_sensor_sensor_4
+          -  sensor.bathroom_motion_sensor_temperature_4
+          - sensor.bathroom_motion_sensor_luminance_4
           - sensor.kitchen_fibaro_battery
       - type: history-graph
         title: Power Consumption

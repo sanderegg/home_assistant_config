@@ -1,13 +1,13 @@
 - id: switch on kitchen with motion and light
   alias: Switch light on in kitchen
   trigger:
-  - entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_4
+  - entity_id: binary_sensor.bathroom_motion_sensor_sensor_4
     platform: state
     to: 'on'
   condition:
   - below: '15'
     condition: numeric_state
-    entity_id: sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_4
+    entity_id: sensor.bathroom_motion_sensor_luminance_4
   - condition: state
     entity_id: light.kitchen_lights
     state: 'off'
@@ -22,7 +22,7 @@
   alias: Switch light off in kitchen
   trigger:
   - platform: state
-    entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_4
+    entity_id: binary_sensor.bathroom_motion_sensor_sensor_4
     to: 'off'
     for:
       minutes: 15
@@ -31,7 +31,7 @@
     entity_id: light.kitchen_lights
     state: 'on'
   - condition: numeric_state
-    entity_id: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4
+    entity_id: sensor.bathroom_burglar_4
     below: 3
   action:
     service: homeassistant.turn_off
@@ -41,7 +41,7 @@
 - id: increase light brightness when someone keeps being there
   alias: Increase light in corridor
   trigger:
-  - entity_id: sensor.fibaro_system_fgms001zw5_motion_sensor_burglar_4
+  - entity_id: sensor.bathroom_burglar_4
     platform: numeric_state
     above: 0
     for:
