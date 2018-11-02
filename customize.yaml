@@ -1,5 +1,3 @@
-light.principale_2: {}
-light.salonmain: {}
 group.all_switches:
   hidden: false
   control: hidden
@@ -7,55 +5,3 @@ group.all_lights:
   hidden: false
 group.all_automations:
   hidden: false
-zwave.aeotec_zw090_zstick_gen5_eu:
-  friendly_name: zwave controller
-zwave.fibaro_system_fgms001zw5_motion_sensor:
-  friendly_name: Bathroom Motion Sensor
-sensor.bathroom_burglar:
-  friendly_name: Bathroom IR
-sensor.bathroom_motion_sensor_luminance:
-  friendly_name: Bathroom Light
- sensor.bathroom_motion_sensor_temperature:
-  friendly_name: Bathroom Temperature
-binary_sensor.bathroom_motion_sensor_sensor:
-  friendly_name: Bathroom Motion Detection
-zwave.fibaro_system_fgms001zw5_motion_sensor_2:
-  friendly_name: Entrance Motion Sensor
-sensor.bathroom_burglar_2:
-  friendly_name: Entrance IR
-sensor.bathroom_motion_sensor_luminance_2:
-  friendly_name: Entrance Light
- sensor.bathroom_motion_sensor_temperature_2:
-  friendly_name: Entrance Temperature
-binary_sensor.bathroom_motion_sensor_sensor_2:
-  friendly_name: Entrance Motion Detection
-zwave.fibaro_system_fgms001zw5_motion_sensor_3:
-  friendly_name: Undef Motion Sensor
-sensor.bathroom_burglar_3:
-  friendly_name: Undef IR
-sensor.bathroom_motion_sensor_luminance_3:
-  friendly_name: Undef Light
- sensor.bathroom_motion_sensor_temperature_3:
-  friendly_name: Undef Temperature
-binary_sensor.bathroom_motion_sensor_sensor_3:
-  friendly_name: Undef Motion Detection
-zwave.fibaro_system_fgms001zw5_motion_sensor_4:
-  friendly_name: Kitchen Motion Sensor
-sensor.bathroom_burglar_4:
-  friendly_name: Kitchen IR
-sensor.bathroom_motion_sensor_luminance_4:
-  friendly_name: Kitchen Light
- sensor.bathroom_motion_sensor_temperature_4:
-  friendly_name: Kitchen Temperature
-binary_sensor.bathroom_motion_sensor_sensor_4:
-  friendly_name: Kitchen Motion Detection
-sensor.fibaro_system_fgms001zw5_motion_sensor_alarm_type_4:
-    friendly_name: Kitchen Alarm Type
-sensor.fibaro_system_fgms001zw5_motion_sensor_alarm_level_4:
-    friendly_name: Kitchen Alarm Level
-sensor.fibaro_system_fgms001zw5_motion_sensor_general_4:
-    friendly_name: Kitchen General
-sensor.fibaro_system_fgms001zw5_motion_sensor_seismic_intensity_4:
-    friendly_name: Kitchen Seismic Intensity
-sensor.fibaro_system_fgms001zw5_motion_sensor_sourcenodeid_4:
-    friendly_name: Kitchen Source Node ID
