@@ -2,15 +2,15 @@ entrance:
   view: no
   name: Entrance
   entities:
-      - group.entrance_lights
-      - binary_sensor.entrance_motion_sensor_sensor
-      - sensor.entrance_motion_sensor_luminance
-      - sensor.entrance_motion_sensor_burglar
-      - sensor.entrance_motion_sensor_temperature
-      - sensor.entrance_fibaro_battery
+    - group.entrance_lights
+    - binary_sensor.entrance_motion_sensor_sensor
+    - sensor.entrance_motion_sensor_luminance
+    - sensor.entrance_motion_sensor_burglar
+    - sensor.entrance_motion_sensor_temperature
+    - sensor.entrance_fibaro_battery
 
 entrance_lights:
   view: no
   name: Entrance Lights
   entities:
-      - light.entrance_dimmer_level 	
+    - light.entrance_dimmer_level 	
