@@ -13,4 +13,4 @@ entrance_lights:
   view: no
   name: Entrance Lights
   entities:
-    - light.entrance_dimmer_level 	
+    - light.entrance_dimmer_level
