@@ -3,14 +3,14 @@ entrance:
   name: Entrance
   entities:
       - group.entrance_lights
-      - binary_sensor.bathroom_motion_sensor_sensor_2
-      - sensor.bathroom_motion_sensor_luminance_2
-      - sensor.bathroom_burglar_2
-      -  sensor.bathroom_motion_sensor_temperature_2
+      - binary_sensor.entrance_motion_sensor_sensor
+      - sensor.entrance_motion_sensor_luminance
+      - sensor.entrance_motion_sensor_burglar
+      - sensor.entrance_motion_sensor_temperature
       - sensor.entrance_fibaro_battery
 
 entrance_lights:
   view: no
   name: Entrance Lights
   entities:
-      - light.aeotec_zw111_nano_dimmer_level_6
+      - light.entrance_dimmer_level 	

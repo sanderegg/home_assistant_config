@@ -14,10 +14,10 @@ gr2:
     -  sensor.bathroom_motion_sensor_temperature
     - sensor.bathroom_motion_sensor_luminance
     - sensor.living_room_battery
-    - sensor.bathroom_burglar_2
-    - binary_sensor.bathroom_motion_sensor_sensor_2
-    -  sensor.bathroom_motion_sensor_temperature_2
-    - sensor.bathroom_motion_sensor_luminance_2
+    - sensor.entrance_motion_sensor_burglar
+    - binary_sensor.entrance_motion_sensor_sensor
+    -  sensor.entrance_motion_sensor_temperature
+    - sensor.entrance_motion_sensor_luminance
     - sensor.entrance_battery
     - sensor.bathroom_burglar_3
     - binary_sensor.bathroom_motion_sensor_sensor_3
