@@ -2,19 +2,31 @@
   sensors:
     bathroom_fibaro_battery:
       friendly_name: "Bathroom Sensor Battery"
-      entity_id: zwave.fibaro_system_fgms001zw5_motion_sensor
+      entity_id: zwave.bathroom_motion_sensor
       unit_of_measurement: "%"
       icon_template: mdi-battery
-      value_template: "{{states.zwave.fibaro_system_fgms001zw5_motion_sensor.attributes.battery_level}}"
+      value_template: "{{states.zwave.bathroom_motion_sensor.attributes.battery_level}}"
     entrance_fibaro_battery:
       friendly_name: "Entrance Sensor Battery"
-      entity_id: zwave.fibaro_system_fgms001zw5_motion_sensor_2
+      entity_id: zwave.entrance_motion_sensor
       unit_of_measurement: "%"
       icon_template: mdi-battery
-      value_template: "{{states.zwave.fibaro_system_fgms001zw5_motion_sensor_2.attributes.battery_level}}"
+      value_template: "{{states.zwave.entrance_motion_sensor.attributes.battery_level}}"
     kitchen_fibaro_battery:
       friendly_name: "Kitchen Sensor Battery"
-      entity_id: zwave.fibaro_system_fgms001zw5_motion_sensor_4
+      entity_id: zwave.kitchen_motion_sensor
       unit_of_measurement: "%"
       icon_template: mdi-battery
-      value_template: "{{states.zwave.fibaro_system_fgms001zw5_motion_sensor_4.attributes.battery_level}}"
+      value_template: "{{states.zwave.kitchen_motion_sensor.attributes.battery_level}}"
+    livroom_fibaro_battery:
+      friendly_name: "Livroom Sensor Battery"
+      entity_id: zwave.livroom_motion_sensor
+      unit_of_measurement: "%"
+      icon_template: mdi-battery
+      value_template: "{{states.zwave.livroom_motion_sensor.attributes.battery_level}}"
+    bedroom_fibaro_battery:
+      friendly_name: "Bedroom Sensor Battery"
+      entity_id: zwave.bedroom_motion_sensor
+      unit_of_measurement: "%"
+      icon_template: mdi-battery
+      value_template: "{{states.zwave.bedroom_motion_sensor.attributes.battery_level}}"

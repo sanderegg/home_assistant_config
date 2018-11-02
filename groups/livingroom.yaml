@@ -3,9 +3,6 @@ living_room:
   name: Living Room
   control: hidden
   entities:
-      # - binary_sensor.bathroom_motion_sensor_sensor
-      # - sensor.bathroom_motion_sensor_luminance
-      # - sensor.bathroom_burglar
       - switch.listen_music
       - switch.watch_film
       - switch.pcsylvain

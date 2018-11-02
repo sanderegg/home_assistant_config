@@ -2,7 +2,12 @@ liv_room:
   view: no
   name: Liv Room
   entities:
-       - light.livroom_main      
+    - light.livroom_main      
+    - binary_sensor.livroom_motion_sensor_sensor
+    - sensor.livroom_motion_sensor_luminance
+    - sensor.livroom_motion_sensor_burglar
+    - sensor.livroom_motion_sensor_temperature
+    - sensor.livroom_fibaro_battery
 
 #liv_room_lights:
 #  view: no
