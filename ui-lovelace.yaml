@@ -86,8 +86,8 @@ views:
         hours_to_show: 3
         refresh_interval: 300
         entities:
-          - sensor.bathroom_burglar
-          - binary_sensor.bathroom_motion_sensor_sensor
+          - sensor.bathroom_motion_sensor_burglar
+          - binary_sensor.bathroom_motion_sensor_sensor_sensor
           -  sensor.bathroom_motion_sensor_temperature
           - sensor.bathroom_motion_sensor_luminance
           - sensor.living_room_fibaro_battery
@@ -96,8 +96,8 @@ views:
           -  sensor.entrance_motion_sensor_temperature
           - sensor.entrance_motion_sensor_luminance
           - sensor.bathroom_fibaro_battery
-          - sensor.bathroom_burglar_3
-          - binary_sensor.bathroom_motion_sensor_sensor_3
+          - sensor.bathroom_motion_sensor_burglar_3
+          - binary_sensor.bathroom_motion_sensor_sensor_sensor_3
           -  sensor.bathroom_motion_sensor_temperature_3
           - sensor.bathroom_motion_sensor_luminance_3
           - sensor.corridor_fibaro_battery

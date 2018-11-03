@@ -30,7 +30,7 @@
     entity_id: group.bath_room_lights
     state: 'on'
   - condition: numeric_state
-    entity_id: sensor.bathroom_burglar
+    entity_id: sensor.bathroom_motion_sensor_burglar
     below: 3
   action:
     service: homeassistant.turn_off

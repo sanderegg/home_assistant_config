@@ -6,7 +6,7 @@ bath_room:
       - group.bath_room_lights
       - binary_sensor.bathroom_motion_sensor_sensor
       - sensor.bathroom_motion_sensor_luminance
-      - sensor.bathroom_burglar
+      - sensor.bathroom_motion_sensor_burglar
       - sensor.bathroom_motion_sensor_temperature
       - sensor.bathroom_fibaro_battery
 

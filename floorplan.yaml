@@ -87,9 +87,9 @@
 
       #   - name: Binary sensors
       #     entities:
-      #       - binary_sensor.bathroom_motion_sensor_sensor # living room
+      #       - binary_sensor.bathroom_motion_sensor_sensor_sensor # living room
       #       - binary_sensor.entrance_motion_sensor_sensor # entrance
-      #       - binary_sensor.bathroom_motion_sensor_sensor_3 # corridor
+      #       - binary_sensor.bathroom_motion_sensor_sensor_sensor_3 # corridor
       #       - binary_sensor.kitchen_motion_sensor_sensor # kitchen
       #     states:
       #       - state: 'off'

@@ -1,7 +1,7 @@
 # - id: switch on living room with motion and light
 #   alias: Switch light on in living room
 #   trigger:
-#   - entity_id: binary_sensor.bathroom_motion_sensor_sensor
+#   - entity_id: binary_sensor.bathroom_motion_sensor_sensor_sensor
 #     platform: state
 #     to: 'on'
 #   condition:
@@ -30,13 +30,13 @@
 #   alias: Switch light off in living room
 #   trigger:
 #   - platform: state
-#     entity_id: binary_sensor.bathroom_motion_sensor_sensor
+#     entity_id: binary_sensor.bathroom_motion_sensor_sensor_sensor
 #     to: 'off'
 #     for:
 #       minutes: 10
 #   condition:
 #   - condition: numeric_state
-#     entity_id: sensor.bathroom_burglar
+#     entity_id: sensor.bathroom_motion_sensor_burglar
 #     below: 1
 #   action:
 #     service: homeassistant.turn_off    
