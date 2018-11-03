@@ -39,7 +39,7 @@ gr2:
     - binary_sensor.bedroom_motion_sensor_sensor
     - sensor.livroom_motion_sensor_burglar
     - binary_sensor.livroom_motion_sensor_sensor
-  hours_to_show: 24
+  hours_to_show: 12
 gr3:
   name: Power Consumption
   entities:
