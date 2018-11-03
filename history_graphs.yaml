@@ -1,37 +1,49 @@
+gr4:
+  name: Temperature
+  entities:
+    - sensor.bathroom_motion_sensor_temperature
+    - sensor.entrance_motion_sensor_temperature
+    - sensor.kitchen_motion_sensor_temperature
+    - sensor.bedroom_motion_sensor_temperature
+    - sensor.livroom_motion_sensor_temperature
+  hours_to_show: 24
+
+gr5:
+  name: Luminance
+  entities:
+    - sensor.bathroom_motion_sensor_luminance
+    - sensor.entrance_motion_sensor_luminance
+    - sensor.kitchen_motion_sensor_luminance
+    - sensor.bedroom_motion_sensor_luminance
+    - sensor.livroom_motion_sensor_luminance
+  hours_to_show: 24
+
 gr1:
   name: Network Status
   entities:
     - sensor.speedtest_ping
     - sensor.speedtest_download
     - sensor.speedtest_upload
-  hours_to_show: 240
+  hours_to_show: 24
     
 gr2:
   name: Fibaro Sensors
   entities:
-    - sensor.bathroom_burglar
+    - sensor.bathroom_motion_sensor_burglar
     - binary_sensor.bathroom_motion_sensor_sensor
-    -  sensor.bathroom_motion_sensor_temperature
-    - sensor.bathroom_motion_sensor_luminance
-    - sensor.living_room_battery
     - sensor.entrance_motion_sensor_burglar
     - binary_sensor.entrance_motion_sensor_sensor
-    -  sensor.entrance_motion_sensor_temperature
-    - sensor.entrance_motion_sensor_luminance
-    - sensor.entrance_battery
-    - sensor.bathroom_burglar_3
-    - binary_sensor.bathroom_motion_sensor_sensor_3
-    -  sensor.bathroom_motion_sensor_temperature_3
-    - sensor.bathroom_motion_sensor_luminance_3
-    - sensor.corridor_battery
     - sensor.kitchen_motion_sensor_burglar
     - binary_sensor.kitchen_motion_sensor_sensor
-    -  sensor.kitchen_motion_sensor_temperature
-    - sensor.kitchen_motion_sensor_luminance
-    - sensor.kitchen_battery
+    - sensor.bedroom_motion_sensor_burglar
+    - binary_sensor.bedroom_motion_sensor_sensor
+    - sensor.livroom_motion_sensor_burglar
+    - binary_sensor.livroom_motion_sensor_sensor
   hours_to_show: 24
 gr3:
   name: Power Consumption
   entities:
-    -  sensor.aeotec_zw111_nano_dimmer_energy_2
+    -  sensor.bathroom_dimmer_power
+    -  sensor.entrance_dimmer_power
+    -  sensor.kitchen_dimmer_power
   hours_to_show: 24
