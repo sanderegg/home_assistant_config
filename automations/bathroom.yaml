@@ -16,7 +16,7 @@
     data:
       desired_entity_id: group.bath_room_lights
       day_intensity: 255
-      night_intensity: 255
+      night_intensity: 50
 - id: switch off bathroom when no motion
   alias: Switch light off in bathroom
   trigger:

@@ -11,4 +11,9 @@ turn_on_light_based_on_time:
               {% else %}
               {{ night_intensity }}
               {% endif %}
-          transition: 3
+          transition: >
+              {% if (now().hour >=22) or (now().hour < 6 and now().minute > 30) %}
+              3
+              {% else %}
+              2
+              {% endif %}

@@ -5,18 +5,18 @@
     platform: state
     to: 'on'
   condition:
-  - below: '15'
-    condition: numeric_state
+  - condition: numeric_state
     entity_id: sensor.kitchen_motion_sensor_luminance
+    below: '15'
   - condition: state
     entity_id: light.kitchen_lights
     state: 'off'
   action:
-    service: homeassistant.turn_on
+    service: script.turn_on_light_based_on_time
     data:
-      entity_id: light.kitchen_dimmer_level
-      brightness: 255
-      transition: 3
+      entity_id: light.kitchen_lights
+      day_intensity: 255
+      night_intensity: 50
 
 - id: switch off kitchen when no motion
   alias: Switch light off in kitchen
@@ -51,7 +51,7 @@
       entity_id: light.kitchen_lights
       state: 'on'
     - condition: template
-      value_template: "{{ 'light.kitchen_lights.attributes.brightness' == 15 }}"
+      value_template: "{{ 'light.kitchen_lights.attributes.brightness' == 50 }}"
   action:
   - service: homeassistant.turn_on
     data:
