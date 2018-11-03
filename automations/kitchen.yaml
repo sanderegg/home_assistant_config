@@ -14,7 +14,7 @@
   action:
     service: homeassistant.turn_on
     data:
-      entity_id: light.aeotec_zw111_nano_dimmer_level_3
+      entity_id: light.kitchen_dimmer_level
       brightness: 255
       transition: 3
 

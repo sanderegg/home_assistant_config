@@ -48,7 +48,7 @@ views:
             name: IR
           - entity:  sensor.kitchen_motion_sensor_temperature
             name: Temp
-          - entity: light.aeotec_zw111_nano_dimmer_level_3
+          - entity: light.kitchen_dimmer_level
             name: Light
             tap_action: toggle
       - type: glance

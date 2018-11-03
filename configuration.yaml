@@ -70,7 +70,7 @@ light:
   - platform: group
     name: Kitchen Lights
     entities:
-      - light.aeotec_zw111_nano_dimmer_level_3
+      - light.kitchen_dimmer_level
       - light.strip_cuisine
 
 media_player: !include mediaplayers.yaml
