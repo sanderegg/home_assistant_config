@@ -72,6 +72,10 @@ light:
     entities:
       - light.kitchen_dimmer_level
       - light.strip_cuisine
+  - platform: group
+    name: Bathroom Lights
+    entities:
+      - light.bathroom_dimmer_level
 
 media_player: !include mediaplayers.yaml
 weblink: !include weblinks.yaml   

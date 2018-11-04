@@ -9,12 +9,12 @@
     condition: numeric_state
     entity_id: sensor.bathroom_motion_sensor_luminance
   - condition: state
-    entity_id: group.bath_room_lights
+    entity_id: light.bathroom_lights
     state: 'off'
   action:
     service: script.turn_on_light_based_on_time
     data:
-      desired_entity_id: group.bath_room_lights
+      desired_entity_id: light.bathroom_lights
       day_intensity: 255
       night_intensity: 50
 - id: switch off bathroom when no motion
@@ -27,7 +27,7 @@
       minutes: 15
   condition:
   - condition: state
-    entity_id: group.bath_room_lights
+    entity_id: light.bathroom_lights
     state: 'on'
   - condition: numeric_state
     entity_id: sensor.bathroom_motion_sensor_burglar
@@ -35,5 +35,5 @@
   action:
     service: homeassistant.turn_off
     data:
-      entity_id: group.bath_room_lights
+      entity_id: light.bathroom_lights
       transition: 3

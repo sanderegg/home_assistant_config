@@ -3,15 +3,9 @@ bath_room:
   name: Bath Room
   control: hidden
   entities:
-      - group.bath_room_lights
+      - light.bathroom_lights
       - binary_sensor.bathroom_motion_sensor_sensor
       - sensor.bathroom_motion_sensor_luminance
       - sensor.bathroom_motion_sensor_burglar
       - sensor.bathroom_motion_sensor_temperature
       - sensor.bathroom_fibaro_battery
-
-bath_room_lights:
-  view: no
-  name: Bath Room Lights
-  entities:
-      - light.bathroom_dimmer_level
