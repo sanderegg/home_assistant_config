@@ -14,7 +14,7 @@
   action:
     service: script.turn_on_light_based_on_time
     data:
-      entity_id: light.kitchen_lights
+      desired_entity_id: light.kitchen_lights
       day_intensity: 255
       night_intensity: 50
 
