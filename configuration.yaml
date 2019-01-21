@@ -104,10 +104,9 @@ input_boolean:
     initial: off
     icon: mdi:weather-night
 
-# Hue sensors (https://github.com/robmarkcole/Hue-sensors-HASS):
+# Hue sensors (https://github.com/robmarkcole/Hue-sensors-HASS):, sensor is in sensors folder
 binary_sensor:
   - platform: hue
 device_tracker:
   - platform: hue
-sensor:
-  - platform: hue
+  
