@@ -1,0 +1,39 @@
+- id: switch on entrance with motion and light
+  alias: Switch light on in entrance
+  trigger:
+  - entity_id: binary_sensor.entrance_motion_sensor_sensor
+    platform: state
+    to: 'on'
+  condition:
+  - below: '15'
+    condition: numeric_state
+    entity_id: sensor.entrance_motion_sensor_luminance
+  - condition: state
+    entity_id: light.entrance_dimmer_level
+    state: 'off'
+  action:
+    service: script.turn_on_light_based_on_night_mode
+    data:
+      desired_entity_id: light.entrance_dimmer_level
+      day_intensity: 255
+      night_intensity: 3
+- id: switch off entrance when no motion
+  alias: Switch light off in entrance
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.entrance_motion_sensor_sensor
+    to: 'off'
+    for:
+      minutes: 15
+  condition:
+  - condition: state
+    entity_id: light.entrance_dimmer_level
+    state: 'on'
+  - condition: numeric_state
+    entity_id: sensor.entrance_motion_sensor_burglar
+    below: 3
+  action:
+    service: homeassistant.turn_off
+    data:
+      entity_id: light.entrance_dimmer_level
+      transition: 3

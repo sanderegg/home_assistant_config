@@ -12,11 +12,11 @@
     entity_id: light.kitchen_lights
     state: 'off'
   action:
-    service: script.turn_on_light_based_on_time
+    service: script.turn_on_light_based_on_night_mode
     data:
       desired_entity_id: light.kitchen_lights
       day_intensity: 255
-      night_intensity: 255
+      night_intensity: 2
 
 - id: switch off kitchen when no motion
   alias: Switch light off in kitchen
@@ -38,23 +38,3 @@
     data:
       entity_id: light.kitchen_lights
       transition: 5
-- id: increase light brightness when someone keeps being there
-  alias: Increase light in corridor
-  trigger:
-  - entity_id: sensor.kitchen_motion_sensor_burglar
-    platform: numeric_state
-    above: 0
-    for:
-      seconds: 15
-  condition:
-    - condition: state
-      entity_id: light.kitchen_lights
-      state: 'on'
-    - condition: template
-      value_template: "{{ 'light.kitchen_lights.attributes.brightness' == 50 }}"
-  action:
-  - service: homeassistant.turn_on
-    data:
-      entity_id: light.kitchen_lights
-      transition: 3
-      brightness: 255

@@ -97,6 +97,14 @@ panel_custom:
     url_path: floorplan
     config: !include floorplan.yaml
 
+# dark mode
+input_boolean:
+  night_mode:
+    name: When night mode is set
+    initial: off
+    icon: mdi:weather-night
+
+# Hue sensors (https://github.com/robmarkcole/Hue-sensors-HASS):
 binary_sensor:
   - platform: hue
 device_tracker:

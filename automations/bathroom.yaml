@@ -1,4 +1,4 @@
-- id: switch on bathrrom with motion and light
+- id: switch on bathroom with motion and light
   alias: Switch light on in bathroom
   trigger:
   - entity_id: binary_sensor.bathroom_motion_sensor_sensor
@@ -12,11 +12,11 @@
     entity_id: light.bathroom_lights
     state: 'off'
   action:
-    service: script.turn_on_light_based_on_time
+    service: script.turn_on_light_based_on_night_mode
     data:
       desired_entity_id: light.bathroom_lights
       day_intensity: 255
-      night_intensity: 255
+      night_intensity: 3
 - id: switch off bathroom when no motion
   alias: Switch light off in bathroom
   trigger:

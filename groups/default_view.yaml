@@ -3,7 +3,8 @@ default_view:
   name: Main
   entities:
       - sun.sun
-      - sensor.time__date
+      - sensor.time_date
+      - input_boolean.night_mode
       - group.living_room
       - group.media_players   
       - group.bath_room
