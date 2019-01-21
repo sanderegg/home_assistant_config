@@ -1,13 +1,13 @@
 - id: toggle nightmode
   alias: Toggle the nightmode on/off
   trigger:
-    - entity_id: sensor.hue_dimmer_switch_1_2
+    - entity_id: sensor.hue_bedroom_interrupteur
       platform: state
       to: "4_hold"
-    - entity_id: sensor.hue_dimmer_switch_1
+    - entity_id: sensor.hue_cuisine_interrupteur
       platform: state
       to: "4_hold"
-    - entity_id: sensor.cuisine_interrupteur
+    - entity_id: sensor.hue_salon_interrupteur
       platform: state
       to: "4_hold"
   action:
