@@ -22,7 +22,7 @@
       entity_id: input_boolean.night_mode
   action:
     # flash the lights
-    - service: light.turn_on
+    - service: homeassistant.turn_on
       data:
         entity_id: >
           {% for light in states.light %}
@@ -31,8 +31,8 @@
             {%- endif %}
           {%- endfor %}
         brightness: 127
-    - delay: 0:01
-    - service: light.turn_on
+    - delay: 0:02
+    - service: homeassistant.turn_on
       data:
         entity_id: >
           {% for light in states.light %}
