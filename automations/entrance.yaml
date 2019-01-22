@@ -11,12 +11,15 @@
   - condition: state
     entity_id: light.entrance_dimmer_level
     state: 'off'
+  - condition: state
+    entity_id: input_boolean.night_mode
+    state: 'off'
   action:
     service: script.turn_on_light_based_on_night_mode
     data:
       desired_entity_id: light.entrance_dimmer_level
       day_intensity: 255
-      night_intensity: 3
+      night_intensity: 0
 - id: switch off entrance when no motion
   alias: Switch light off in entrance
   trigger:
