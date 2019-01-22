@@ -25,19 +25,19 @@
     - service: light.turn_on
       data:
         entity_id:
-          {% for light in states.light -%}
+          {% for light in states.light %}
             {%- if is_state(light.entity_id, 'on') %}
               - {{ light.entity_id | lower }}              
-            {% endif -%}
+            {%- endif %}
           {%- endfor %}
         brightness: 127
     - delay: 0:01
     - service: light.turn_on
       data:
         entity_id:
-          {% for light in states.light -%}
+          {% for light in states.light %}
             {%- if is_state(light.entity_id, 'on') %}
               - {{ light.entity_id | lower }}              
-            {% endif -%}
+            {%- endif %}
           {%- endfor %}
         brightness: 255
