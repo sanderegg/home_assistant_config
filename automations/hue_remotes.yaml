@@ -24,7 +24,7 @@
     # flash the lights
     - service: light.turn_on
       data:
-        entity_id:
+        entity_id: >
           {% for light in states.light %}
             {%- if is_state(light.entity_id, 'on') %}
               - {{ light.entity_id | lower }}              
@@ -34,7 +34,7 @@
     - delay: 0:01
     - service: light.turn_on
       data:
-        entity_id:
+        entity_id: >
           {% for light in states.light %}
             {%- if is_state(light.entity_id, 'on') %}
               - {{ light.entity_id | lower }}              
