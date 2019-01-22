@@ -25,9 +25,9 @@
     - service: homeassistant.turn_on
       data:
         entity_id: >
-          {% for light in states.light %}
+          {%- for light in states.light %}
             {%- if is_state(light.entity_id, 'on') %}
-              - {{ light.entity_id | lower }}              
+          - {{ light.entity_id | lower }}              
             {%- endif %}
           {%- endfor %}
         brightness: 127
@@ -35,9 +35,9 @@
     - service: homeassistant.turn_on
       data:
         entity_id: >
-          {% for light in states.light %}
+          {%- for light in states.light %}
             {%- if is_state(light.entity_id, 'on') %}
-              - {{ light.entity_id | lower }}              
+          - {{ light.entity_id | lower }}              
             {%- endif %}
           {%- endfor %}
         brightness: 255
