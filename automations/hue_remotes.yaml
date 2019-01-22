@@ -13,4 +13,31 @@
   action:
     service: input_boolean.toggle
     data:
-      entity_id: input_boolean.night_mode      
+      entity_id: input_boolean.night_mode
+
+- id: feedback nightmode
+  alias: Feedback on nightmode change
+  trigger:
+    - platform: state
+      entity_id: input_boolean.night_mode
+  action:
+    # flash the lights
+    - service: light.turn_on
+      data:
+        entity_id:
+          {% for light in states.light -%}
+            {%- if is_state(light.entity_id, 'on') %}
+              - {{ light.entity_id | lower }}              
+            {% endif -%}
+          {%- endfor %}
+        brightness: 127
+    - delay: 0:01
+    - service: light.turn_on
+      data:
+        entity_id:
+          {% for light in states.light -%}
+            {%- if is_state(light.entity_id, 'on') %}
+              - {{ light.entity_id | lower }}              
+            {% endif -%}
+          {%- endfor %}
+        brightness: 255
