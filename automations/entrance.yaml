@@ -18,7 +18,7 @@
     service: script.turn_on_light_based_on_night_mode
     data:
       desired_entity_id: light.entrance_dimmer_level
-      day_intensity: 255
+      day_intensity: 200
       night_intensity: 0
 - id: switch off entrance when no motion
   alias: Switch light off in entrance
@@ -27,7 +27,7 @@
     entity_id: binary_sensor.entrance_motion_sensor_sensor
     to: 'off'
     for:
-      minutes: 15
+      minutes: 5
   condition:
   - condition: state
     entity_id: light.entrance_dimmer_level
