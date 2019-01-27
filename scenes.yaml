@@ -1,37 +1,27 @@
   - name: Watching Movies
     entities:
-       light.leds_bureau:
+       light.kitchen_lights:
           state: on
           transition: 5
           brightness: 50          
           rgb_color: [255, 255, 200]
-       light.salonmain:
-          state: off          
-          transition: 8
   
   - name: Watching Movies Paused
     entities:
-       light.leds_bureau:
+       light.kitchen_lights:
           state: on
           transition: 5
           brightness: 100          
           rgb_color: [255, 255, 200]
-       light.salonmain:
-          state: on
-          transition: 8
-          brightness: 50
-
-  - name: Livingroom Normal
+  
+  - name: Playing Nintendo
     entities:
-      light.leds_bureau:
+       light.kitchen_lights:
           state: on
           transition: 5
-          brightness: 200          
-          rgb_color: [255, 255, 255]
-      light.salonmain:
-         state: on
-         transition: 5         
-         
+          brightness: 100          
+          rgb_color: [255, 255, 200]
+
   - name: All Lights Off
     entities:
       group.all_lights:
