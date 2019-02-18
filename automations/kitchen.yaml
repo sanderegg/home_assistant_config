@@ -87,15 +87,14 @@
       to: "2_hold"
   condition:
   - condition: state
-    entity_id: light.kitchen_dimmer_level
+    entity_id: light.kitchen_lights
     state: 'on'
   action:
     service: homeassistant.turn_on
     data:
       entity_id: light.kitchen_lights
-      transition: 3
-      brightness: >
-        {{ [state_attr("light.kitchen_lights", "brightness") + 5, 255]|min }}
+      transition: 1
+      brightness: {{ [state_attr("light.kitchen_lights", "brightness") + 10 |int, 255] |min }}
 
 - id: level down kitchen lights manually
   alias: Level down kitchen lights manually
@@ -111,12 +110,11 @@
       to: "3_hold"
   condition:
   - condition: state
-    entity_id: light.kitchen_dimmer_level
+    entity_id: light.kitchen_lights
     state: 'on'
   action:
     service: homeassistant.turn_on
     data:
       entity_id: light.kitchen_lights
-      transition: 3
-      brightness: >
-        {{ [state_attr("light.kitchen_lights", "brightness") - 5, 0]|max }}
+      transition: 1
+      brightness: {{ [state_attr("light.kitchen_lights", "brightness") - 10 |int, 0] |max }}
