@@ -38,3 +38,19 @@
     data:
       entity_id: light.kitchen_lights
       transition: 5
+
+- id: switch on kitchen lights
+  alias: Switch on kitchen lights
+  trigger:
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "1_click"
+  condition:
+  - condition: state
+    entity_id: light.kitchen_lights
+    state: 'off'
+  action:
+    service: homeassistant.turn_on
+    data:
+      entity_id: light.kitchen_lights
+      transition: 3
