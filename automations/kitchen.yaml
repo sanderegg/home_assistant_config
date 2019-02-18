@@ -94,7 +94,7 @@
     data:
       entity_id: light.kitchen_lights
       transition: 1
-      brightness: {{ [(state_attr("light.kitchen_lights", "brightness") | int + 10), 255] |min }}
+      brightness: {{ [(state_attr("light.kitchen_lights", "brightness") | int + 10), 255]|min }}
 
 - id: level down kitchen lights manually
   alias: Level down kitchen lights manually
@@ -117,4 +117,4 @@
     data:
       entity_id: light.kitchen_lights
       transition: 1
-      brightness: {{ [(state_attr("light.kitchen_lights", "brightness") | int - 10), 0] |max }}
+      brightness: {{ [(state_attr("light.kitchen_lights", "brightness") | int - 10), 0]|max }}
