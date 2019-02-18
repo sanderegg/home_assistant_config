@@ -39,18 +39,84 @@
       entity_id: light.kitchen_lights
       transition: 5
 
-- id: switch on kitchen lights
-  alias: Switch on kitchen lights
+- id: switch on kitchen lights manually
+  alias: Switch on kitchen lights manually
   trigger:
     - entity_id: sensor.hue_cuisine_interrupteur
       platform: state
       to: "1_click"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "1_click_up"
   condition:
   - condition: state
-    entity_id: light.kitchen_lights
+    entity_id: light.kitchen_dimmer_level
     state: 'off'
   action:
     service: homeassistant.turn_on
     data:
       entity_id: light.kitchen_lights
       transition: 3
+
+- id: switch off kitchen lights manually
+  alias: Switch off kitchen lights manually
+  trigger:
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "4_click"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "4_click_up"
+  action:
+    service: homeassistant.turn_off
+    data:
+      entity_id: light.kitchen_lights
+      transition: 3
+
+- id: level up kitchen lights manually
+  alias: Level up kitchen lights manually
+  trigger:
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "2_click"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "2_click_up"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "2_hold"
+  condition:
+  - condition: state
+    entity_id: light.kitchen_dimmer_level
+    state: 'on'
+  action:
+    service: homeassistant.turn_on
+    data:
+      entity_id: light.kitchen_lights
+      transition: 3
+      brightness: >
+        {{ [state_attr("light.kitchen_lights", "brightness") + 5, 255]|min }}
+
+- id: level down kitchen lights manually
+  alias: Level down kitchen lights manually
+  trigger:
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "3_click"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "3_click_up"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "3_hold"
+  condition:
+  - condition: state
+    entity_id: light.kitchen_dimmer_level
+    state: 'on'
+  action:
+    service: homeassistant.turn_on
+    data:
+      entity_id: light.kitchen_lights
+      transition: 3
+      brightness: >
+        {{ [state_attr("light.kitchen_lights", "brightness") - 5, 0]|max }}
