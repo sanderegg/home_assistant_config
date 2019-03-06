@@ -18,14 +18,6 @@ gr5:
     - sensor.livroom_motion_sensor_luminance
   hours_to_show: 24
 
-gr1:
-  name: Network Status
-  entities:
-    - sensor.speedtest_ping
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-  hours_to_show: 24
-    
 gr2:
   name: Fibaro Sensors
   entities:

@@ -111,15 +111,7 @@ views:
         hours_to_show: 24
         refresh_interval: 600
         entities:
-          - sensor.aeotec_zw111_nano_dimmer_energy_2      
-      - type: history-graph
-        title: Network Status
-        hours_to_show: 12
-        refresh_interval: 0
-        entities:
-          - sensor.speedtest_ping
-          - sensor.speedtest_download
-          - sensor.speedtest_upload
+          - sensor.aeotec_zw111_nano_dimmer_energy_2            
   - title: Automations
     cards:
     - type: entities
