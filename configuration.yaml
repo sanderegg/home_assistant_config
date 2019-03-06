@@ -48,6 +48,10 @@ logger:
 # Discover some devices automatically
 discovery:
 
+# handles the db
+recorder:
+  purge_keep_days: 15
+  
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
@@ -108,6 +112,9 @@ input_boolean:
     icon: mdi:weather-night
 
 system_health:
+
+# duckdns
+
 
 # Hue sensors (https://github.com/robmarkcole/Hue-sensors-HASS):, sensor is in sensors folder
 binary_sensor:
