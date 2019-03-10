@@ -3,4 +3,4 @@ media_players:
   name: Media Players
   entities:
       - media_player.kodi
-      - media_player.spotify
+      - media_player.verospotify
