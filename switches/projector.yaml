@@ -10,7 +10,7 @@
   switches:
     watch_film:
       friendly_name: Watch Movies/Videos
-      value_template: >-
+      value_template: >
         {{ is_state('switch.projector_cli', 'on')
            and is_state('switch.kodi_switch', 'on') }}
       turn_on:
