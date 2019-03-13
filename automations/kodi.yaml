@@ -66,9 +66,10 @@
     state: 'off'    
     entity_id: switch.listen_music
   action:
-    service: media_player.turn_off
+    service: media_player.kodi_call_method
     data:
       entity_id: media_player.kodi
+      method: System.Shutdown
 
 - id: switch off kodi when music goes off
   alias: Switch off Kodi when music goes off
@@ -83,9 +84,10 @@
     state: 'off'    
     entity_id: switch.watch_film
   action:
-    service: media_player.turn_off
+    service: media_player.kodi_call_method
     data:
       entity_id: media_player.kodi
+      method: System.Shutdown
 
 - id: switch off kodi switch when kodi switches off
   alias: Switch off Kodi switch when Kodi switches off
@@ -100,16 +102,16 @@
     data:
       entity_id: switch.kodi_switch
 
--   id: switch off projector when kodi switches off
-    alias: Switch off projector when Kodi switches off for 1 minute
-    trigger:
-        platform: state
-        entity_id: media_player.kodi
-        to: 'off'
-        for:
-            minutes: 1
-    action:
-        service: switch.turn_off
-        data:
-            entity_id: switch.projector_cli
+- id: switch off projector when kodi switches off
+  alias: Switch off projector when Kodi switches off for 1 minute
+  trigger:
+      platform: state
+      entity_id: media_player.kodi
+      to: 'off'
+      for:
+          minutes: 1
+  action:
+      service: switch.turn_off
+      data:
+          entity_id: switch.projector_cli
             
