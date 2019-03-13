@@ -5,8 +5,9 @@ start_watching_film:
       service: switch.turn_on
       data:
         entity_id: switch.kodi_switch
-    - delay:
-        seconds: 5
+    - wait_template: "{{ is_state('mediaplayer.kodi', 'idle') }}"
+      timeout: '00:00:30'
+      continue_on_timeout: 'true'
     - alias: Switch on Projector
       service: switch.turn_on
       data:
