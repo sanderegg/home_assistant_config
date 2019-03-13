@@ -78,7 +78,7 @@ views:
       - type: media-control
         entity: media_player.kodi
       - type: media-control
-        entity: media_player.spotify
+        entity: media_player.verospotify
   - title: States
     cards:
       - type: history-graph
