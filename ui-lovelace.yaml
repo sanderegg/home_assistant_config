@@ -5,117 +5,207 @@
 title: Home
 views:
   - title: Main
+    badges:
+      - sensor.time_date
+      - sun.sun
     id: main
-    icon: mdi:flower
-    background: radial-gradient(crimson, skyblue)
-    theme: dark-mode
+    icon: mdi:home
+    panel: true
     cards:
-      - type: glance
-        title: General
-        show_header_toggle: false
-        entities:
-          - entity: scene.all_lights_off
-            tap_action: call-service
-            service: scene.turn_on
-      - type: entities
-        title: Medias
-        show_header_toggle: false
-        entities:
-          - entity: switch.listen_music
-            icon: mdi:music
-          - entity: switch.watch_film
-            icon: mdi:film
-      - type: entities
-        title: Office
-        show_header_toggle: false
-        entities:
-          - entity: switch.pcsylvain
-            icon: mdi:desktop-classic
-          - entity: switch.printer_switch
-            icon: mdi:printer      
-      - type: glance
-        title: Kitchen
-        show_header_toggle: true
-        entities:
-          - entity: sensor.kitchen_fibaro_battery
-            name: Battery
-            icon: mdi:battery
-          - entity: sensor.kitchen_motion_sensor_luminance
-            name: Luminance
-          - entity: binary_sensor.kitchen_motion_sensor_sensor
-            name: Motion?
-          - entity: sensor.kitchen_motion_sensor_burglar
-            name: IR
-          - entity:  sensor.kitchen_motion_sensor_temperature
-            name: Temp
-          - entity: light.kitchen_dimmer_level
-            name: Light
-            tap_action: toggle
-      - type: glance
-        title: Bathroom
-        show_header_toggle: true
-        entities:
-          - entity: sensor.bathroom_fibaro_battery
-            name: Battery
-            icon: mdi:battery
-          - entity: sensor.entrance_motion_sensor_luminance
-            name: Luminance
-          - entity: sensor.entrance_motion_sensor_burglar
-            name: IR
-          - entity: binary_sensor.entrance_motion_sensor_sensor
-            name: Motion?
-          - entity:  sensor.entrance_motion_sensor_temperature
-            name: Temp
-          - entity: light.bathroom_dimmer_level
-            name: Light
-            tap_action: toggle
-      - type: entities
-        title: Cave
-        show_header_toggle: false
-        entities:
-          - entity: switch.nas
-            icon: mdi:nas      
-      - type: media-control
-        entity: media_player.kodi
-      - type: media-control
-        entity: media_player.verospotify
-  - title: States
-    cards:
-      - type: history-graph
-        title: Fibaro Sensors
-        hours_to_show: 3
-        refresh_interval: 300
-        entities:
-          - sensor.bathroom_motion_sensor_burglar
-          - binary_sensor.bathroom_motion_sensor_sensor_sensor
-          -  sensor.bathroom_motion_sensor_temperature
-          - sensor.bathroom_motion_sensor_luminance
-          - sensor.living_room_fibaro_battery
-          - sensor.entrance_motion_sensor_burglar
-          - binary_sensor.entrance_motion_sensor_sensor
-          -  sensor.entrance_motion_sensor_temperature
-          - sensor.entrance_motion_sensor_luminance
-          - sensor.bathroom_fibaro_battery
-          - sensor.bathroom_motion_sensor_burglar_3
-          - binary_sensor.bathroom_motion_sensor_sensor_sensor_3
-          -  sensor.bathroom_motion_sensor_temperature_3
-          - sensor.bathroom_motion_sensor_luminance_3
-          - sensor.corridor_fibaro_battery
-          - sensor.kitchen_motion_sensor_burglar
-          - binary_sensor.kitchen_motion_sensor_sensor
-          -  sensor.kitchen_motion_sensor_temperature
-          - sensor.kitchen_motion_sensor_luminance
-          - sensor.kitchen_fibaro_battery
-      - type: history-graph
-        title: Power Consumption
-        hours_to_show: 24
-        refresh_interval: 600
-        entities:
-          - sensor.aeotec_zw111_nano_dimmer_energy_2            
-  - title: Automations
-    cards:
-    - type: entities
-      title: General
-      show_header_toggle: false
-      entities:
-        - automation.switch_light_off_in_kitchen
+      - type: vertical-stack
+        cards:
+        - type: glance
+          entities:
+            - entity: scene.all_lights_off
+              icon: mdi:flashlight-off
+              tap_action:
+                action: call-service
+                service: scene.turn_on
+                service_data: 
+                  entity_id: scene.all_lights_off
+        - type: glance
+          entities:
+            - entity: switch.listen_music
+              icon: mdi:music-note-bluetooth
+              tap_action:
+                action: toggle
+            - entity: switch.watch_film
+              icon: mdi:kodi
+              tap_action:
+                action: toggle
+            - entity: switch.pcsylvain
+              icon: mdi:laptop
+              tap_action:
+                action: toggle
+            - entity: switch.printer_switch
+              icon: mdi:printer
+              tap_action:
+                action: toggle
+            - entity: switch.nas
+              icon: mdi:nas
+              tap_action:
+                action: toggle
+        - type: horizontal-stack
+          cards:
+            - type: light
+              entity: light.kitchen_lights
+              name: Kitchen
+            - type: light
+              entity:  light.bathroom_lights
+              name: Bathroom
+            - type: light
+              entity: light.entrance_dimmer_level
+              name: Entrance
+            - type: light
+              entity: light.bedroom_main
+              name: Bedroom
+            - type: light
+              entity: light.livroom_main
+              name: Livroom
+        - type: horizontal-stack
+          cards:            
+            - type: sensor
+              entity: sensor.kitchen_motion_sensor_temperature
+              graph: line
+              unit: °
+            - type: sensor
+              entity: sensor.bathroom_motion_sensor_temperature
+              graph: line
+              unit: °   
+            - type: sensor
+              entity: sensor.bedroom_motion_sensor_temperature
+              graph: line
+              unit: °
+            - type: sensor
+              entity: sensor.livroom_motion_sensor_temperature
+              graph: line
+              unit: °
+        - type: horizontal-stack
+          cards:            
+            - type: sensor
+              entity: sensor.kitchen_motion_sensor_luminance
+              graph: line
+              unit: lm
+            - type: sensor
+              entity: sensor.bathroom_motion_sensor_luminance
+              graph: line
+              unit: lm  
+            - type: sensor
+              entity: sensor.bedroom_motion_sensor_luminance
+              graph: line
+              unit: lm
+            - type: sensor
+              entity: sensor.livroom_motion_sensor_luminance
+              graph: line
+              unit: lm        
+            
+
+  #     - type: glance
+  #       title: General
+  #       show_header_toggle: false
+  #       entities:
+  #         - entity: scene.all_lights_off
+  #           tap_action: call-service
+  #           service: scene.turn_on
+  #     - type: entities
+  #       title: Medias
+  #       show_header_toggle: false
+  #       entities:
+  #         - entity: switch.listen_music
+  #           icon: mdi:music
+  #         - entity: switch.watch_film
+  #           icon: mdi:film
+  #     - type: entities
+  #       title: Office
+  #       show_header_toggle: false
+  #       entities:
+  #         - entity: switch.pcsylvain
+  #           icon: mdi:desktop-classic
+  #         - entity: switch.printer_switch
+  #           icon: mdi:printer      
+  #     - type: glance
+  #       title: Kitchen
+  #       show_header_toggle: true
+  #       entities:
+  #         - entity: sensor.kitchen_fibaro_battery
+  #           name: Battery
+  #           icon: mdi:battery
+  #         - entity: sensor.kitchen_motion_sensor_luminance
+  #           name: Luminance
+  #         - entity: binary_sensor.kitchen_motion_sensor_sensor
+  #           name: Motion?
+  #         - entity: sensor.kitchen_motion_sensor_burglar
+  #           name: IR
+  #         - entity:  sensor.kitchen_motion_sensor_temperature
+  #           name: Temp
+  #         - entity: light.kitchen_dimmer_level
+  #           name: Light
+  #           tap_action: toggle
+  #     - type: glance
+  #       title: Bathroom
+  #       show_header_toggle: true
+  #       entities:
+  #         - entity: sensor.bathroom_fibaro_battery
+  #           name: Battery
+  #           icon: mdi:battery
+  #         - entity: sensor.entrance_motion_sensor_luminance
+  #           name: Luminance
+  #         - entity: sensor.entrance_motion_sensor_burglar
+  #           name: IR
+  #         - entity: binary_sensor.entrance_motion_sensor_sensor
+  #           name: Motion?
+  #         - entity:  sensor.entrance_motion_sensor_temperature
+  #           name: Temp
+  #         - entity: light.bathroom_dimmer_level
+  #           name: Light
+  #           tap_action: toggle
+  #     - type: entities
+  #       title: Cave
+  #       show_header_toggle: false
+  #       entities:
+  #         - entity: switch.nas
+  #           icon: mdi:nas      
+  #     - type: media-control
+  #       entity: media_player.kodi
+  #     - type: media-control
+  #       entity: media_player.verospotify
+  # - title: States
+  #   cards:
+  #     - type: history-graph
+  #       title: Fibaro Sensors
+  #       hours_to_show: 3
+  #       refresh_interval: 300
+  #       entities:
+  #         - sensor.bathroom_motion_sensor_burglar
+  #         - binary_sensor.bathroom_motion_sensor_sensor_sensor
+  #         -  sensor.bathroom_motion_sensor_temperature
+  #         - sensor.bathroom_motion_sensor_luminance
+  #         - sensor.living_room_fibaro_battery
+  #         - sensor.entrance_motion_sensor_burglar
+  #         - binary_sensor.entrance_motion_sensor_sensor
+  #         -  sensor.entrance_motion_sensor_temperature
+  #         - sensor.entrance_motion_sensor_luminance
+  #         - sensor.bathroom_fibaro_battery
+  #         - sensor.bathroom_motion_sensor_burglar_3
+  #         - binary_sensor.bathroom_motion_sensor_sensor_sensor_3
+  #         -  sensor.bathroom_motion_sensor_temperature_3
+  #         - sensor.bathroom_motion_sensor_luminance_3
+  #         - sensor.corridor_fibaro_battery
+  #         - sensor.kitchen_motion_sensor_burglar
+  #         - binary_sensor.kitchen_motion_sensor_sensor
+  #         -  sensor.kitchen_motion_sensor_temperature
+  #         - sensor.kitchen_motion_sensor_luminance
+  #         - sensor.kitchen_fibaro_battery
+  #     - type: history-graph
+  #       title: Power Consumption
+  #       hours_to_show: 24
+  #       refresh_interval: 600
+  #       entities:
+  #         - sensor.aeotec_zw111_nano_dimmer_energy_2            
+  # - title: Automations
+  #   cards:
+  #   - type: entities
+  #     title: General
+  #     show_header_toggle: false
+  #     entities:
+  #       - automation.switch_light_off_in_kitchen
