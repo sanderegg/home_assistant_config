@@ -1,13 +1,21 @@
 
-*
 !*.yaml
 !.gitignore
 !*.md
+*.db*
+*.sqlite
+*.xml
+*.conf
 
+archive/
+
+.uuid
+.HA_VERSION
 .storage
 .cloud
 .google.token
 
+ha.code-workspace
 ip_bans.yaml
 secrets.yaml
 known_devices.yaml
