@@ -6,6 +6,7 @@
 *.sqlite
 *.xml
 *.conf
+*.mp3
 
 archive/
 
