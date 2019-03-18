@@ -98,7 +98,7 @@ scene: !include scenes.yaml
 group: !include_dir_merge_named groups/
 automation: !include_dir_merge_list automations/
 script: !include_dir_merge_named scripts/
-
+binary_sensor: !include_dir_merge_list binary_sensors/
 
 panel_custom:
   - name: floorplan
@@ -120,8 +120,8 @@ system_health:
 
 
 # Hue sensors (https://github.com/robmarkcole/Hue-sensors-HASS):, sensor is in sensors folder
-binary_sensor:
-  - platform: hue
+
+    
 device_tracker:
   - platform: hue
   

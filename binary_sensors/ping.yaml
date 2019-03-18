@@ -1,0 +1,23 @@
+- platform: ping
+  name: Sunrise Router
+  host: !secret ip_router
+
+- platform: ping
+  name: PC Sylvain
+  host: !secret ip_sylvain_pc
+
+- platform: ping
+  name: Vero 4K
+  host: !secret ip_kodi_player
+
+- platform: ping
+  name: Kodi Switch
+  host: !secret ip_kodi_switch
+
+- platform: ping
+  name: Printer Switch
+  host: !secret ip_printer_switch
+
+- platform: ping
+  name: Printer Switch
+  host: !secret ip_pcs_switch
