@@ -125,3 +125,4 @@ system_health:
 device_tracker:
   - platform: hue
   
+custom_updater:
