@@ -24,3 +24,6 @@ known_devices.yaml
 
 OZW_Log.txt
 *.log
+
+# python
+__pycache__
