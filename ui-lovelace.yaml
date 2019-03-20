@@ -6,6 +6,10 @@ resources:
     type: module
   - url: /local/custom-lovelace/monster-card/monster-card.js?v=1
     type: js
+  - url: /local/custom-lovelace/bignumber-card/bignumber-card.js?v=1
+    type: js
+  - url: /local/lovelace-slider-entity-row/slider-entity-row.js?v=1
+    type: js
 
 title: Home
 views:
@@ -15,7 +19,7 @@ views:
       - sun.sun
     id: main
     icon: mdi:home
-    panel: true
+    panel: false
     cards:
       - type: vertical-stack
         cards:
@@ -50,23 +54,43 @@ views:
               icon: mdi:nas
               tap_action:
                 action: toggle
-        - type: horizontal-stack
-          cards:
-            - type: light
+        - type: entities
+          title: Lights
+          entities:
+            - type: section
+            - type: custom:slider-entity-row
               entity: light.kitchen_lights
-              name: Kitchen
-            - type: light
-              entity:  light.bathroom_lights
-              name: Bathroom
-            - type: light
+              toggle: true
+            - type: custom:slider-entity-row
+              entity: light.bathroom_lights
+              toggle: true
+            - type: custom:slider-entity-row
               entity: light.entrance_dimmer_level
-              name: Entrance
-            - type: light
+              toggle: true
+            - type: custom:slider-entity-row
               entity: light.bedroom_main
-              name: Bedroom
-            - type: light
+              toggle: true
+            - type: custom:slider-entity-row
               entity: light.livroom_main
-              name: Livroom
+              toggle: true
+
+        # - type: horizontal-stack
+        #   cards:
+        #     - type: light
+        #       entity: light.kitchen_lights
+        #       name: Kitchen
+        #     - type: light
+        #       entity:  light.bathroom_lights
+        #       name: Bathroom
+        #     - type: light
+        #       entity: light.entrance_dimmer_level
+        #       name: Entrance
+        #     - type: light
+        #       entity: light.bedroom_main
+        #       name: Bedroom
+        #     - type: light
+        #       entity: light.livroom_main
+        #       name: Livroom
         - type: horizontal-stack
           cards:            
             - type: sensor
@@ -104,6 +128,107 @@ views:
               graph: line
               unit: lm        
 
+  - title: Monitoring
+    icon: mdi:tune
+    id: monitoring    
+    cards:
+      - type: entities
+        title: Raspberry
+        show_header_toggle: false
+        entities:
+          - entity: sensor.last_boot
+          - entity: sensor.network_in
+          - entity: sensor.network_out
+          - entity: sensor.processor_use
+          - entity: sensor.disk_use_percent
+          - entity: sensor.disk_free
+          - entity: sensor.memory_free
+      - type: entities
+        title: NAS Synology
+        show_header_toggle: false
+        entities:
+          - entity: sensor.network_up
+          - entity: sensor.network_down
+          - entity: sensor.cpu_load_total
+          - entity: sensor.memory_usage_real
+          - entity: sensor.status_smart_sda
+          - entity: sensor.status_smart_sdb
+          - entity: sensor.status_smart_sdc
+          - entity: sensor.status_smart_sdd
+          - entity: sensor.volume_used_volume_1
+      - type: horizontal-stack
+        cards:
+        - type: custom:bignumber-card
+          title: Bathroom Battery
+          entity: sensor.bathroom_fibaro_battery
+          scale: 30px
+          from: bottom
+          min: 0
+          max: 100
+          severity:
+            - value: 20
+              style: 'var(--label-badge-red)'
+            - value: 50
+              style: 'var(--label-badge-yellow)'
+            - value: 100
+              style: 'var(--label-badge-green)'
+        - type: custom:bignumber-card
+          title: Bedroom Battery
+          entity: sensor.bedroom_fibaro_battery
+          scale: 30px
+          from: bottom
+          min: 0
+          max: 100
+          severity:
+            - value: 20
+              style: 'var(--label-badge-red)'
+            - value: 50
+              style: 'var(--label-badge-yellow)'
+            - value: 100
+              style: 'var(--label-badge-green)'
+        - type: custom:bignumber-card
+          title: Entrance Battery
+          entity: sensor.entrance_fibaro_battery
+          scale: 30px
+          from: bottom
+          min: 0
+          max: 100
+          severity:
+            - value: 20
+              style: 'var(--label-badge-red)'
+            - value: 50
+              style: 'var(--label-badge-yellow)'
+            - value: 100
+              style: 'var(--label-badge-green)'
+        - type: custom:bignumber-card
+          title: Kitchen Battery
+          entity: sensor.kitchen_fibaro_battery
+          scale: 30px
+          from: bottom
+          min: 0
+          max: 100
+          severity:
+            - value: 20
+              style: 'var(--label-badge-red)'
+            - value: 50
+              style: 'var(--label-badge-yellow)'
+            - value: 100
+              style: 'var(--label-badge-green)'
+        - type: custom:bignumber-card
+          title: Livroom Battery
+          entity: sensor.livroom_fibaro_battery
+          scale: 30px
+          from: bottom
+          min: 0
+          max: 100
+          severity:
+            - value: 20
+              style: 'var(--label-badge-red)'
+            - value: 50
+              style: 'var(--label-badge-yellow)'
+            - value: 100
+              style: 'var(--label-badge-green)'
+
   - title: Advanced
     icon: mdi:settings
     id: advanced
@@ -117,114 +242,11 @@ views:
         filter:
           include:
             - entity_id: "automation.*"
-      
-
-  #     - type: glance
-  #       title: General
-  #       show_header_toggle: false
-  #       entities:
-  #         - entity: scene.all_lights_off
-  #           tap_action: call-service
-  #           service: scene.turn_on
-  #     - type: entities
-  #       title: Medias
-  #       show_header_toggle: false
-  #       entities:
-  #         - entity: switch.listen_music
-  #           icon: mdi:music
-  #         - entity: switch.watch_film
-  #           icon: mdi:film
-  #     - type: entities
-  #       title: Office
-  #       show_header_toggle: false
-  #       entities:
-  #         - entity: switch.pcsylvain
-  #           icon: mdi:desktop-classic
-  #         - entity: switch.printer_switch
-  #           icon: mdi:printer      
-  #     - type: glance
-  #       title: Kitchen
-  #       show_header_toggle: true
-  #       entities:
-  #         - entity: sensor.kitchen_fibaro_battery
-  #           name: Battery
-  #           icon: mdi:battery
-  #         - entity: sensor.kitchen_motion_sensor_luminance
-  #           name: Luminance
-  #         - entity: binary_sensor.kitchen_motion_sensor_sensor
-  #           name: Motion?
-  #         - entity: sensor.kitchen_motion_sensor_burglar
-  #           name: IR
-  #         - entity:  sensor.kitchen_motion_sensor_temperature
-  #           name: Temp
-  #         - entity: light.kitchen_dimmer_level
-  #           name: Light
-  #           tap_action: toggle
-  #     - type: glance
-  #       title: Bathroom
-  #       show_header_toggle: true
-  #       entities:
-  #         - entity: sensor.bathroom_fibaro_battery
-  #           name: Battery
-  #           icon: mdi:battery
-  #         - entity: sensor.entrance_motion_sensor_luminance
-  #           name: Luminance
-  #         - entity: sensor.entrance_motion_sensor_burglar
-  #           name: IR
-  #         - entity: binary_sensor.entrance_motion_sensor_sensor
-  #           name: Motion?
-  #         - entity:  sensor.entrance_motion_sensor_temperature
-  #           name: Temp
-  #         - entity: light.bathroom_dimmer_level
-  #           name: Light
-  #           tap_action: toggle
-  #     - type: entities
-  #       title: Cave
-  #       show_header_toggle: false
-  #       entities:
-  #         - entity: switch.nas
-  #           icon: mdi:nas      
-  #     - type: media-control
-  #       entity: media_player.kodi
-  #     - type: media-control
-  #       entity: media_player.verospotify
-  # - title: States
-  #   cards:
-  #     - type: history-graph
-  #       title: Fibaro Sensors
-  #       hours_to_show: 3
-  #       refresh_interval: 300
-  #       entities:
-  #         - sensor.bathroom_motion_sensor_burglar
-  #         - binary_sensor.bathroom_motion_sensor_sensor_sensor
-  #         -  sensor.bathroom_motion_sensor_temperature
-  #         - sensor.bathroom_motion_sensor_luminance
-  #         - sensor.living_room_fibaro_battery
-  #         - sensor.entrance_motion_sensor_burglar
-  #         - binary_sensor.entrance_motion_sensor_sensor
-  #         -  sensor.entrance_motion_sensor_temperature
-  #         - sensor.entrance_motion_sensor_luminance
-  #         - sensor.bathroom_fibaro_battery
-  #         - sensor.bathroom_motion_sensor_burglar_3
-  #         - binary_sensor.bathroom_motion_sensor_sensor_sensor_3
-  #         -  sensor.bathroom_motion_sensor_temperature_3
-  #         - sensor.bathroom_motion_sensor_luminance_3
-  #         - sensor.corridor_fibaro_battery
-  #         - sensor.kitchen_motion_sensor_burglar
-  #         - binary_sensor.kitchen_motion_sensor_sensor
-  #         -  sensor.kitchen_motion_sensor_temperature
-  #         - sensor.kitchen_motion_sensor_luminance
-  #         - sensor.kitchen_fibaro_battery
-  #     - type: history-graph
-  #       title: Power Consumption
-  #       hours_to_show: 24
-  #       refresh_interval: 600
-  #       entities:
-  #         - sensor.aeotec_zw111_nano_dimmer_energy_2            
-  # - title: Automations
-  #   cards:
-  #   - type: entities
-  #     title: General
-  #     show_header_toggle: false
-  #     entities:
-  #       - automation.switch_light_off_in_kitchen
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: 'Sensors'
+        filter:
+          include:
+            - entity_id: "sensor.*"
