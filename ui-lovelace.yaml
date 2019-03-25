@@ -79,72 +79,127 @@ views:
               entity: light.livroom_main
               toggle: true
 
-        # - type: horizontal-stack
-        #   cards:
-        #     - type: light
-        #       entity: light.kitchen_lights
-        #       name: Kitchen
-        #     - type: light
-        #       entity:  light.bathroom_lights
-        #       name: Bathroom
-        #     - type: light
-        #       entity: light.entrance_dimmer_level
-        #       name: Entrance
-        #     - type: light
-        #       entity: light.bedroom_main
-        #       name: Bedroom
-        #     - type: light
-        #       entity: light.livroom_main
-        #       name: Livroom
         - type: horizontal-stack
-          cards:            
-            - type: sensor
-              entity: sensor.kitchen_motion_sensor_temperature
+          cards:
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.kitchen_motion_sensor_temperature
+                name: Kitchen / Livingroom Temperature
+            hours_to_show: 168
+            points_per_hour: 0.25
+            show:
+              labels: true
+              state: true
               graph: line
-              unit: °
-            - type: sensor
-              entity: sensor.bathroom_motion_sensor_temperature
-              graph: line
-              unit: °   
-            - type: sensor
-              entity: sensor.bedroom_motion_sensor_temperature
-              graph: line
-              unit: °
-            - type: sensor
-              entity: sensor.livroom_motion_sensor_temperature
-              graph: line
-              unit: °
+            color_thresholds:
+              - value: 10
+                color: blue
+              - value: 20
+                color: green
+              - value: 22
+                color: orange
+              - value: 23.5
+                color: red          
         - type: horizontal-stack
-          cards:            
-            - type: sensor
-              entity: sensor.kitchen_motion_sensor_luminance
+          cards:
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.entrance_motion_sensor_temperature
+            hours_to_show: 168
+            points_per_hour: 0.25
+            show:
+              labels: true
+              state: true
               graph: line
-              unit: lm
-            - type: sensor
-              entity: sensor.bathroom_motion_sensor_luminance
+            color_thresholds:
+              - value: 10
+                color: blue
+              - value: 20
+                color: green
+              - value: 22
+                color: orange
+              - value: 23.5
+                color: red
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.bathroom_motion_sensor_temperature
+            hours_to_show: 168
+            points_per_hour: 0.25
+            show:
+              labels: true
+              state: true
               graph: line
-              unit: lm  
-            - type: sensor
-              entity: sensor.bedroom_motion_sensor_luminance
+            color_thresholds:
+              - value: 10
+                color: blue
+              - value: 20
+                color: green
+              - value: 22
+                color: orange
+              - value: 23.5
+                color: red
+        - type: horizontal-stack
+          cards:
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.bedroom_motion_sensor_temperature
+            hours_to_show: 168
+            points_per_hour: 0.25
+            show:
+              labels: true
+              state: true
               graph: line
-              unit: lm
-            - type: sensor
-              entity: sensor.livroom_motion_sensor_luminance
+            color_thresholds:
+              - value: 10
+                color: blue
+              - value: 20
+                color: green
+              - value: 22
+                color: orange
+              - value: 23.5
+                color: red
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.livroom_motion_sensor_temperature
+            hours_to_show: 168
+            points_per_hour: 0.25
+            show:
+              labels: true
+              state: true
               graph: line
-              unit: lm        
+            color_thresholds:
+              - value: 10
+                color: blue
+              - value: 20
+                color: green
+              - value: 22
+                color: orange
+              - value: 23.5
+                color: red
+        
+              
 
   - title: Monitoring
     icon: mdi:tune
     id: monitoring    
     cards:
       - type: custom:compact-custom-header
+      - type: custom:mini-graph-card
+        name: Rapsberry network throughput
+        icon: mdi:server
+        entities:
+          - entity: sensor.network_throughput_in_enxb827eb962127
+            name: In
+          - entity: sensor.network_throughput_out_enxb827eb962127
+            name: Out
+
       - type: entities
         title: Raspberry
         show_header_toggle: false
         entities:
           - entity: sensor.last_boot
-          - entity: sensor.network_in
-          - entity: sensor.network_out
+          - entity: sensor.network_in_enxb827eb962127
+          - entity: sensor.network_out_enxb827eb962127
           - entity: sensor.processor_use
           - entity: sensor.disk_use_percent
           - entity: sensor.disk_free
@@ -234,6 +289,24 @@ views:
               style: 'var(--label-badge-yellow)'
             - value: 100
               style: 'var(--label-badge-green)'
+      - type: horizontal-stack
+        cards:
+          - type: sensor
+            entity: sensor.kitchen_motion_sensor_luminance
+            graph: line
+            unit: lm
+          - type: sensor
+            entity: sensor.bathroom_motion_sensor_luminance
+            graph: line
+            unit: lm  
+          - type: sensor
+            entity: sensor.bedroom_motion_sensor_luminance
+            graph: line
+            unit: lm
+          - type: sensor
+            entity: sensor.livroom_motion_sensor_luminance
+            graph: line
+            unit: lm  
 
   - title: Advanced
     icon: mdi:settings
