@@ -6,6 +6,12 @@
       arg: /
     - type: memory_free
     - type: network_in
+      arg: enxb827eb962127
+    - type: throughput_network_in
+      arg: enxb827eb962127
     - type: network_out
+      arg: enxb827eb962127
+    - type: throughput_network_out
+      arg: enxb827eb962127
     - type: processor_use
     - type: last_boot
