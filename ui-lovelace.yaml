@@ -23,7 +23,7 @@ views:
       - sun.sun
     id: main
     icon: mdi:home
-    panel: false
+    # panel: false
     cards:
       - type: custom:compact-custom-header
       - type: vertical-stack
@@ -184,14 +184,34 @@ views:
     id: monitoring    
     cards:
       - type: custom:compact-custom-header
-      - type: custom:mini-graph-card
-        name: Rapsberry network throughput
-        icon: mdi:server
+      - type: entity-filter
         entities:
-          - entity: sensor.network_throughput_in_enxb827eb962127
-            name: In
-          - entity: sensor.network_throughput_out_enxb827eb962127
-            name: Out
+          - binary_sensor.sunrise_router
+          - binary_sensor.pc_sylvain            
+          - binary_sensor.vero_4k
+          - binary_sensor.kodi_switch
+          - binary_sensor.printer_switch
+          - binary_sensor.pc_switch
+        state_filter:
+          - "on"
+        card:
+          type: glance
+          title: Systems on the network
+
+      - type: custom:mini-graph-card
+        name: Internet connectivity
+        icon: mdi:network
+        unit: ms
+        entities:
+          - entity:  sensor.internet_connectivity
+      - type: custom:mini-graph-card
+        name: Intranet
+        icon: mdi:network
+        unit: ms
+        entities:
+          - entity: sensor.pc_sylvain_connectivity
+          - entity: sensor.nas_connectivity
+          - entity: sensor.vero_4k_connectivity
 
       - type: entities
         title: Raspberry
@@ -199,7 +219,9 @@ views:
         entities:
           - entity: sensor.last_boot
           - entity: sensor.network_in_enxb827eb962127
+          - entity: sensor.network_throughput_in_enxb827eb962127
           - entity: sensor.network_out_enxb827eb962127
+          - entity: sensor.network_throughput_out_enxb827eb962127
           - entity: sensor.processor_use
           - entity: sensor.disk_use_percent
           - entity: sensor.disk_free
