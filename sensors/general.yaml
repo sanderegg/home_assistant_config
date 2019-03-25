@@ -2,3 +2,11 @@
 - platform: time_date
   display_options:
     - 'time_date'
+
+- platform: template
+  sensors:
+    internet_connectivity:
+      friendly_name: "Internet Connectivity"
+      entity_id:  binary_sensor.internet_connectivity
+      icon_template: mdi-network
+      value_template: "{{ states.binary_sensor.internet_connectivity.attributes.round_trip_time_avg }}"
