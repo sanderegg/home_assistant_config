@@ -1,23 +1,34 @@
 - platform: ping
   name: Sunrise Router
   host: !secret ip_router
+  scan_interval: 60
 
 - platform: ping
   name: PC Sylvain
   host: !secret ip_sylvain_pc
+  scan_interval: 60
 
 - platform: ping
   name: Vero 4K
   host: !secret ip_kodi_player
+  scan_interval: 60
 
 - platform: ping
   name: Kodi Switch
   host: !secret ip_kodi_switch
+  scan_interval: 60
 
 - platform: ping
   name: Printer Switch
   host: !secret ip_printer_switch
+  scan_interval: 60
 
 - platform: ping
   name: Printer Switch
   host: !secret ip_pcs_switch
+  scan_interval: 60
+
+- platform: ping
+  name: Internet Connectivity
+  host: 8.8.8.8
+  scan_interval: 60
