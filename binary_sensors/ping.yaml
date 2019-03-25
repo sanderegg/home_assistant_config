@@ -14,6 +14,11 @@
   scan_interval: 60
 
 - platform: ping
+  name: NAS
+  host: !secret ip_nas
+  scan_interval: 60
+
+- platform: ping
   name: Kodi Switch
   host: !secret ip_kodi_switch
   scan_interval: 60
@@ -24,7 +29,7 @@
   scan_interval: 60
 
 - platform: ping
-  name: Printer Switch
+  name: PC Switch
   host: !secret ip_pcs_switch
   scan_interval: 60
 
