@@ -123,6 +123,6 @@ system_health:
 
     
 device_tracker:
-  - platform: hue
+  - platform: huesensor
   
 custom_updater:
