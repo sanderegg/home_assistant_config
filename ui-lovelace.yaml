@@ -18,9 +18,7 @@ resources:
 title: Home
 views:
   - title: Main
-    badges:
-      - sensor.time_date
-      - sun.sun
+    badges: []
     id: main
     icon: mdi:home
     # panel: false
@@ -32,21 +30,24 @@ views:
           entities:
             - entity: scene.all_lights_off
               icon: mdi:flashlight-off
+              name: Lights Off
               tap_action:
                 action: call-service
                 service: scene.turn_on
                 service_data: 
                   entity_id: scene.all_lights_off
-        - type: glance
-          entities:
             - entity: switch.listen_music
               icon: mdi:music-note-bluetooth
+              name: Spotify
               tap_action:
                 action: toggle
             - entity: switch.watch_film
               icon: mdi:kodi
+              name: Kodi
               tap_action:
                 action: toggle
+        - type: glance
+          entities:
             - entity: switch.pcsylvain
               icon: mdi:laptop
               tap_action:
