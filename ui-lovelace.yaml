@@ -239,96 +239,51 @@ views:
           - entity: sensor.status_smart_sdc
           - entity: sensor.status_smart_sdd
           - entity: sensor.volume_used_volume_1
-      - type: horizontal-stack
-        cards:
-        - type: custom:bignumber-card
-          title: Bathroom Battery
-          entity: sensor.bathroom_fibaro_battery
-          scale: 30px
-          from: bottom
-          min: 0
-          max: 100
-          severity:
-            - value: 20
-              style: 'var(--label-badge-red)'
-            - value: 50
-              style: 'var(--label-badge-yellow)'
-            - value: 100
-              style: 'var(--label-badge-green)'
-        - type: custom:bignumber-card
-          title: Bedroom Battery
-          entity: sensor.bedroom_fibaro_battery
-          scale: 30px
-          from: bottom
-          min: 0
-          max: 100
-          severity:
-            - value: 20
-              style: 'var(--label-badge-red)'
-            - value: 50
-              style: 'var(--label-badge-yellow)'
-            - value: 100
-              style: 'var(--label-badge-green)'
-        - type: custom:bignumber-card
-          title: Entrance Battery
-          entity: sensor.entrance_fibaro_battery
-          scale: 30px
-          from: bottom
-          min: 0
-          max: 100
-          severity:
-            - value: 20
-              style: 'var(--label-badge-red)'
-            - value: 50
-              style: 'var(--label-badge-yellow)'
-            - value: 100
-              style: 'var(--label-badge-green)'
-        - type: custom:bignumber-card
-          title: Kitchen Battery
-          entity: sensor.kitchen_fibaro_battery
-          scale: 30px
-          from: bottom
-          min: 0
-          max: 100
-          severity:
-            - value: 20
-              style: 'var(--label-badge-red)'
-            - value: 50
-              style: 'var(--label-badge-yellow)'
-            - value: 100
-              style: 'var(--label-badge-green)'
-        - type: custom:bignumber-card
-          title: Livroom Battery
-          entity: sensor.livroom_fibaro_battery
-          scale: 30px
-          from: bottom
-          min: 0
-          max: 100
-          severity:
-            - value: 20
-              style: 'var(--label-badge-red)'
-            - value: 50
-              style: 'var(--label-badge-yellow)'
-            - value: 100
-              style: 'var(--label-badge-green)'
-      - type: horizontal-stack
-        cards:
-          - type: sensor
-            entity: sensor.kitchen_motion_sensor_luminance
-            graph: line
-            unit: lm
-          - type: sensor
-            entity: sensor.bathroom_motion_sensor_luminance
-            graph: line
-            unit: lm  
-          - type: sensor
-            entity: sensor.bedroom_motion_sensor_luminance
-            graph: line
-            unit: lm
-          - type: sensor
-            entity: sensor.livroom_motion_sensor_luminance
-            graph: line
-            unit: lm  
+      - type: custom:mini-graph-card
+        name: Fibaro batteries
+        icon: mdi:battery
+        unit: "%"
+        lower_bound: 0
+        upper_bound: 100
+        show:
+          labels: true
+          # fill: false
+          name_adaptive_color: true
+          graph: line
+        color_thresholds:
+          - value: 0
+            color: red
+          - value: 30
+            color: yellow
+          - value: 70
+            color: green
+
+        entities:
+        - entity: sensor.bathroom_fibaro_battery
+          # scale: 30px
+          # from: bottom
+          # min: 0
+          # max: 100
+          # severity:
+          #   - value: 20
+          #     style: 'var(--label-badge-red)'
+          #   - value: 50
+          #     style: 'var(--label-badge-yellow)'
+          #   - value: 100
+          #     style: 'var(--label-badge-green)'
+        - entity: sensor.bedroom_fibaro_battery
+        - entity: sensor.entrance_fibaro_battery
+        - entity: sensor.kitchen_fibaro_battery
+        - entity: sensor.livroom_fibaro_battery
+      - type: custom:mini-graph-card
+        name: Light intensity
+        icon: mdi:spotlight-beam
+        unit: lm
+        entities:
+          - entity: sensor.kitchen_motion_sensor_luminance
+          - entity: sensor.bathroom_motion_sensor_luminance
+          - entity: sensor.bedroom_motion_sensor_luminance
+          - entity: sensor.livroom_motion_sensor_luminance
 
   - title: Advanced
     icon: mdi:settings
@@ -346,9 +301,19 @@ views:
             - entity_id: "automation.*"
       - type: custom:monster-card
         show_empty: false
+        show_header_toggle: false
         card:
           type: entities
           title: 'Sensors'
         filter:
           include:
             - entity_id: "sensor.*"
+      - type: custom:monster-card
+        show_empty: false
+        show_header_toggle: false
+        card:
+          type: entities
+          title: 'Switches'
+        filter:
+          include:
+            - entity_id: "switch.*"
