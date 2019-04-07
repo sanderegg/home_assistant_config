@@ -24,159 +24,157 @@ views:
     # panel: false
     cards:
       - type: custom:compact-custom-header
-      - type: vertical-stack
-        cards:
-        - type: glance
-          entities:
-            - entity: scene.all_lights_off
-              icon: mdi:flashlight-off
-              name: Lights Off
-              tap_action:
-                action: call-service
-                service: scene.turn_on
-                service_data: 
-                  entity_id: scene.all_lights_off
-            - entity: switch.listen_music
-              icon: mdi:music-note-bluetooth
-              name: Spotify
-              tap_action:
-                action: toggle
-            - entity: switch.watch_film
-              icon: mdi:kodi
-              name: Kodi
-              tap_action:
-                action: toggle
-        - type: glance
-          entities:
-            - entity: switch.pcsylvain
-              icon: mdi:laptop
-              tap_action:
-                action: toggle
-            - entity: switch.printer_switch
-              icon: mdi:printer
-              tap_action:
-                action: toggle
-            - entity: switch.nas
-              icon: mdi:nas
-              tap_action:
-                action: toggle
-        - type: entities
-          title: Lights
-          entities:
-            - type: section
-            - type: custom:slider-entity-row
-              entity: light.kitchen_lights
-              toggle: true
-            - type: custom:slider-entity-row
-              entity: light.bathroom_lights
-              toggle: true
-            - type: custom:slider-entity-row
-              entity: light.entrance_dimmer_level
-              toggle: true
-            - type: custom:slider-entity-row
-              entity: light.bedroom_main
-              toggle: true
-            - type: custom:slider-entity-row
-              entity: light.livroom_main
-              toggle: true
+      - type: glance
+        entities:
+          - entity: scene.all_lights_off
+            icon: mdi:flashlight-off
+            name: Lights Off
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data: 
+                entity_id: scene.all_lights_off
+          - entity: switch.listen_music
+            icon: mdi:music-note-bluetooth
+            name: Spotify
+            tap_action:
+              action: toggle
+          - entity: switch.watch_film
+            icon: mdi:kodi
+            name: Kodi
+            tap_action:
+              action: toggle
+      - type: glance
+        entities:
+          - entity: switch.pcsylvain
+            icon: mdi:laptop
+            tap_action:
+              action: toggle
+          - entity: switch.printer_switch
+            icon: mdi:printer
+            tap_action:
+              action: toggle
+          - entity: switch.nas
+            icon: mdi:nas
+            tap_action:
+              action: toggle
+      - type: entities
+        title: Lights
+        entities:
+          - type: section
+          - type: custom:slider-entity-row
+            entity: light.kitchen_lights
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.bathroom_lights
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.entrance_dimmer_level
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.bedroom_main
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.livroom_main
+            toggle: true
 
-        - type: horizontal-stack
-          cards:
-          - type: custom:mini-graph-card
-            entities:
-              - entity: sensor.kitchen_motion_sensor_temperature
-                name: Kitchen / Livingroom Temperature
-            hours_to_show: 168
-            points_per_hour: 0.25
-            show:
-              labels: true
-              state: true
-              graph: line
-            color_thresholds:
-              - value: 10
-                color: blue
-              - value: 20
-                color: green
-              - value: 22
-                color: orange
-              - value: 23.5
-                color: red          
-        - type: horizontal-stack
-          cards:
-          - type: custom:mini-graph-card
-            entities:
-              - entity: sensor.entrance_motion_sensor_temperature
-            hours_to_show: 168
-            points_per_hour: 0.25
-            show:
-              labels: true
-              state: true
-              graph: line
-            color_thresholds:
-              - value: 10
-                color: blue
-              - value: 20
-                color: green
-              - value: 22
-                color: orange
-              - value: 23.5
-                color: red
-          - type: custom:mini-graph-card
-            entities:
-              - entity: sensor.bathroom_motion_sensor_temperature
-            hours_to_show: 168
-            points_per_hour: 0.25
-            show:
-              labels: true
-              state: true
-              graph: line
-            color_thresholds:
-              - value: 10
-                color: blue
-              - value: 20
-                color: green
-              - value: 22
-                color: orange
-              - value: 23.5
-                color: red
-        - type: horizontal-stack
-          cards:
-          - type: custom:mini-graph-card
-            entities:
-              - entity: sensor.bedroom_motion_sensor_temperature
-            hours_to_show: 168
-            points_per_hour: 0.25
-            show:
-              labels: true
-              state: true
-              graph: line
-            color_thresholds:
-              - value: 10
-                color: blue
-              - value: 20
-                color: green
-              - value: 22
-                color: orange
-              - value: 23.5
-                color: red
-          - type: custom:mini-graph-card
-            entities:
-              - entity: sensor.livroom_motion_sensor_temperature
-            hours_to_show: 168
-            points_per_hour: 0.25
-            show:
-              labels: true
-              state: true
-              graph: line
-            color_thresholds:
-              - value: 10
-                color: blue
-              - value: 20
-                color: green
-              - value: 22
-                color: orange
-              - value: 23.5
-                color: red
+      - type: horizontal-stack
+        cards:
+        - type: custom:mini-graph-card
+          entities:
+            - entity: sensor.kitchen_motion_sensor_temperature
+              name: Kitchen / Livingroom Temperature
+          hours_to_show: 168
+          points_per_hour: 0.25
+          show:
+            labels: true
+            state: true
+            graph: line
+          color_thresholds:
+            - value: 10
+              color: blue
+            - value: 20
+              color: green
+            - value: 22
+              color: orange
+            - value: 23.5
+              color: red          
+      - type: horizontal-stack
+        cards:
+        - type: custom:mini-graph-card
+          entities:
+            - entity: sensor.entrance_motion_sensor_temperature
+          hours_to_show: 168
+          points_per_hour: 0.25
+          show:
+            labels: true
+            state: true
+            graph: line
+          color_thresholds:
+            - value: 10
+              color: blue
+            - value: 20
+              color: green
+            - value: 22
+              color: orange
+            - value: 23.5
+              color: red
+        - type: custom:mini-graph-card
+          entities:
+            - entity: sensor.bathroom_motion_sensor_temperature
+          hours_to_show: 168
+          points_per_hour: 0.25
+          show:
+            labels: true
+            state: true
+            graph: line
+          color_thresholds:
+            - value: 10
+              color: blue
+            - value: 20
+              color: green
+            - value: 22
+              color: orange
+            - value: 23.5
+              color: red
+      - type: horizontal-stack
+        cards:
+        - type: custom:mini-graph-card
+          entities:
+            - entity: sensor.bedroom_motion_sensor_temperature
+          hours_to_show: 168
+          points_per_hour: 0.25
+          show:
+            labels: true
+            state: true
+            graph: line
+          color_thresholds:
+            - value: 10
+              color: blue
+            - value: 20
+              color: green
+            - value: 22
+              color: orange
+            - value: 23.5
+              color: red
+        - type: custom:mini-graph-card
+          entities:
+            - entity: sensor.livroom_motion_sensor_temperature
+          hours_to_show: 168
+          points_per_hour: 0.25
+          show:
+            labels: true
+            state: true
+            graph: line
+          color_thresholds:
+            - value: 10
+              color: blue
+            - value: 20
+              color: green
+            - value: 22
+              color: orange
+            - value: 23.5
+              color: red
         
               
 
@@ -305,16 +303,17 @@ views:
         show_header_toggle: false
         card:
           type: entities
-          title: 'Sensors'
+          title: 'Switches'
         filter:
           include:
-            - entity_id: "sensor.*"
+            - entity_id: "switch.*"
       - type: custom:monster-card
         show_empty: false
         show_header_toggle: false
         card:
           type: entities
-          title: 'Switches'
+          title: 'Sensors'
         filter:
           include:
-            - entity_id: "switch.*"
+            - entity_id: "sensor.*"
+      
