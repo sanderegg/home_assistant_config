@@ -186,8 +186,9 @@ views:
       - type: entity-filter
         entities:
           - binary_sensor.sunrise_router
-          - binary_sensor.pc_sylvain            
+          - binary_sensor.pc_sylvain
           - binary_sensor.vero_4k
+          - binary_sensor.nas
           - binary_sensor.kodi_switch
           - binary_sensor.printer_switch
           - binary_sensor.pc_switch
