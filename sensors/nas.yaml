@@ -1,5 +1,6 @@
 - platform: synologydsm
   host: !secret ip_nas
+  port: !secret ui_port_nas
   username: !secret separate_user_nas
   password: !secret separate_user_password
   monitored_conditions:
