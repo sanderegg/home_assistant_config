@@ -14,6 +14,8 @@ resources:
     type: module
   - url: /customcards/github/maykar/compact-custom-header.js?track=true
     type: module
+  - url: /local/mini-media-player-bundle.js?v=1.1.3
+    type: module
 
 title: Home
 views:
@@ -35,7 +37,7 @@ views:
               service_data: 
                 entity_id: scene.all_lights_off
           - entity: switch.listen_music
-            icon: mdi:music-note-bluetooth
+            icon: mdi:spotify
             name: Spotify
             tap_action:
               action: toggle
@@ -44,6 +46,10 @@ views:
             name: Kodi
             tap_action:
               action: toggle
+      - type: custom:mini-media-player
+        entity: media_player.spotify
+        icon: mdi:spotify
+        artwork: cover
       - type: glance
         entities:
           - entity: switch.pcsylvain
@@ -211,8 +217,15 @@ views:
         entities:
           - entity: sensor.pc_sylvain_connectivity
           - entity: sensor.nas_connectivity
-          - entity: sensor.vero_4k_connectivity
-
+          - entity: sensor.vero_4k_connectivity      
+      - type: custom:mini-media-player
+        entity: media_player.verospotify
+        icon: mdi:spotify
+        artwork: cover
+        
+      - type: custom:mini-media-player
+        entity: media_player.kodi
+        icon: mdi:kodi
       - type: entities
         title: Raspberry
         show_header_toggle: false
