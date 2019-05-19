@@ -2,5 +2,5 @@ media_players:
   view: no
   name: Media Players
   entities:
-      - media_player.kodi
+      - media_player.raw_kodi
       - media_player.verospotify

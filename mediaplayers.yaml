@@ -1,15 +1,30 @@
 - platform: kodi
+  name: raw_kodi
   host: !secret ip_kodi_player
   port: !secret port_kodi_player
-  turn_on_action:
-    service: homeassistant.turn_on
-    data:
-      entity_id: switch.watch_film
-  turn_off_action:
-    service: homeassistant.turn_off
-    data:
-      entity_id: switch.watch_film
-  
+
+- platform: universal
+  name: Kodi
+  children:
+    - media_player.raw_kodi
+  state_template: >
+    {% if is_state('switch.kodi_switch', 'off') or is_state('switch.projector_cli', 'off') %}
+    off
+    {% else %}
+    {{ states('media_player.raw_kodi') }}
+    {% endif %}
+  commands:
+    turn_on:
+      service: switch.turn_on
+      data:
+        entity_id: switch.watch_film
+    turn_off:
+      service: switch.turn_off
+      data:
+        entity_id: switch.watch_film
+  attributes:
+    state: switch.watch_film
+    
 - platform: spotify
   client_id: !secret client_id_spotify_player
   client_secret: !secret secret_spotify_player
@@ -25,7 +40,7 @@
     off
     {% else %}
     {{ states('media_player.verospotify') }}
-    {% endif %}        
+    {% endif %}
   commands:
     turn_on:
       service: switch.turn_on
@@ -34,4 +49,6 @@
     turn_off:
       service: media_player.media_stop
       data:
-        entity_id: media_player.verospotify    
+        entity_id: media_player.verospotify
+  attributes:
+    state: switch.kodi_switch

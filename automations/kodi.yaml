@@ -1,7 +1,7 @@
 # - id: kodi paused
 #   alias: Media player paused
 #   trigger:
-#   - entity_id: media_player.kodi
+#   - entity_id: media_player.raw_kodi
 #     from: playing
 #     platform: state
 #     to: paused
@@ -20,7 +20,7 @@
 # - id: kodi stopped
 #   alias: Media player stopped
 #   trigger:
-#   - entity_id: media_player.kodi
+#   - entity_id: media_player.raw_kodi
 #     platform: state
 #     to: idle
 #   condition:
@@ -38,7 +38,7 @@
 # - id: kodi playing
 #   alias: Media player playing
 #   trigger:
-#   - entity_id: media_player.kodi
+#   - entity_id: media_player.raw_kodi
 #     platform: state
 #     to: playing
 #   condition:
@@ -64,18 +64,18 @@
   condition:
   - condition: state
     state: 'idle'
-    entity_id: media_player.spotify
+    entity_id: media_player.raw_spotify
   action:
     service: media_player.kodi_call_method
     data:
-      entity_id: media_player.kodi
+      entity_id: media_player.raw_kodi
       method: System.Shutdown
 
 - id: switch off kodi when music goes off
   alias: Switch off Kodi when music goes off
   trigger:
     platform: state
-    entity_id: media_player.spotify
+    entity_id: media_player.raw_spotify
     to: 'idle'
     for:
       minutes: 20
@@ -86,14 +86,14 @@
   action:
     service: media_player.kodi_call_method
     data:
-      entity_id: media_player.kodi
+      entity_id: media_player.raw_kodi
       method: System.Shutdown
 
 - id: switch off kodi switch when kodi switches off
   alias: Switch off Kodi switch when Kodi switches off
   trigger:
     platform: state
-    entity_id: media_player.kodi
+    entity_id: media_player.raw_kodi
     to: 'off'
     for:
       minutes: 5
@@ -106,7 +106,7 @@
   alias: Switch off projector when Kodi switches off for 1 minute
   trigger:
       platform: state
-      entity_id: media_player.kodi
+      entity_id: media_player.raw_kodi
       to: 'off'
       for:
           minutes: 1

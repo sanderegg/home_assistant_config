@@ -36,20 +36,13 @@ views:
               service: scene.turn_on
               service_data: 
                 entity_id: scene.all_lights_off
-          - entity: switch.listen_music
-            icon: mdi:spotify
-            name: Spotify
-            tap_action:
-              action: toggle
-          - entity: switch.watch_film
-            icon: mdi:kodi
-            name: Kodi
-            tap_action:
-              action: toggle
       - type: custom:mini-media-player
         entity: media_player.spotify
         icon: mdi:spotify
         artwork: cover
+      - type: custom:mini-media-player
+        entity: media_player.kodi
+        icon: mdi:kodi
       - type: glance
         entities:
           - entity: switch.pcsylvain
@@ -217,15 +210,7 @@ views:
         entities:
           - entity: sensor.pc_sylvain_connectivity
           - entity: sensor.nas_connectivity
-          - entity: sensor.vero_4k_connectivity      
-      - type: custom:mini-media-player
-        entity: media_player.verospotify
-        icon: mdi:spotify
-        artwork: cover
-        
-      - type: custom:mini-media-player
-        entity: media_player.kodi
-        icon: mdi:kodi
+          - entity: sensor.vero_4k_connectivity
       - type: entities
         title: Raspberry
         show_header_toggle: false
