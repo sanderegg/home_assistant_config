@@ -20,9 +20,14 @@
     for:
       minutes: 5
   condition:
-  - condition: state
-    state: 'idle'
-    entity_id: media_player.spotify
+    condition: or
+    conditions:
+      - condition: state
+        state: 'idle'
+        entity_id: media_player.spotify
+      - condition: state
+        state: 'paused'
+        entity_id: media_player.spotify
   action:
     service: switch.turn_off
     data:
@@ -31,11 +36,21 @@
 - id: switch off kodi when music goes off
   alias: Switch off Kodi when music goes off
   trigger:
-    platform: state
-    entity_id: media_player.spotify
-    to: 'idle'
-    for:
-      minutes: 20
+    - platform: state
+      entity_id: media_player.spotify
+      to: 'off'
+      for:
+        minutes: 20
+    - platform: state
+      entity_id: media_player.spotify
+      to: 'idle'
+      for:
+        minutes: 20
+    - platform: state
+      entity_id: media_player.spotify
+      to: 'paused'
+      for:
+        minutes: 20
   condition:
   - condition: state
     state: 'off'    
