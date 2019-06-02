@@ -1,60 +1,18 @@
-# - id: kodi paused
-#   alias: Media player paused
-#   trigger:
-#   - entity_id: media_player.raw_kodi
-#     from: playing
-#     platform: state
-#     to: paused
-#   condition:
-#   - condition: state
-#     entity_id: sun.sun
-#     state: below_horizon
-#   action:
-#   - data:
-#       entity_id: automation.switch_light_on_in_living_room
-#     service: automation.turn_off
-#   - data:
-#       entity_id: scene.watching_movies_paused
-#     service: scene.turn_on
+- id: switch off projector when watch film switch goes off
+  alias: Switch off projector when watch film switch goes off 10 seconds
+  trigger:
+      platform: state
+      entity_id: switch.watch_film
+      to: 'off'
+      for:
+          seconds: 10
+  action:
+      service: switch.turn_off
+      data:
+          entity_id: switch.projector_cli
 
-# - id: kodi stopped
-#   alias: Media player stopped
-#   trigger:
-#   - entity_id: media_player.raw_kodi
-#     platform: state
-#     to: idle
-#   condition:
-#   - condition: state
-#     entity_id: sun.sun
-#     state: below_horizon
-#   action:
-#   - data:
-#       entity_id: automation.switch_light_on_in_living_room
-#     service: automation.turn_on
-#   - data:
-#       entity_id: scene.living_room_normal
-#     service: scene.turn_on  
-
-# - id: kodi playing
-#   alias: Media player playing
-#   trigger:
-#   - entity_id: media_player.raw_kodi
-#     platform: state
-#     to: playing
-#   condition:
-#   - condition: state
-#     entity_id: sun.sun
-#     state: below_horizon
-#   action:
-#   - data:
-#       entity_id: automation.switch_light_on_in_living_room
-#     service: automation.turn_off
-#   - data:
-#       entity_id: scene.watching_movies
-#     service: scene.turn_on  
-
-- id: switch off kodi when video goes off
-  alias: Switch off Kodi when video goes off
+- id: switch off kodi switch when watch film switch goes off
+  alias: Switch off Kodi switch 5minutes after Kodi switches off
   trigger:
     platform: state
     entity_id: switch.watch_film
@@ -64,18 +22,17 @@
   condition:
   - condition: state
     state: 'idle'
-    entity_id: media_player.raw_spotify
+    entity_id: media_player.spotify
   action:
-    service: media_player.kodi_call_method
+    service: switch.turn_off
     data:
-      entity_id: media_player.raw_kodi
-      method: System.Shutdown
+      entity_id: switch.kodi_switch
 
 - id: switch off kodi when music goes off
   alias: Switch off Kodi when music goes off
   trigger:
     platform: state
-    entity_id: media_player.raw_spotify
+    entity_id: media_player.spotify
     to: 'idle'
     for:
       minutes: 20
@@ -84,34 +41,6 @@
     state: 'off'    
     entity_id: switch.watch_film
   action:
-    service: media_player.kodi_call_method
-    data:
-      entity_id: media_player.raw_kodi
-      method: System.Shutdown
-
-- id: switch off kodi switch when kodi switches off
-  alias: Switch off Kodi switch when Kodi switches off
-  trigger:
-    platform: state
-    entity_id: media_player.raw_kodi
-    to: 'off'
-    for:
-      minutes: 5
-  action:
     service: switch.turn_off
     data:
       entity_id: switch.kodi_switch
-
-- id: switch off projector when kodi switches off
-  alias: Switch off projector when Kodi switches off for 1 minute
-  trigger:
-      platform: state
-      entity_id: media_player.raw_kodi
-      to: 'off'
-      for:
-          minutes: 1
-  action:
-      service: switch.turn_off
-      data:
-          entity_id: switch.projector_cli
-            
