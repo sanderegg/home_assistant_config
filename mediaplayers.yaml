@@ -47,7 +47,7 @@
       data:
         entity_id: switch.kodi_switch
     turn_off:
-      service: media_player.media_stop
+      service: media_player.media_play_pause
       data:
         entity_id: media_player.verospotify
   attributes:
