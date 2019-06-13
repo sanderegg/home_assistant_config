@@ -36,8 +36,10 @@
   children:
     - media_player.verospotify
   state_template: >
-    {% if is_state('switch.kodi_switch', 'off') or state_attr('media_player.verpspotify', 'source') != "raspotify (osmc)"  %}
+    {% if is_state('switch.kodi_switch', 'off')  %}
     off
+    {% elif state_attr('media_player.verospotify', 'source') != 'raspotify (osmc)' %}
+    idle
     {% else %}
     {{ states('media_player.verospotify') }}
     {% endif %}
