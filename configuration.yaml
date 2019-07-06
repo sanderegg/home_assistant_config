@@ -1,3 +1,4 @@
+
 homeassistant:
   # Name of the location where Home Assistant is running
   name: !secret hass_name
@@ -83,7 +84,7 @@ light:
     name: Kitchen Lights
     entities:
       - light.kitchen_dimmer_level
-      - light.strip_cuisine
+      - light.kitchen_led_strip
   - platform: group
     name: Bathroom Lights
     entities:
@@ -116,16 +117,16 @@ input_boolean:
 
 system_health:
 
-duckdns:
-  domain: !secret duck_dns_domain
-  access_token: !secret duck_dns_token
+# duckdns:
+#   domain: !secret duck_dns_domain
+#   access_token: !secret duck_dns_token
 
 
 # Hue sensors (https://github.com/robmarkcole/Hue-sensors-HASS):, sensor is in sensors folder
 
     
-device_tracker:
-  - platform: huesensor
+# device_tracker:
+#   - platform: huesensor
   
 custom_updater:
   card_urls:
