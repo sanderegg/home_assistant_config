@@ -125,6 +125,6 @@ system_health:
   
 hacs:
   token: !secret hacs_token
-  appdameon: true
+  appdaemon: true
   python_script: true
-  them: true
+  theme: true
