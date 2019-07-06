@@ -117,11 +117,8 @@ input_boolean:
 
 system_health:
 
-# Hue sensors (https://github.com/robmarkcole/Hue-sensors-HASS):, sensor is in sensors folder
-
-    
-# device_tracker:
-#   - platform: huesensor
+device_tracker:
+  - platform: huesensor
   
 hacs:
   token: !secret hacs_token
