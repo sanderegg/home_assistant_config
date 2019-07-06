@@ -15,3 +15,6 @@
       arg: enxb827eb962127
     - type: processor_use
     - type: last_boot
+
+- platform: rpi_power
+  text_state: true
