@@ -28,8 +28,8 @@ lovelace:
   mode: yaml
 
 http:
-  # ssl_certificate: /ssl/fullchain.pem
-  # ssl_key: /ssl/privkey.pem
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
 
 
 api:
