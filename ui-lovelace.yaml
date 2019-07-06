@@ -287,7 +287,9 @@ views:
     icon: mdi:settings
     id: advanced
     cards:
-      # - type: custom:compact-custom-header
+      - type: glance
+        entities:
+            - entity: sensor.hacs
       - type: custom:monster-card
         show_empty: false
         card:
