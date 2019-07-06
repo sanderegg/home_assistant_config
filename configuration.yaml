@@ -117,20 +117,14 @@ input_boolean:
 
 system_health:
 
-# duckdns:
-#   domain: !secret duck_dns_domain
-#   access_token: !secret duck_dns_token
-
-
 # Hue sensors (https://github.com/robmarkcole/Hue-sensors-HASS):, sensor is in sensors folder
 
     
 # device_tracker:
 #   - platform: huesensor
   
-custom_updater:
-  card_urls:
-    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
-    # - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
-  component_urls:
-    - https://raw.githubusercontent.com/robmarkcole/Hue-sensors-HASS/master/custom_updater.json
+hacs:
+  token: !secret hacs_token
+  appdameon: true
+  python_script: true
+  them: true
