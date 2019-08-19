@@ -228,15 +228,15 @@ views:
         title: NAS Synology
         show_header_toggle: false
         entities:
-          - entity: sensor.network_up
-          - entity: sensor.network_down
-          - entity: sensor.cpu_load_total
-          - entity: sensor.memory_usage_real
-          - entity: sensor.status_smart_sda
-          - entity: sensor.status_smart_sdb
-          - entity: sensor.status_smart_sdc
-          - entity: sensor.status_smart_sdd
-          - entity: sensor.volume_used_volume_1
+          - entity: sensor.synology_dsm_network_up
+          - entity: sensor.synology_dsm_network_down
+          - entity: sensor.synology_dsm_cpu_load_total
+          - entity: sensor.synology_dsm_memory_usage_real
+          - entity: sensor.synology_dsm_status_smart_sda
+          - entity: sensor.synology_dsm_status_smart_sdb
+          - entity: sensor.synology_dsm_status_smart_sdc
+          - entity: sensor.synology_dsm_status_smart_sdd
+          - entity: sensor.synology_dsm_volume_used_volume_1
       - type: custom:mini-graph-card
         name: Fibaro batteries
         icon: mdi:battery
