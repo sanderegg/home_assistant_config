@@ -128,6 +128,7 @@ views:
             - value: 23.5
               color: red
         - type: custom:mini-graph-card
+          name: Bathroom
           entities:
             - entity: sensor.bathroom_motion_sensor_temperature
               name: Fibaro
