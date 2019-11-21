@@ -210,7 +210,18 @@ views:
               color: orange
             - value: 23.5
               color: red
-        
+      - type: thermostat
+        entity: climate.cuisine_salon
+        name: Kitchen/Salon
+      - type: thermostat
+        entity: climate.parents
+        name: Bedroom
+      - type: thermostat
+        entity: climate.liv
+        name: Liv room
+      - type: thermostat
+        entity: climate.salle_de_bain
+        name: Bathroom
               
 
   - title: Monitoring
