@@ -28,9 +28,6 @@ lovelace:
   mode: yaml
 
 http:
-  # ssl_certificate: !secret ssl_certificate
-  # ssl_key: !secret ssl_key_path
-  # base_url: !secret home_address
 
 api:
 updater:
@@ -116,3 +113,7 @@ hacs:
   appdaemon: true
   python_script: true
   theme: true
+
+tado:
+  username: !secret tado_username
+  password: !secret tado_password
