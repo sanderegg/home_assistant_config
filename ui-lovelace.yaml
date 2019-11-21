@@ -82,13 +82,18 @@ views:
         - type: custom:mini-graph-card
           entities:
             - entity: sensor.kitchen_motion_sensor_temperature
-              name: Kitchen / Livingroom Temperature
+              name: Fibaro
             - entity: sensor.cuisine_salon_temperature
               name: Thermostat
+            - entity: sensor.cuisine_salon_humidity
+              name: Humidity
+              color: blue
+              y_axis: secondary
           hours_to_show: 168
           points_per_hour: 0.25
           show:
             labels: true
+            labels_secondary: true
             state: true
             graph: line
           color_thresholds:
