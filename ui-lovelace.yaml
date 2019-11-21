@@ -83,6 +83,8 @@ views:
           entities:
             - entity: sensor.kitchen_motion_sensor_temperature
               name: Kitchen / Livingroom Temperature
+            - entity: sensor.cuisine_salon_temperature
+              name: Thermostat
           hours_to_show: 168
           points_per_hour: 0.25
           show:
