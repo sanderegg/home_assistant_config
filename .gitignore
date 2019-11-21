@@ -31,3 +31,4 @@ __pycache__
 www/github
 *.js
 .vscode/sftp.json
+custom_components/
