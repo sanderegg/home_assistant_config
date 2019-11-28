@@ -258,6 +258,16 @@ views:
           - entity: sensor.pc_sylvain_connectivity
           - entity: sensor.nas_connectivity
           - entity: sensor.vero_4k_connectivity
+      - type: custom:mini-graph-card
+        title: Raspberry
+        icon: mdi:raspberry
+        entities:
+          - entity: sensor.processor_use
+          - entity: sensor.disk_use_percent
+          - entity: sensor.memory_free
+            y_axis: secondary
+          - entity: sensor.disk_free
+            y_axis: secondary
       - type: entities
         title: Raspberry
         show_header_toggle: false
@@ -271,6 +281,18 @@ views:
           - entity: sensor.disk_use_percent
           - entity: sensor.disk_free
           - entity: sensor.memory_free
+      - type: custom:mini-graph-card
+        title: NAS Synology
+        icon: mdi:nas
+        entities:
+          - entity: sensor.synology_dsm_network_up
+          - entity: sensor.synology_dsm_network_down
+          - entity: sensor.synology_dsm_cpu_load_total
+            y_axis: secondary
+          - entity: sensor.synology_dsm_memory_usage_real
+            y_axis: secondary
+          - entity: sensor.synology_dsm_volume_used_volume_1
+            y_axis: secondary
       - type: entities
         title: NAS Synology
         show_header_toggle: false
