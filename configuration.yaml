@@ -27,6 +27,9 @@ config:
 lovelace:
   mode: yaml
 
+pi_hole:
+  host: localhost:4865
+  
 http:
 
 api:
