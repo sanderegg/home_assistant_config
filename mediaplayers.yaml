@@ -30,6 +30,11 @@
   client_secret: !secret secret_spotify_player
   name: VeroSpotify
 
+- platform: spotify
+  client_id: !secret client_id_spotify_player_paule
+  client_secret: !secret secret_spotify_player_paule
+  name: VeroSpotify_Paule
+
 # add the universal mediaplayer to override the turn_on/off actions not available in spotify component
 - platform: universal
   name: Spotify
@@ -38,10 +43,12 @@
   state_template: >
     {% if is_state('switch.kodi_switch', 'off')  %}
     off
-    {% elif state_attr('media_player.verospotify', 'source') != 'raspotify (osmc)' %}
+    {% elif state_attr('media_player.verospotify', 'source') != 'raspotify (osmc)' and state_attr('media_player.verospotify_paule', 'source') != 'raspotify (osmc)'%}
     idle
-    {% else %}
+    {% elif state_attr('media_player.verospotify', 'source') == 'raspotify (osmc)' %}
     {{ states('media_player.verospotify') }}
+    {% else %}
+    {{ states('media_player.verospotify_paule') }}
     {% endif %}
   commands:
     turn_on:
