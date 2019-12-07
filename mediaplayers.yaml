@@ -29,11 +29,13 @@
   client_id: !secret client_id_spotify_player
   client_secret: !secret secret_spotify_player
   name: VeroSpotify
+  cache_path: /config/verospotity.cache
 
 - platform: spotify
   client_id: !secret client_id_spotify_player_paule
   client_secret: !secret secret_spotify_player_paule
   name: VeroSpotify_Paule
+  cache_path: /config/verospotity_paule.cache
 
 # add the universal mediaplayer to override the turn_on/off actions not available in spotify component
 - platform: universal
