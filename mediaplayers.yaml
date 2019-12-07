@@ -48,8 +48,8 @@
     {% if is_state('switch.kodi_switch', 'off')  %}
     off
     {% elif state_attr('media_player.verospotify', 'source') == 'raspotify (osmc)' or 
-        state_attr('media_player.verospotify2', 'source') == 'raspotify (osmc)' -%}
-      {% if is_state('media_player.verospotify', 'playing') or is_state('media_player.verospotify_2', 'playing') %}
+        state_attr('media_player.verospotify_paule', 'source') == 'raspotify (osmc)' -%}
+      {% if is_state('media_player.verospotify', 'playing') or is_state('media_player.verospotify_paule', 'playing') %}
       playing
       {% endif %}
     {% else %}
