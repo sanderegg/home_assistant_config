@@ -31,13 +31,13 @@
   client_secret: !secret secret_spotify_player
   name: Sylvain Spotify
   # must have a cache path with absolute path to make it work https://community.home-assistant.io/t/support-for-multiple-spotify-accounts/16117/18
-  cache_path: /config/.sylvain_spotify.cache
+  cache_path: .sylvain_spotify.cache
 
 - platform: spotify
   client_id: !secret client_id_spotify_player_paule
   client_secret: !secret secret_spotify_player_paule
   name: Paule Spotify
-  cache_path: /config/.paule_spotify.cache
+  cache_path: .paule_spotify.cache
 
 # add the universal mediaplayer to override the turn_on/off actions not available in spotify component
 - platform: universal
