@@ -47,10 +47,11 @@
   state_template: >
     {% if is_state('switch.kodi_switch', 'off')  %}
     off
-    {% elif state_attr('media_player.verospotify', 'source') == 'raspotify (osmc)' %}
-    {{ states('media_player.verospotify') }}
-    {% elif state_attr('media_player.verospotify2', 'source') == 'raspotify (osmc)' %}
-    {{ states('media_player.verospotify_2') }}
+    {% elif state_attr('media_player.verospotify', 'source') == 'raspotify (osmc)' or 
+        state_attr('media_player.verospotify2', 'source') == 'raspotify (osmc)' -%}
+      {% if is_state('media_player.verospotify', 'playing') or is_state('media_player.verospotify_2', 'playing') %}
+      playing
+      {% endif %}
     {% else %}
     idle
     {% endif %}
