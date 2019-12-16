@@ -1,7 +1,7 @@
 - platform: wake_on_lan
-  mac_address: !secret mac_nas
+  mac: !secret mac_nas
   name: NAS WOL
-  host: !secret ip_nas
+  broadcast_address: !secret ip_nas
 
 - platform: template
   switches:
