@@ -1,5 +1,5 @@
 - platform: wake_on_lan
-  mac_address: !secret mac_sylvain_pc
+  mac: !secret mac_sylvain_pc
   name: PC Sylvain WOL
   host: !secret ip_sylvain_pc
 
