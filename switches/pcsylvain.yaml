@@ -1,7 +1,7 @@
 - platform: wake_on_lan
   mac: !secret mac_sylvain_pc
   name: PC Sylvain WOL
-  broadcast_address: !secret ip_sylvain_pc
+  host: !secret ip_sylvain_pc
 
 - platform: template
   switches:
