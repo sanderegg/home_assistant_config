@@ -32,6 +32,8 @@ pi_hole:
   
 http:
 
+wake_on_lan:
+
 api:
 updater:
   # Optional, allows Home Assistant developers to focus on popular components.
