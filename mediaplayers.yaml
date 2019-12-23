@@ -52,6 +52,8 @@
         state_attr('media_player.paule_spotify', 'source') == 'raspotify (osmc)' -%}
       {% if is_state('media_player.sylvain_spotify', 'playing') or is_state('media_player.paule_spotify', 'playing') %}
       playing
+      {% else %}
+      idle
       {% endif %}
     {% else %}
     idle
