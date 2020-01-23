@@ -24,12 +24,5 @@
 
   - name: All Lights Off
     entities:
-      group.all_lights:
+      light.all:
         state: off      
-        
-  - name: All Off
-    entities:
-      group.all_lights:
-        state: off
-      group.all_switches:
-        state: off
