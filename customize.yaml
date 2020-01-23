@@ -1,7 +1,0 @@
-group.all_switches:
-  hidden: false
-  control: hidden
-group.all_lights:
-  hidden: false
-group.all_automations:
-  hidden: false

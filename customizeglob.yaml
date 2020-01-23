@@ -1,8 +1,0 @@
-"sensor.*sourcenodeid*":
-  hidden: true
-
-"sensor.*alarm_level*":
-  hidden: true
-
-"sensor.*alarm_type*":
-  hidden: true
