@@ -91,13 +91,6 @@ automation: !include_dir_merge_list automations/
 script: !include_dir_merge_named scripts/
 binary_sensor: !include_dir_merge_list binary_sensors/
 
-panel_custom:
-  - name: floorplan
-    sidebar_title: Floorplan
-    sidebar_icon: mdi:home
-    url_path: floorplan
-    config: !include floorplan.yaml
-
 # dark mode
 input_boolean:
   night_mode:

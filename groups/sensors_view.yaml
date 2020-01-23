@@ -1,5 +1,0 @@
-sensorss:
-  view: yes
-  name: Sensors
-  entities:
-      - group.graphs

@@ -1,9 +1,0 @@
-living_room:
-  view: no
-  name: Living Room
-  control: hidden
-  entities:
-      - media_player.spotify
-      - switch.watch_film
-      - switch.pcsylvain
-      - scene.all_lights_off
