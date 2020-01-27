@@ -33,9 +33,9 @@ views:
             name: Lights Off
             tap_action:
               action: call-service
-              service: scene.turn_on
+              service: light.turn_off
               service_data: 
-                entity_id: scene.all_lights_off
+                entity_id: all
       - type: custom:mini-media-player
         entity: media_player.spotify
         icon: mdi:spotify
