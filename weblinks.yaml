@@ -1,7 +1,0 @@
-entities:
-  - name: Router
-    url: !secret url_router
-  - name: NAS
-    url: !secret url_nas
-  - name: Resilio Sync on NAS
-    url: !secret url_resiliosync

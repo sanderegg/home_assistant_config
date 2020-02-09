@@ -81,7 +81,6 @@ light:
       - light.bathroom_dimmer_level
 
 media_player: !include mediaplayers.yaml
-weblink: !include weblinks.yaml   
 shell_command: !include shell_commands.yaml
 sensor: !include_dir_merge_list sensors/
 switch: !include_dir_merge_list switches/
