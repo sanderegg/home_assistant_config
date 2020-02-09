@@ -111,3 +111,7 @@ hacs:
 tado:
   username: !secret tado_username
   password: !secret tado_password
+
+spotify:
+  client_id: !secret client_id_spotify_player
+  client_secret: !secret secret_spotify_player
