@@ -36,10 +36,10 @@ views:
               service: light.turn_off
               service_data: 
                 entity_id: all
-      # - type: custom:mini-media-player
-      #   entity: media_player.spotify
-      #   icon: mdi:spotify
-      #   artwork: cover
+      - type: custom:mini-media-player
+        entity: media_player.spotify
+        icon: mdi:spotify
+        artwork: cover
       - type: custom:mini-media-player
         entity: media_player.kodi
         icon: mdi:kodi
