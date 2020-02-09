@@ -25,11 +25,11 @@
   attributes:
     state: switch.watch_film
     
-# # Note: needs 2 separate activations from 2 separate browser or different IPs maybe
-# - platform: spotify
-#   client_id: !secret client_id_spotify_player
-#   client_secret: !secret secret_spotify_player
-#   name: Sylvain Spotify
+# Note: needs 2 separate activations from 2 separate browser or different IPs maybe
+- platform: spotify
+  client_id: !secret client_id_spotify_player
+  client_secret: !secret secret_spotify_player
+  # name: Sylvain Spotify
 #   # must have a cache path with absolute path to make it work https://community.home-assistant.io/t/support-for-multiple-spotify-accounts/16117/18
 #   cache_path: /config/.sylvain_spotify.cache
 
