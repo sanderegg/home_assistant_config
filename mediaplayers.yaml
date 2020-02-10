@@ -34,8 +34,8 @@
     {% if is_state('switch.kodi_switch', 'off')  %}
     off
     {% elif state_attr('media_player.spotify_slyou666', 'source') == 'raspotify (osmc)' or 
-        state_attr('media_player.paule_spotify', 'source') == 'raspotify (osmc)' -%}
-      {% if is_state('media_player.spotify_slyou666', 'playing') or is_state('media_player.paule_spotify', 'playing') %}
+        state_attr('media_player.spotify_sly666999', 'source') == 'raspotify (osmc)' -%}
+      {% if is_state('media_player.spotify_slyou666', 'playing') or is_state('media_player.spotify_sly666999', 'playing') %}
       playing
       {% else %}
       idle
