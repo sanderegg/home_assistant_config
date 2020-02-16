@@ -36,13 +36,26 @@ views:
               service: light.turn_off
               service_data: 
                 entity_id: all
-      - type: custom:mini-media-player
-        entity: media_player.spotify
-        icon: mdi:spotify
-        artwork: cover
-      - type: custom:mini-media-player
-        entity: media_player.kodi
-        icon: mdi:kodi
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-media-player
+            entity: media_player.spotify
+            icon: mdi:spotify
+            artwork: cover
+            info: short
+            toggle_power: false
+            hide:
+              mute: true
+              power_state: false
+          - type: custom:mini-media-player
+            entity: media_player.kodi
+            icon: mdi:kodi
+            artwork: cover
+            info: short
+            toggle_power: false
+            hide:
+              mute: true
+              power_state: false
       - type: glance
         entities:
           - entity: switch.pcsylvain
@@ -154,7 +167,7 @@ views:
               color: orange
             - value: 23.5
               color: red
-      - type: horizontal-stack
+      - type: horizontal-stack      
         cards:
         - type: custom:mini-graph-card
           name: Bedroom
@@ -209,19 +222,23 @@ views:
             - value: 22
               color: orange
             - value: 23.5
-              color: red
-      - type: thermostat
-        entity: climate.cuisine_salon
-        name: Kitchen/Salon
-      - type: thermostat
-        entity: climate.parents
-        name: Bedroom
-      - type: thermostat
-        entity: climate.liv
-        name: Liv room
-      - type: thermostat
-        entity: climate.salle_de_bain
-        name: Bathroom
+              color: red     
+      - type: horizontal-stack
+        cards:
+          - type: thermostat
+            entity: climate.cuisine_salon
+            name: Kitchen/Salon
+          - type: thermostat
+            entity: climate.parents
+            name: Bedroom
+      - type: horizontal-stack
+        cards:
+          - type: thermostat
+            entity: climate.liv
+            name: Liv room
+          - type: thermostat
+            entity: climate.salle_de_bain
+            name: Bathroom
               
 
   - title: Monitoring
