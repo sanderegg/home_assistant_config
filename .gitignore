@@ -20,7 +20,6 @@ ha.code-workspace
 ip_bans.yaml
 secrets.yaml
 known_devices.yaml
-.spotify-token-cache
 
 OZW_Log.txt
 *.log

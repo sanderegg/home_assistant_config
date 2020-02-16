@@ -25,32 +25,17 @@
   attributes:
     state: switch.watch_film
     
-# Note: needs 2 separate activations from 2 separate browser or different IPs maybe
-- platform: spotify
-  client_id: !secret client_id_spotify_player
-  client_secret: !secret secret_spotify_player
-  name: Sylvain Spotify
-  # must have a cache path with absolute path to make it work https://community.home-assistant.io/t/support-for-multiple-spotify-accounts/16117/18
-  cache_path: /config/.sylvain_spotify.cache
-
-- platform: spotify
-  client_id: !secret client_id_spotify_player
-  client_secret: !secret secret_spotify_player
-  name: Paule Spotify
-  cache_path: /config/.paule_spotify.cache
-
 # add the universal mediaplayer to override the turn_on/off actions not available in spotify component
 - platform: universal
   name: Spotify
   children:
-    - media_player.sylvain_spotify
-    - media_player.sylvain_spotify2
+    - media_player.spotify_slyou666
   state_template: >
     {% if is_state('switch.kodi_switch', 'off')  %}
     off
-    {% elif state_attr('media_player.sylvain_spotify', 'source') == 'raspotify (osmc)' or 
-        state_attr('media_player.paule_spotify', 'source') == 'raspotify (osmc)' -%}
-      {% if is_state('media_player.sylvain_spotify', 'playing') or is_state('media_player.paule_spotify', 'playing') %}
+    {% elif state_attr('media_player.spotify_slyou666', 'source') == 'raspotify (osmc)' or 
+        state_attr('media_player.spotify_sly666999', 'source') == 'raspotify (osmc)' -%}
+      {% if is_state('media_player.spotify_slyou666', 'playing') or is_state('media_player.spotify_sly666999', 'playing') %}
       playing
       {% else %}
       idle
@@ -66,6 +51,6 @@
     turn_off:
       service: media_player.media_play_pause
       data:
-        entity_id: media_player.sylvain_spotify
+        entity_id: media_player.spotify_slyou666
   attributes:
     state: switch.kodi_switch
