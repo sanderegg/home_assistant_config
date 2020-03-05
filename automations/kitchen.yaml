@@ -97,6 +97,15 @@
     - entity_id: sensor.hue_cuisine_interrupteur
       platform: state
       to: "2_hold"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "2_click"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "2_click_up"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "2_hold"
   condition:
   - condition: state
     entity_id: light.kitchen_lights
@@ -105,9 +114,8 @@
     service: homeassistant.turn_on
     data:
       entity_id: light.kitchen_lights
-      transition: 1
-      brightness: >
-        {{ state_attr('light.kitchen_lights', 'brightness') | int + 10 }}
+      brightness_step_pct: 10
+      
 
 - id: level down kitchen lights manually
   alias: Level down kitchen lights manually
@@ -121,6 +129,15 @@
     - entity_id: sensor.hue_cuisine_interrupteur
       platform: state
       to: "3_hold"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "3_click"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "3_click_up"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "3_hold"
   condition:
   - condition: state
     entity_id: light.kitchen_lights
@@ -129,6 +146,4 @@
     service: homeassistant.turn_on
     data:
       entity_id: light.kitchen_lights
-      transition: 1
-      brightness: >
-        {{ state_attr("light.kitchen_lights", "brightness") | int - 10 }}
+      brightness_step_pct: -10
