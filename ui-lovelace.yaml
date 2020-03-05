@@ -1,3 +1,6 @@
+resources:
+  - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
+    type: module
 
 title: Home
 views:
