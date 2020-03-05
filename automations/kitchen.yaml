@@ -42,6 +42,12 @@
 - id: switch on kitchen lights manually
   alias: Switch on kitchen lights manually
   trigger:
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "1_click"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "1_click_up"
     - entity_id: sensor.hue_cuisine_interrupteur
       platform: state
       to: "1_click"
@@ -61,6 +67,12 @@
 - id: switch off kitchen lights manually
   alias: Switch off kitchen lights manually
   trigger:
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "4_click"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "4_click_up"
     - entity_id: sensor.hue_cuisine_interrupteur
       platform: state
       to: "4_click"
