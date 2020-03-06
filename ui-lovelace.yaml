@@ -7,6 +7,9 @@ resources:
     type: module
   - url: /hacsfiles/lovelace-fold-entity-row/fold-entity-row.js
     type: module
+  - url: /hacsfiles/lovelace-auto-entities/auto-entities.js
+    type: module
+
 
 title: Home
 views:
@@ -368,8 +371,20 @@ views:
         entities:
             - entity: sensor.hacs
       - type: custom:fold-entity-row
+        open: true
         head: group.all_automations
       - type: custom:fold-entity-row
+        open: true
         head: group.all_switches
       - type: custom:fold-entity-row
+        open: true
         head: group.all_sensors
+      - type: custom:auto-entities
+        card:
+          type: entities
+          title: All automations
+        filter:
+          include:
+            - domain: automation
+              options:
+                type: custom:fold-entity-row
