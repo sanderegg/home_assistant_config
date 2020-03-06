@@ -370,15 +370,6 @@ views:
       - type: glance
         entities:
             - entity: sensor.hacs
-      - type: custom:fold-entity-row
-        open: true
-        head: group.all_automations
-      - type: custom:fold-entity-row
-        open: true
-        head: group.all_switches
-      - type: custom:fold-entity-row
-        open: true
-        head: group.all_sensors
       - type: custom:auto-entities
         card:
           type: entities
@@ -386,5 +377,17 @@ views:
         filter:
           include:
             - domain: automation
-              options:
-                type: custom:fold-entity-row
+      - type: custom:auto-entities
+        card:
+          type: entities
+          title: All switches
+        filter:
+          include:
+            - domain: switch
+      - type: custom:auto-entities
+        card:
+          type: entities
+          title: All sensors
+        filter:
+          include:
+            - domain: sensor
