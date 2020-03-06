@@ -5,6 +5,8 @@ resources:
     type: module
   - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
     type: module
+  - url: /hacsfiles/lovelace-fold-entity-row/fold-entity-row.js
+    type: module
 
 title: Home
 views:
@@ -365,15 +367,10 @@ views:
       - type: glance
         entities:
             - entity: sensor.hacs
-      - type: custom:monster-card
-        show_empty: false
-        card:
-          type: entities
-          title: 'Automations'
-        filter:
-          include:
-            - entity_id: "automation.*"
-      - type: custom:monster-card
+      - type: custom:fold-entity-row
+        open: true
+        head: group.all_automations
+      - type: custom:fold-entity-row
         show_empty: false
         show_header_toggle: false
         card:
@@ -382,7 +379,7 @@ views:
         filter:
           include:
             - entity_id: "switch.*"
-      - type: custom:monster-card
+      - type: custom:fold-entity-row
         show_empty: false
         show_header_toggle: false
         card:
