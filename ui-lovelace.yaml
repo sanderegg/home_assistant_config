@@ -368,24 +368,8 @@ views:
         entities:
             - entity: sensor.hacs
       - type: custom:fold-entity-row
-        open: true
         head: group.all_automations
       - type: custom:fold-entity-row
-        show_empty: false
-        show_header_toggle: false
-        card:
-          type: entities
-          title: 'Switches'
-        filter:
-          include:
-            - entity_id: "switch.*"
+        head: group.all_switches
       - type: custom:fold-entity-row
-        show_empty: false
-        show_header_toggle: false
-        card:
-          type: entities
-          title: 'Sensors'
-        filter:
-          include:
-            - entity_id: "sensor.*"
-      
+        head: group.all_sensors
