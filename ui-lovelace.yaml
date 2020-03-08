@@ -97,6 +97,13 @@ views:
               name: Humidity
               color: blue
               y_axis: secondary
+            - color: gray
+              entity: input_number.nighttime
+              name: Night
+              show_line: false
+              show_points: false
+              show_legend: false
+              y_axis: secondary
           hours_to_show: 48
           show:
             labels: true
@@ -117,7 +124,14 @@ views:
         - type: custom:mini-graph-card
           name: Entrance
           entities:
-            - entity: sensor.entrance_motion_sensor_temperature              
+            - entity: sensor.entrance_motion_sensor_temperature
+            - color: gray
+              entity: input_number.nighttime
+              name: Night
+              show_line: false
+              show_points: false
+              show_legend: false
+              y_axis: secondary
           hours_to_show: 48
           show:
             labels: true
@@ -142,6 +156,13 @@ views:
             - entity: sensor.salle_de_bain_humidity_2
               name: Humidity
               color: blue
+              y_axis: secondary
+            - color: gray
+              entity: input_number.nighttime
+              name: Night
+              show_line: false
+              show_points: false
+              show_legend: false
               y_axis: secondary
           hours_to_show: 48
           show:
@@ -171,6 +192,13 @@ views:
               name: Humidity
               color: blue
               y_axis: secondary
+            - color: gray
+              entity: input_number.nighttime
+              name: Night
+              show_line: false
+              show_points: false
+              show_legend: false
+              y_axis: secondary
           hours_to_show: 48
           show:
             labels: true
@@ -196,6 +224,13 @@ views:
             - entity: sensor.liv_humidity_2
               name: Humidity
               color: blue
+              y_axis: secondary
+            - color: gray
+              entity: input_number.nighttime
+              name: Night
+              show_line: false
+              show_points: false
+              show_legend: false
               y_axis: secondary
           hours_to_show: 48
           show:
