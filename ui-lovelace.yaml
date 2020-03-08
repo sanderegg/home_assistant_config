@@ -93,12 +93,11 @@ views:
               name: Fibaro
             - entity: sensor.cuisine_salon_temperature
               name: Thermostat
-            - entity: sensor.cuisine_salon_humidity
+            - entity: sensor.cuisine_salon_humidity_2
               name: Humidity
               color: blue
               y_axis: secondary
           hours_to_show: 48
-          points_per_hour: 0.25
           show:
             labels: true
             labels_secondary: true
@@ -120,7 +119,6 @@ views:
           entities:
             - entity: sensor.entrance_motion_sensor_temperature              
           hours_to_show: 48
-          points_per_hour: 0.25
           show:
             labels: true
             state: true
@@ -141,12 +139,11 @@ views:
               name: Fibaro
             - entity: sensor.salle_de_bain_temperature
               name: Thermostat
-            - entity: sensor.salle_de_bain_humidity
+            - entity: sensor.salle_de_bain_humidity_2
               name: Humidity
               color: blue
               y_axis: secondary
           hours_to_show: 48
-          points_per_hour: 0.25
           show:
             labels: true
             labels_secondary: true
@@ -170,12 +167,11 @@ views:
               name: Fibaro
             - entity: sensor.parents_temperature
               name: Thermostat
-            - entity: sensor.parents_humidity
+            - entity: sensor.parents_humidity_2
               name: Humidity
               color: blue
               y_axis: secondary
           hours_to_show: 48
-          points_per_hour: 0.25
           show:
             labels: true
             labels_secondary: true
@@ -197,12 +193,11 @@ views:
               name: Fibaro
             - entity: sensor.liv_temperature
               name: Thermostat
-            - entity: sensor.liv_humidity
+            - entity: sensor.liv_humidity_2
               name: Humidity
               color: blue
               y_axis: secondary
           hours_to_show: 48
-          points_per_hour: 0.25
           show:
             labels: true
             labels_secondary: true
