@@ -96,15 +96,7 @@ views:
             - entity: sensor.cuisine_salon_humidity_2
               name: Humidity
               color: blue
-              y_axis: secondary
-            - color: gray
-              entity: sun.sun
-              name: Night
-              show_line: false
-              y_axis: secondary
-              state_map:
-                - value: "above_horizon"                  
-                - value: "below_horizon"
+              y_axis: secondary            
           hours_to_show: 48
           show:
             labels: true
@@ -112,7 +104,6 @@ views:
             state: true
             legend: false
             points: false
-            #graph: line
           color_thresholds:
             - value: 10
               color: blue
@@ -127,19 +118,14 @@ views:
         - type: custom:mini-graph-card
           name: Entrance
           entities:
-            - entity: sensor.entrance_motion_sensor_temperature
-            - color: gray
-              entity: input_number.nighttime
-              name: Night
-              show_line: false
-              show_points: false
-              show_legend: false
-              y_axis: secondary
+            - entity: sensor.entrance_motion_sensor_temperature            
           hours_to_show: 48
           show:
             labels: true
+            labels_secondary: true
             state: true
-            graph: line
+            legend: false
+            points: false
           color_thresholds:
             - value: 10
               color: blue
@@ -159,20 +145,14 @@ views:
             - entity: sensor.salle_de_bain_humidity_2
               name: Humidity
               color: blue
-              y_axis: secondary
-            - color: gray
-              entity: input_number.nighttime
-              name: Night
-              show_line: false
-              show_points: false
-              show_legend: false
-              y_axis: secondary
+              y_axis: secondary            
           hours_to_show: 48
           show:
             labels: true
             labels_secondary: true
             state: true
-            graph: line
+            legend: false
+            points: false
           color_thresholds:
             - value: 10
               color: blue
@@ -194,20 +174,14 @@ views:
             - entity: sensor.parents_humidity_2
               name: Humidity
               color: blue
-              y_axis: secondary
-            - color: gray
-              entity: input_number.nighttime
-              name: Night
-              show_line: false
-              show_points: false
-              show_legend: false
-              y_axis: secondary
+              y_axis: secondary            
           hours_to_show: 48
           show:
             labels: true
             labels_secondary: true
             state: true
-            graph: line
+            legend: false
+            points: false
           color_thresholds:
             - value: 10
               color: blue
@@ -227,20 +201,14 @@ views:
             - entity: sensor.liv_humidity_2
               name: Humidity
               color: blue
-              y_axis: secondary
-            - color: gray
-              entity: input_number.nighttime
-              name: Night
-              show_line: false
-              show_points: false
-              show_legend: false
-              y_axis: secondary
+              y_axis: secondary            
           hours_to_show: 48
           show:
             labels: true
             labels_secondary: true
             state: true
-            graph: line
+            legend: false
+            points: false
           color_thresholds:
             - value: 10
               color: blue
