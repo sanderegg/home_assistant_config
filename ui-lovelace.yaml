@@ -97,7 +97,7 @@ views:
               name: Humidity
               color: blue
               y_axis: secondary
-          hours_to_show: 168
+          hours_to_show: 48
           points_per_hour: 0.25
           show:
             labels: true
@@ -119,7 +119,7 @@ views:
           name: Entrance
           entities:
             - entity: sensor.entrance_motion_sensor_temperature              
-          hours_to_show: 168
+          hours_to_show: 48
           points_per_hour: 0.25
           show:
             labels: true
@@ -145,7 +145,7 @@ views:
               name: Humidity
               color: blue
               y_axis: secondary
-          hours_to_show: 168
+          hours_to_show: 48
           points_per_hour: 0.25
           show:
             labels: true
@@ -174,7 +174,7 @@ views:
               name: Humidity
               color: blue
               y_axis: secondary
-          hours_to_show: 168
+          hours_to_show: 48
           points_per_hour: 0.25
           show:
             labels: true
@@ -201,7 +201,7 @@ views:
               name: Humidity
               color: blue
               y_axis: secondary
-          hours_to_show: 168
+          hours_to_show: 48
           points_per_hour: 0.25
           show:
             labels: true
