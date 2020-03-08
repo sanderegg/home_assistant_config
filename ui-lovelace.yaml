@@ -91,12 +91,18 @@ views:
           entities:
             - entity: sensor.kitchen_motion_sensor_temperature
               name: Fibaro
+              show_legend: false
+              show_points: false
             - entity: sensor.cuisine_salon_temperature
               name: Thermostat
+              show_legend: false
+              show_points: false
             - entity: sensor.cuisine_salon_humidity_2
               name: Humidity
               color: blue
               y_axis: secondary
+              show_legend: false
+              show_points: false
             - color: gray
               entity: input_number.nighttime
               name: Night
@@ -109,7 +115,7 @@ views:
             labels: true
             labels_secondary: true
             state: true
-            graph: line
+            #graph: line
           color_thresholds:
             - value: 10
               color: blue
