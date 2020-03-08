@@ -103,8 +103,8 @@ views:
               show_line: false
               y_axis: secondary
               state_map:
-                - value: above_horizon
-                - value: below_horizon
+                - value: "above_horizon"                  
+                - value: "below_horizon"
           hours_to_show: 48
           show:
             labels: true
