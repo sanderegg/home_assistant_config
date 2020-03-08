@@ -257,14 +257,14 @@ views:
           title: Systems on the network
       - type: custom:mini-graph-card
         name: Power consumption        
-        unit: kWh
+        unit: Wh
         hours_to_show: 168
         group_by: date
         aggregate_func: max
         entities:
-          - entity:  sensor.aeon_labs_zw111_nano_dimmer_energy
-          - entity:  sensor.aeon_labs_zw111_nano_dimmer_energy_2
-          - entity:  sensor.aeon_labs_zw111_nano_dimmer_energy_3
+          - entity:  sensor.aeon_labs_zw111_nano_dimmer_power
+          - entity:  sensor.aeon_labs_zw111_nano_dimmer_power_2
+          - entity:  sensor.aeon_labs_zw111_nano_dimmer_power_3
         show:
           graph: bar
 
