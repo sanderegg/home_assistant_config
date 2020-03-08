@@ -91,30 +91,27 @@ views:
           entities:
             - entity: sensor.kitchen_motion_sensor_temperature
               name: Fibaro
-              show_legend: false
-              show_points: false
             - entity: sensor.cuisine_salon_temperature
               name: Thermostat
-              show_legend: false
-              show_points: false
             - entity: sensor.cuisine_salon_humidity_2
               name: Humidity
               color: blue
               y_axis: secondary
-              show_legend: false
-              show_points: false
             - color: gray
-              entity: input_number.nighttime
+              entity: sun.sun
               name: Night
               show_line: false
-              show_points: false
-              show_legend: false
               y_axis: secondary
+              state_map:
+                - value: above_horizon
+                - value: below_horizon
           hours_to_show: 48
           show:
             labels: true
             labels_secondary: true
             state: true
+            legend: false
+            points: false
             #graph: line
           color_thresholds:
             - value: 10
