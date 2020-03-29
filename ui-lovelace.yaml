@@ -293,10 +293,10 @@ views:
         show_header_toggle: false
         entities:
           - entity: sensor.last_boot
-          - entity: sensor.network_in_enxb827eb962127
-          - entity: sensor.network_throughput_in_enxb827eb962127
-          - entity: sensor.network_out_enxb827eb962127
-          - entity: sensor.network_throughput_out_enxb827eb962127
+          - entity: sensor.network_in_eth0
+          - entity: sensor.network_throughput_in_eth0
+          - entity: sensor.network_out_eth0
+          - entity: sensor.network_throughput_out_eth0
           - entity: sensor.processor_use
           - entity: sensor.disk_use_percent
           - entity: sensor.disk_free
