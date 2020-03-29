@@ -108,9 +108,6 @@ input_boolean:
 
 system_health:
 
-# device_tracker:
-#   - platform: huesensor
-
 hacs:
   token: !secret hacs_token
   appdaemon: true
