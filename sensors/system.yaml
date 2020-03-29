@@ -6,12 +6,18 @@
       arg: /
     - type: memory_free
     - type: memory_use_percent
-    - type: network_in      
+    - type: network_in 
+      arg: eth0     
     - type: throughput_network_in      
+      arg: eth0
     - type: packets_in
+      arg: eth0
     - type: network_out      
-    - type: throughput_network_out      
+      arg: eth0
+    - type: throughput_network_out
+      arg: eth0
     - type: packets_out
+      arg: eth0
     - type: processor_use
     - type: last_boot
 
