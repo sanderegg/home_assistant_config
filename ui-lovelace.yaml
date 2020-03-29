@@ -243,16 +243,15 @@ views:
           type: glance
           title: Systems on the network
       - type: custom:mini-graph-card
-        name: Energy consumption
+        name: Power instant consumption
         hours_to_show: 168
-        group_by: date
-        aggregate_func: max
+        #group_by: date        
         entities:
-          - entity:  sensor.aeon_labs_zw111_nano_dimmer_energy
-          - entity:  sensor.aeon_labs_zw111_nano_dimmer_energy_2
-          - entity:  sensor.aeon_labs_zw111_nano_dimmer_energy_3
+          - entity:  sensor.kitchen_dimmer_power
+          - entity:  sensor.entrance_dimmer_power
+          - entity:  sensor.bathroom_dimmer_power
         show:
-          graph: bar
+          graph: line
 
       - type: custom:mini-graph-card
         name: Internet connectivity
