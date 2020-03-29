@@ -243,13 +243,23 @@ views:
           type: glance
           title: Systems on the network
       - type: custom:mini-graph-card
-        name: Power instant consumption
+        name: Dimmers power instant consumption
         hours_to_show: 168
         #group_by: date        
         entities:
           - entity:  sensor.kitchen_dimmer_power
           - entity:  sensor.entrance_dimmer_power
           - entity:  sensor.bathroom_dimmer_power
+        show:
+          graph: line
+      - type: custom:mini-graph-card
+        name: Switches instant consumption
+        hours_to_show: 168
+        #group_by: date        
+        entities:
+          - entity:  sensor.switch_pcs_power
+          - entity:  sensor.switch_printer_power
+          - entity:  sensor.switch_kodi_power
         show:
           graph: line
 
