@@ -1,4 +1,3 @@
-
 homeassistant:
   # Name of the location where Home Assistant is running
   name: !secret hass_name
@@ -24,9 +23,6 @@ config:
 lovelace:
   mode: yaml
 
-pi_hole:
-  host: localhost:4865
-  
 http:
 
 wake_on_lan:
@@ -38,14 +34,14 @@ updater:
 
 logger:
   default: info
-  
+
 # Discover some devices automatically
 discovery:
 
 # handles the db
 recorder:
   purge_keep_days: 15
-  
+
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
@@ -62,9 +58,8 @@ map:
 sun:
 
 zwave:
-    usb_path: /dev/ttyACM0
- 
- # Text to speech
+  usb_path: /dev/ttyACM0
+  # Text to speech
 tts:
   - platform: google_translate
     service_name: google_say
@@ -101,7 +96,7 @@ system_health:
 
 device_tracker:
   - platform: huesensor
-  
+
 hacs:
   token: !secret hacs_token
   appdaemon: true
