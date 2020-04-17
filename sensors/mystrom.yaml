@@ -1,0 +1,14 @@
+- platform: template
+  sensors:
+    switch_pcs_power:
+      friendly_name: "PCs Switch Current Power"
+      unit_of_measurement: "W"
+      value_template: "{{ state_attr('switch.pcs_switch', 'current_power_w') }}"
+    switch_printer_power:
+      friendly_name: "Printer Switch Current Power"
+      unit_of_measurement: "W"
+      value_template: "{{ state_attr('switch.printer_switch', 'current_power_w') }}"
+    switch_kodi_power:
+      friendly_name: "Kodi Switch Current Power"
+      unit_of_measurement: "W"
+      value_template: "{{ state_attr('switch.kodi_switch', 'current_power_w') }}"

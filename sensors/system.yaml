@@ -5,14 +5,19 @@
     - type: disk_free
       arg: /
     - type: memory_free
-    - type: network_in
-      arg: enxb827eb962127
-    - type: throughput_network_in
-      arg: enxb827eb962127
-    - type: network_out
-      arg: enxb827eb962127
+    - type: memory_use_percent
+    - type: network_in 
+      arg: eth0     
+    - type: throughput_network_in      
+      arg: eth0
+    - type: packets_in
+      arg: eth0
+    - type: network_out      
+      arg: eth0
     - type: throughput_network_out
-      arg: enxb827eb962127
+      arg: eth0
+    - type: packets_out
+      arg: eth0
     - type: processor_use
     - type: last_boot
 
