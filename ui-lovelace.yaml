@@ -245,7 +245,7 @@ views:
       - type: custom:mini-graph-card
         name: Dimmers power instant consumption
         hours_to_show: 48
-        group_by: date        
+        #group_by: date        
         entities:
           - entity:  sensor.kitchen_dimmer_power
           - entity:  sensor.entrance_dimmer_power
