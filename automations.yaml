@@ -1,0 +1,11 @@
+- id: '1576526426710'
+  alias: Turn lights in salon on when clicking the hue salon interrupteur
+  description: ''
+  trigger:
+  - entity_id: sensor.hue_salon_interrupteur
+    platform: state
+    to: 4_click_up
+  condition: []
+  action:
+  - entity_id: light.kitchen_lights
+    service: light.turn_off
