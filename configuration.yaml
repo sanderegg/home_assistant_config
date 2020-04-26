@@ -35,6 +35,8 @@ lovelace:
       type: module
     - url: /hacsfiles/lovelace-layout-card/layout-card.js
       type: module
+    - url: /hacsfiles/lovelace-card-mod/card-mod.js
+      type: module
 
 http:
 
