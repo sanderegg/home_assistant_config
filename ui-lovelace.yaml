@@ -15,7 +15,7 @@ views:
             tap_action:
               action: call-service
               service: light.turn_off
-              service_data: 
+              service_data:
                 entity_id: all
       - type: horizontal-stack
         cards:
@@ -54,7 +54,6 @@ views:
       - type: entities
         title: Lights
         entities:
-          - type: section
           - type: custom:slider-entity-row
             entity: light.kitchen_lights
             toggle: true
@@ -73,138 +72,138 @@ views:
 
       - type: horizontal-stack
         cards:
-        - type: custom:mini-graph-card
-          name: Kitchen/Salon
-          entities:
-            - entity: sensor.kitchen_motion_sensor_temperature
-              name: Fibaro
-            - entity: sensor.cuisine_salon_temperature
-              name: Thermostat
-            - entity: sensor.cuisine_salon_humidity_2
-              name: Humidity
-              color: blue
-              y_axis: secondary            
-          hours_to_show: 48
-          show:
-            labels: true
-            labels_secondary: true
-            state: true
-            legend: false
-            points: false
-          color_thresholds:
-            - value: 10
-              color: blue
-            - value: 20
-              color: green
-            - value: 22
-              color: orange
-            - value: 23.5
-              color: red          
+          - type: custom:mini-graph-card
+            name: Kitchen/Salon
+            entities:
+              - entity: sensor.kitchen_motion_sensor_temperature
+                name: Fibaro
+              - entity: sensor.cuisine_salon_temperature
+                name: Thermostat
+              - entity: sensor.cuisine_salon_humidity_2
+                name: Humidity
+                color: blue
+                y_axis: secondary
+            hours_to_show: 48
+            show:
+              labels: true
+              labels_secondary: true
+              state: true
+              legend: false
+              points: false
+            color_thresholds:
+              - value: 10
+                color: blue
+              - value: 20
+                color: green
+              - value: 22
+                color: orange
+              - value: 23.5
+                color: red
       - type: horizontal-stack
         cards:
-        - type: custom:mini-graph-card
-          name: Entrance
-          entities:
-            - entity: sensor.entrance_motion_sensor_temperature            
-          hours_to_show: 48
-          show:
-            labels: true
-            labels_secondary: true
-            state: true
-            legend: false
-            points: false
-          color_thresholds:
-            - value: 10
-              color: blue
-            - value: 20
-              color: green
-            - value: 22
-              color: orange
-            - value: 23.5
-              color: red
-        - type: custom:mini-graph-card
-          name: Bathroom
-          entities:
-            - entity: sensor.bathroom_motion_sensor_temperature
-              name: Fibaro
-            - entity: sensor.salle_de_bain_temperature
-              name: Thermostat
-            - entity: sensor.salle_de_bain_humidity_2
-              name: Humidity
-              color: blue
-              y_axis: secondary            
-          hours_to_show: 48
-          show:
-            labels: true
-            labels_secondary: true
-            state: true
-            legend: false
-            points: false
-          color_thresholds:
-            - value: 10
-              color: blue
-            - value: 20
-              color: green
-            - value: 22
-              color: orange
-            - value: 23.5
-              color: red
-      - type: horizontal-stack      
+          - type: custom:mini-graph-card
+            name: Entrance
+            entities:
+              - entity: sensor.entrance_motion_sensor_temperature
+            hours_to_show: 48
+            show:
+              labels: true
+              labels_secondary: true
+              state: true
+              legend: false
+              points: false
+            color_thresholds:
+              - value: 10
+                color: blue
+              - value: 20
+                color: green
+              - value: 22
+                color: orange
+              - value: 23.5
+                color: red
+          - type: custom:mini-graph-card
+            name: Bathroom
+            entities:
+              - entity: sensor.bathroom_motion_sensor_temperature
+                name: Fibaro
+              - entity: sensor.salle_de_bain_temperature
+                name: Thermostat
+              - entity: sensor.salle_de_bain_humidity_2
+                name: Humidity
+                color: blue
+                y_axis: secondary
+            hours_to_show: 48
+            show:
+              labels: true
+              labels_secondary: true
+              state: true
+              legend: false
+              points: false
+            color_thresholds:
+              - value: 10
+                color: blue
+              - value: 20
+                color: green
+              - value: 22
+                color: orange
+              - value: 23.5
+                color: red
+      - type: horizontal-stack
         cards:
-        - type: custom:mini-graph-card
-          name: Bedroom
-          entities:
-            - entity: sensor.bedroom_motion_sensor_temperature
-              name: Fibaro
-            - entity: sensor.parents_temperature
-              name: Thermostat
-            - entity: sensor.parents_humidity_2
-              name: Humidity
-              color: blue
-              y_axis: secondary            
-          hours_to_show: 48
-          show:
-            labels: true
-            labels_secondary: true
-            state: true
-            legend: false
-            points: false
-          color_thresholds:
-            - value: 10
-              color: blue
-            - value: 20
-              color: green
-            - value: 22
-              color: orange
-            - value: 23.5
-              color: red
-        - type: custom:mini-graph-card
-          name: Liv room
-          entities:
-            - entity: sensor.livroom_motion_sensor_temperature
-              name: Fibaro
-            - entity: sensor.liv_temperature
-              name: Thermostat
-            - entity: sensor.liv_humidity_2
-              name: Humidity
-              color: blue
-              y_axis: secondary            
-          hours_to_show: 48
-          show:
-            labels: true
-            labels_secondary: true
-            state: true
-            legend: false
-            points: false
-          color_thresholds:
-            - value: 10
-              color: blue
-            - value: 20
-              color: green
-            - value: 22
-              color: orange
-            - value: 23.5
-              color: red     
+          - type: custom:mini-graph-card
+            name: Bedroom
+            entities:
+              - entity: sensor.bedroom_motion_sensor_temperature
+                name: Fibaro
+              - entity: sensor.parents_temperature
+                name: Thermostat
+              - entity: sensor.parents_humidity_2
+                name: Humidity
+                color: blue
+                y_axis: secondary
+            hours_to_show: 48
+            show:
+              labels: true
+              labels_secondary: true
+              state: true
+              legend: false
+              points: false
+            color_thresholds:
+              - value: 10
+                color: blue
+              - value: 20
+                color: green
+              - value: 22
+                color: orange
+              - value: 23.5
+                color: red
+          - type: custom:mini-graph-card
+            name: Liv room
+            entities:
+              - entity: sensor.livroom_motion_sensor_temperature
+                name: Fibaro
+              - entity: sensor.liv_temperature
+                name: Thermostat
+              - entity: sensor.liv_humidity_2
+                name: Humidity
+                color: blue
+                y_axis: secondary
+            hours_to_show: 48
+            show:
+              labels: true
+              labels_secondary: true
+              state: true
+              legend: false
+              points: false
+            color_thresholds:
+              - value: 10
+                color: blue
+              - value: 20
+                color: green
+              - value: 22
+                color: orange
+              - value: 23.5
+                color: red
       - type: horizontal-stack
         cards:
           - type: thermostat
@@ -221,11 +220,10 @@ views:
           - type: thermostat
             entity: climate.salle_de_bain
             name: Bathroom
-              
 
   - title: Monitoring
     icon: mdi:tune
-    id: monitoring    
+    id: monitoring
     cards:
       # - type: custom:compact-custom-header
       - type: entity-filter
@@ -245,22 +243,22 @@ views:
       - type: custom:mini-graph-card
         name: Dimmers power instant consumption
         hours_to_show: 48
-        #group_by: date        
+        #group_by: date
         entities:
-          - entity:  sensor.kitchen_dimmer_power
-          - entity:  sensor.entrance_dimmer_power
-          - entity:  sensor.bathroom_dimmer_power
+          - entity: sensor.kitchen_dimmer_power
+          - entity: sensor.entrance_dimmer_power
+          - entity: sensor.bathroom_dimmer_power
         show:
           graph: line
       - type: custom:mini-graph-card
         name: Switches instant consumption
         hours_to_show: 48
         #aggregate_func: sum
-        #group_by: date        
+        #group_by: date
         entities:
-          - entity:  sensor.switch_pcs_power
-          - entity:  sensor.switch_printer_power
-          - entity:  sensor.switch_kodi_power
+          - entity: sensor.switch_pcs_power
+          - entity: sensor.switch_printer_power
+          - entity: sensor.switch_kodi_power
         show:
           graph: line
 
@@ -269,7 +267,7 @@ views:
         icon: mdi:network
         unit: ms
         entities:
-          - entity:  sensor.internet_connectivity
+          - entity: sensor.internet_connectivity
       - type: custom:mini-graph-card
         name: Intranet
         icon: mdi:network
@@ -346,22 +344,22 @@ views:
             color: green
 
         entities:
-        - entity: sensor.bathroom_fibaro_battery
-          # scale: 30px
-          # from: bottom
-          # min: 0
-          # max: 100
-          # severity:
-          #   - value: 20
-          #     style: 'var(--label-badge-red)'
-          #   - value: 50
-          #     style: 'var(--label-badge-yellow)'
-          #   - value: 100
-          #     style: 'var(--label-badge-green)'
-        - entity: sensor.bedroom_fibaro_battery
-        - entity: sensor.entrance_fibaro_battery
-        - entity: sensor.kitchen_fibaro_battery
-        - entity: sensor.livroom_fibaro_battery
+          - entity: sensor.bathroom_fibaro_battery
+            # scale: 30px
+            # from: bottom
+            # min: 0
+            # max: 100
+            # severity:
+            #   - value: 20
+            #     style: 'var(--label-badge-red)'
+            #   - value: 50
+            #     style: 'var(--label-badge-yellow)'
+            #   - value: 100
+            #     style: 'var(--label-badge-green)'
+          - entity: sensor.bedroom_fibaro_battery
+          - entity: sensor.entrance_fibaro_battery
+          - entity: sensor.kitchen_fibaro_battery
+          - entity: sensor.livroom_fibaro_battery
       - type: custom:mini-graph-card
         name: Light intensity
         icon: mdi:spotlight-beam
@@ -378,7 +376,7 @@ views:
     cards:
       - type: glance
         entities:
-            - entity: sensor.hacs
+          - entity: sensor.hacs
       - type: custom:auto-entities
         card:
           type: entities
