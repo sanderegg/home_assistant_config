@@ -371,7 +371,7 @@ views:
           - entity: sensor.livroom_motion_sensor_luminance
 
   - title: Advanced
-    icon: mdi:settings
+    icon: mdi:cog
     id: advanced
     cards:
       - type: glance
