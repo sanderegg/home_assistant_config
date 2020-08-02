@@ -124,8 +124,3 @@ tado:
 spotify:
   client_id: !secret client_id_spotify_player
   client_secret: !secret secret_spotify_player
-
-weather:
-  - platform: meteo-swiss
-    name: "MeteoSwiss"
-    postcode: !secret meteo_swiss_postcode
