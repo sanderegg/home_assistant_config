@@ -77,7 +77,7 @@ views:
             entities:
               - entity: sensor.kitchen_motion_sensor_temperature
                 name: Fibaro
-              - entity: sensor.cuisine_salon_temperature
+              - entity: sensor.cuisine_salon_temperature_2
                 name: Thermostat
               - entity: sensor.cuisine_salon_humidity_2
                 name: Humidity
@@ -126,7 +126,7 @@ views:
             entities:
               - entity: sensor.bathroom_motion_sensor_temperature
                 name: Fibaro
-              - entity: sensor.salle_de_bain_temperature
+              - entity: sensor.salle_de_bain_temperature_2
                 name: Thermostat
               - entity: sensor.salle_de_bain_humidity_2
                 name: Humidity
@@ -155,7 +155,7 @@ views:
             entities:
               - entity: sensor.bedroom_motion_sensor_temperature
                 name: Fibaro
-              - entity: sensor.parents_temperature
+              - entity: sensor.parents_temperature_2
                 name: Thermostat
               - entity: sensor.parents_humidity_2
                 name: Humidity
@@ -182,7 +182,7 @@ views:
             entities:
               - entity: sensor.livroom_motion_sensor_temperature
                 name: Fibaro
-              - entity: sensor.liv_temperature
+              - entity: sensor.liv_temperature_2
                 name: Thermostat
               - entity: sensor.liv_humidity_2
                 name: Humidity
