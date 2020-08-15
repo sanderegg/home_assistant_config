@@ -1,11 +1,11 @@
 - id: switch off pc switch when pc switches off
   alias: Switch off PC switch when PC Sylvain switches off
   trigger:
-  - platform: state
-    entity_id: switch.pcsylvain
-    to: 'off'
-    for:
-      minutes: 5
+    - platform: state
+      entity_id: switch.pcsylvain
+      to: "off"
+      for:
+        minutes: 5
   action:
     service: homeassistant.turn_off
     data:

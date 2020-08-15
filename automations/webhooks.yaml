@@ -1,8 +1,8 @@
 - id: webhook switch all lights off
   alias: Webhook switch all lights off
   trigger:
-  - platform: webhook
-    webhook_id: all_off
+    - platform: webhook
+      webhook_id: all_off
   action:
     service: scene.turn_on
     data:

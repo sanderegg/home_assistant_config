@@ -1,16 +1,16 @@
 - id: switch on kitchen with motion and light
   alias: Switch light on in kitchen
   trigger:
-  - entity_id: binary_sensor.kitchen_motion_sensor_sensor
-    platform: state
-    to: 'on'
+    - entity_id: binary_sensor.kitchen_motion_sensor_sensor
+      platform: state
+      to: "on"
   condition:
-  - condition: numeric_state
-    entity_id: sensor.kitchen_motion_sensor_luminance
-    below: '15'
-  - condition: state
-    entity_id: light.kitchen_lights
-    state: 'off'
+    - condition: numeric_state
+      entity_id: sensor.kitchen_motion_sensor_luminance
+      below: 15
+    - condition: state
+      entity_id: light.kitchen_lights
+      state: "off"
   action:
     service: script.turn_on_light_based_on_night_mode
     data:
@@ -21,18 +21,18 @@
 - id: switch off kitchen when no motion
   alias: Switch light off in kitchen
   trigger:
-  - platform: state
-    entity_id: binary_sensor.kitchen_motion_sensor_sensor
-    to: 'off'
-    for:
-      minutes: 15
+    - platform: state
+      entity_id: binary_sensor.kitchen_motion_sensor_sensor
+      to: "off"
+      for:
+        minutes: 15
   condition:
-  - condition: state
-    entity_id: light.kitchen_lights
-    state: 'on'
-  - condition: numeric_state
-    entity_id: sensor.kitchen_motion_sensor_burglar
-    below: 3
+    - condition: state
+      entity_id: light.kitchen_lights
+      state: "on"
+    - condition: numeric_state
+      entity_id: sensor.kitchen_motion_sensor_burglar
+      below: 3
   action:
     service: homeassistant.turn_off
     data:
@@ -55,9 +55,9 @@
       platform: state
       to: "1_click_up"
   condition:
-  - condition: state
-    entity_id: light.kitchen_dimmer_level
-    state: 'off'
+    - condition: state
+      entity_id: light.kitchen_dimmer_level
+      state: "off"
   action:
     service: homeassistant.turn_on
     data:
@@ -107,15 +107,14 @@
       platform: state
       to: "2_hold"
   condition:
-  - condition: state
-    entity_id: light.kitchen_lights
-    state: 'on'
+    - condition: state
+      entity_id: light.kitchen_lights
+      state: "on"
   action:
     service: homeassistant.turn_on
     data:
       entity_id: light.kitchen_lights
       brightness_step_pct: 10
-      
 
 - id: level down kitchen lights manually
   alias: Level down kitchen lights manually
@@ -139,9 +138,9 @@
       platform: state
       to: "3_hold"
   condition:
-  - condition: state
-    entity_id: light.kitchen_lights
-    state: 'on'
+    - condition: state
+      entity_id: light.kitchen_lights
+      state: "on"
   action:
     service: homeassistant.turn_on
     data:
