@@ -2,6 +2,6 @@
   sensors:
     nas_connectivity:
       friendly_name: "NAS Connectivity"
-      entity_id:  binary_sensor.nas
+      entity_id: binary_sensor.nas
       icon_template: mdi-network
-      value_template: "{{ states.binary_sensor.nas.attributes.round_trip_time_avg }}" 
+      value_template: "{{ states.binary_sensor.nas.attributes.round_trip_time_avg }}"

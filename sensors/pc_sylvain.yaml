@@ -2,6 +2,6 @@
   sensors:
     pc_sylvain_connectivity:
       friendly_name: "PC Sylvain Connectivity"
-      entity_id:  binary_sensor.pc_sylvain
+      entity_id: binary_sensor.pc_sylvain
       icon_template: mdi-network
-      value_template: "{{ states.binary_sensor.pc_sylvain.attributes.round_trip_time_avg }}" 
+      value_template: "{{ states.binary_sensor.pc_sylvain.attributes.round_trip_time_avg }}"

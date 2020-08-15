@@ -2,6 +2,6 @@
   sensors:
     vero_4k_connectivity:
       friendly_name: "Vero 4K Connectivity"
-      entity_id:  binary_sensor.vero_4k
+      entity_id: binary_sensor.vero_4k
       icon_template: mdi-network
-      value_template: "{{ states.binary_sensor.vero_4k.attributes.round_trip_time_avg }}" 
+      value_template: "{{ states.binary_sensor.vero_4k.attributes.round_trip_time_avg }}"
