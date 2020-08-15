@@ -1,0 +1,36 @@
+- id: feedback nightmode
+  alias: Feedback on nightmode change
+  trigger:
+    - platform: state
+      entity_id: input_boolean.night_mode
+  action:
+    # flash the lights
+    - service: homeassistant.turn_off
+      data:
+        entity_id: >
+          {% for light in states.light %}
+            {%- if is_state(light.entity_id, 'on') %}
+          - {{ light.entity_id | lower }}              
+            {%- endif %}
+          {%- endfor %}
+        brightness: 127
+    - delay: 0:01
+    - service: homeassistant.turn_on
+      data:
+        entity_id: >
+          {% for light in states.light %}
+            {%- if is_state(light.entity_id, 'on') %}
+          - {{ light.entity_id | lower }}              
+            {%- endif %}
+          {%- endfor %}
+        brightness: 255
+
+- id: disable nightmode in the morning
+  alias: Disable nightmode in the morning
+  trigger:
+    - platform: time
+      at: '07:30:00'
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.night_mode

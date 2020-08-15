@@ -1,0 +1,149 @@
+- id: switch on kitchen with motion and light
+  alias: Switch light on in kitchen
+  trigger:
+  - entity_id: binary_sensor.kitchen_motion_sensor_sensor
+    platform: state
+    to: 'on'
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.kitchen_motion_sensor_luminance
+    below: '15'
+  - condition: state
+    entity_id: light.kitchen_lights
+    state: 'off'
+  action:
+    service: script.turn_on_light_based_on_night_mode
+    data:
+      desired_entity_id: light.kitchen_lights
+      day_intensity: 255
+      night_intensity: 2
+
+- id: switch off kitchen when no motion
+  alias: Switch light off in kitchen
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.kitchen_motion_sensor_sensor
+    to: 'off'
+    for:
+      minutes: 15
+  condition:
+  - condition: state
+    entity_id: light.kitchen_lights
+    state: 'on'
+  - condition: numeric_state
+    entity_id: sensor.kitchen_motion_sensor_burglar
+    below: 3
+  action:
+    service: homeassistant.turn_off
+    data:
+      entity_id: light.kitchen_lights
+      transition: 5
+
+- id: switch on kitchen lights manually
+  alias: Switch on kitchen lights manually
+  trigger:
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "1_click"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "1_click_up"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "1_click"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "1_click_up"
+  condition:
+  - condition: state
+    entity_id: light.kitchen_dimmer_level
+    state: 'off'
+  action:
+    service: homeassistant.turn_on
+    data:
+      entity_id: light.kitchen_lights
+      transition: 3
+
+- id: switch off kitchen lights manually
+  alias: Switch off kitchen lights manually
+  trigger:
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "4_click"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "4_click_up"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "4_click"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "4_click_up"
+  action:
+    service: homeassistant.turn_off
+    data:
+      entity_id: light.kitchen_lights
+      transition: 3
+
+- id: level up kitchen lights manually
+  alias: Level up kitchen lights manually
+  trigger:
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "2_click"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "2_click_up"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "2_hold"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "2_click"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "2_click_up"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "2_hold"
+  condition:
+  - condition: state
+    entity_id: light.kitchen_lights
+    state: 'on'
+  action:
+    service: homeassistant.turn_on
+    data:
+      entity_id: light.kitchen_lights
+      brightness_step_pct: 10
+      
+
+- id: level down kitchen lights manually
+  alias: Level down kitchen lights manually
+  trigger:
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "3_click"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "3_click_up"
+    - entity_id: sensor.hue_cuisine_interrupteur
+      platform: state
+      to: "3_hold"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "3_click"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "3_click_up"
+    - entity_id: sensor.hue_salon_interrupteur
+      platform: state
+      to: "3_hold"
+  condition:
+  - condition: state
+    entity_id: light.kitchen_lights
+    state: 'on'
+  action:
+    service: homeassistant.turn_on
+    data:
+      entity_id: light.kitchen_lights
+      brightness_step_pct: -10

@@ -1,0 +1,16 @@
+- id: switch off printer after idle time
+  alias: Switch off printer when it was not used for awhile
+  trigger:
+  - platform: state
+    entity_id: switch.printer_switch
+    to: 'on'
+    for:
+      minutes: 60
+  condition:
+  - condition: state
+    entity_id: switch.printer_switch
+    state: 'on'
+  action:
+    service: homeassistant.turn_off
+    data:
+      entity_id: switch.printer_switch
